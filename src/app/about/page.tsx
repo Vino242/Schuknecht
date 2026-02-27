@@ -75,7 +75,7 @@ export default function About() {
         {/* Right columns 4-5: image */}
         <div className="col-span-1 md:col-span-2 relative min-h-[60vh] md:min-h-[80vh]">
           <Image
-            src="/über/SnapInsta.to_580485830_1607661643931805_1787513410864216100_n.jpg"
+            src="/ueber/SnapInsta.to_580485830_1607661643931805_1787513410864216100_n.jpg"
             alt="Schuknecht Über Uns"
             fill
             className="object-cover object-center"
