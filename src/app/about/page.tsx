@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import MobileNav from "@/components/MobileNav";
 
 export default function About() {
   return (
     <div className="min-h-screen w-screen bg-white text-black flex flex-col">
       {/* ===== TOP: Logo bar ===== */}
-      <div className="flex-shrink-0 relative flex items-center justify-end px-6 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        {/* Logo right */}
-        <a href="/" className="relative h-[50px] md:h-[75px] lg:h-[100px] w-[50px] md:w-[75px] lg:w-[100px] flex-shrink-0">
+      <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
+        <MobileNav />
+        <a href="/" className="relative h-[35px] w-[35px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
           <Image
             src="/logo.png"
             alt="Schu Knecht Logo"

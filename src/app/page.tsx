@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import MobileNav from "@/components/MobileNav";
 
 const slideshowImages = [
   "/Bild1.png",
@@ -10,17 +11,7 @@ const slideshowImages = [
   "/SnapInsta.to_631810161_18312997990266547_8809735527891804484_n.jpg",
 ];
 
-const navLinks = [
-  { label: "home", href: "/" },
-  { label: "menü", href: "/karte" },
-  { label: "catering", href: "/catering" },
-  { label: "schuki", href: "/menu" },
-  { label: "kontakt", href: "/contact" },
-  { label: "impressum", href: "/imprint" },
-];
-
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [reserveOpen, setReserveOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [personen, setPersonen] = useState("2");
@@ -63,25 +54,7 @@ export default function Home() {
     <div className="h-screen overflow-hidden md:h-auto md:min-h-screen md:overflow-visible w-screen bg-white text-black flex flex-col pb-[70px] md:pb-0">
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        {/* Mobile hamburger — centered */}
-        <div className="md:hidden absolute left-4">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label="menu"
-            style={{ color: "rgb(207, 46, 46)" }}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M3 6.5h18M3 12h18M3 17.5h18"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
-        </div>
-
+        <MobileNav />
         {/* Logo right */}
         <a href="/" className="relative h-[35px] w-[35px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
           <Image
@@ -92,46 +65,6 @@ export default function Home() {
             priority
           />
         </a>
-      </div>
-
-      {/* Mobile menu overlay — always rendered, animated via CSS */}
-      {/* Dark backdrop */}
-      <div
-        className={`md:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${
-          mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={() => setMobileMenuOpen(false)}
-      />
-      {/* Side drawer — slides in from left */}
-      <div
-        className={`md:hidden fixed top-0 left-0 z-50 w-2/3 h-full px-8 py-20 flex flex-col justify-center transition-transform duration-300 ease-in-out ${
-          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-        style={{ backgroundColor: "rgb(207, 46, 46)" }}
-      >
-        {/* Close button */}
-        <button
-          onClick={() => setMobileMenuOpen(false)}
-          aria-label="Menü schließen"
-          className="absolute top-6 right-6 text-white hover:opacity-70 transition-opacity"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-          </svg>
-        </button>
-        <nav className="flex flex-col gap-5">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-[15px] tracking-[0.08em] uppercase text-white hover:opacity-70 transition-opacity"
-              style={{ fontFamily: "'Futura Bold', sans-serif" }}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
       </div>
 
       {/* ===== CENTER: 5-column grid, image in columns 4-5 (arc style) ===== */}
