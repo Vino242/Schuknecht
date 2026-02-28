@@ -60,7 +60,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen w-screen bg-white text-black flex flex-col pb-[70px] md:pb-0">
+    <div className="h-screen overflow-hidden md:h-auto md:min-h-screen md:overflow-visible w-screen bg-white text-black flex flex-col pb-[70px] md:pb-0">
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
         {/* Mobile hamburger — centered */}
@@ -188,7 +188,7 @@ export default function Home() {
 
       {/* ===== MOBILE: Spacer + Ticker + Spacer (1:2 ratio = ticker higher) ===== */}
       <div className="flex-[1] md:hidden" />
-      <div className="md:hidden w-full bg-black text-white overflow-hidden py-3 flex-shrink-0">
+      <div className="md:hidden mx-4 bg-black text-white overflow-hidden py-3 flex-shrink-0">
         <div
           className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
