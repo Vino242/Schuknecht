@@ -62,9 +62,9 @@ export default function Home() {
   return (
     <div className="min-h-screen w-screen bg-white text-black flex flex-col">
       {/* ===== TOP: Logo bar ===== */}
-      <div className="flex-shrink-0 relative flex items-center justify-center md:justify-end px-6 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        {/* Logo right (desktop only) */}
-        <a href="/" className="hidden md:block relative h-[75px] lg:h-[100px] w-[75px] lg:w-[100px] flex-shrink-0">
+      <div className="flex-shrink-0 relative flex items-center md:justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
+        {/* Logo left (mobile) / right (desktop) */}
+        <a href="/" className="relative h-[35px] w-[35px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
           <Image
             src="/logo.png"
             alt="Schu Knecht Logo"
@@ -74,12 +74,13 @@ export default function Home() {
           />
         </a>
 
-        {/* Mobile hamburger — centered, just 3 lines */}
-        <div className="md:hidden">
+        {/* Mobile hamburger — centered */}
+        <div className="md:hidden flex-1 flex justify-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label="menu"
+            style={{ color: "rgb(207, 46, 46)" }}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path
@@ -95,15 +96,17 @@ export default function Home() {
 
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-[70px] left-0 right-0 z-50 bg-white border-t border-black/5 px-6 py-8">
-          <nav className="flex flex-col gap-5">
+        <div className="md:hidden absolute top-[45px] left-1/2 -translate-x-1/2 z-50 rounded-xl px-8 py-8 shadow-lg w-[220px] aspect-[9/16] flex items-center justify-center"
+          style={{ backgroundColor: "rgb(207, 46, 46)" }}
+        >
+          <nav className="flex flex-col gap-4 items-center text-center">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-[16px] font-light hover:opacity-50 transition-opacity"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                className="text-[15px] tracking-[0.08em] uppercase text-white hover:opacity-70 transition-opacity"
+                style={{ fontFamily: "'Futura Bold', sans-serif" }}
               >
                 {link.label}
               </a>
@@ -116,8 +119,24 @@ export default function Home() {
       <div
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-[8px] md:gap-[19px] px-4 md:px-10 lg:px-16"
       >
-        {/* Left columns: title + ticker (mobile: 2 cols, desktop: 3 cols) */}
-        <div className="col-span-2 md:col-span-3 flex flex-col items-start pt-0">
+        {/* Image slideshow (mobile: first/left 3 cols, desktop: right 2 cols) */}
+        <div className="col-span-3 md:col-span-2 md:order-2 relative aspect-[2/3] md:aspect-auto md:min-h-[120vh]">
+          {slideshowImages.map((src, index) => (
+            <Image
+              key={src}
+              src={src}
+              alt={`Schuknecht ${index + 1}`}
+              fill
+              className={`object-cover object-center transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+              priority={index === 0}
+            />
+          ))}
+        </div>
+
+        {/* Title + ticker (mobile: right 2 cols, desktop: left 3 cols) */}
+        <div className="col-span-2 md:col-span-3 md:order-1 flex flex-col items-start pt-0">
           <h1
             className="text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif" }}
@@ -146,26 +165,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Right columns: image slideshow (mobile: 3 cols, desktop: 2 cols) */}
-        <div className="col-span-3 md:col-span-2 relative min-h-[55vh] md:min-h-[120vh]">
-          {slideshowImages.map((src, index) => (
-            <Image
-              key={src}
-              src={src}
-              alt={`Schuknecht ${index + 1}`}
-              fill
-              className={`object-cover object-center transition-opacity duration-1000 ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-              priority={index === 0}
-            />
-          ))}
-        </div>
       </div>
 
       {/* ===== MOBILE TICKER: full width below image ===== */}
-      <div className="md:hidden mt-6 w-full bg-black text-white overflow-hidden py-2">
+      <div className="md:hidden mt-auto w-full bg-black text-white overflow-hidden py-2">
         <div
           className="whitespace-nowrap animate-marquee text-[11px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
@@ -175,7 +178,7 @@ export default function Home() {
       </div>
 
       {/* ===== BOTTOM: Footer nav (arc: 5-col grid, links in cols 1-4, 90px height, sticky on tablet) ===== */}
-      <footer className="flex-shrink-0 flex items-center justify-end md:grid md:grid-cols-6 md:items-center md:justify-items-center h-[70px] md:h-[60px] lg:h-[90px] px-6 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
+      <footer className="flex-shrink-0 flex items-center justify-end md:grid md:grid-cols-6 md:items-center md:justify-items-center mt-10 md:mt-0 h-[70px] md:h-[60px] lg:h-[90px] px-6 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
         <div className="hidden md:block">
           <a
             href="/karte"
