@@ -60,7 +60,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen w-screen bg-white text-black flex flex-col">
+    <div className="min-h-screen w-screen bg-white text-black flex flex-col pb-[70px] md:pb-0">
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 relative flex items-center md:justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
         {/* Logo left (mobile) / right (desktop) */}
@@ -167,18 +167,33 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===== MOBILE TICKER: full width below image ===== */}
-      <div className="md:hidden mt-auto w-full bg-black text-white overflow-hidden py-2">
+      {/* ===== MOBILE: Spacer + Ticker + Spacer ===== */}
+      <div className="flex-1 md:hidden" />
+      <div className="md:hidden w-full bg-black text-white overflow-hidden py-3 flex-shrink-0">
         <div
-          className="whitespace-nowrap animate-marquee text-[11px] leading-[1.4em] font-normal"
+          className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
         >
-          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+        </div>
+      </div>
+      <div className="flex-1 md:hidden" />
+
+      {/* ===== MOBILE: Reservieren fixed am unteren Rand ===== */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white pb-[env(safe-area-inset-bottom)]">
+        <div className="flex items-center justify-center h-[50px]">
+          <button
+            onClick={() => setReserveOpen(true)}
+            className="border border-black/20 text-black px-5 py-2 text-[12px] tracking-[0.15em] uppercase hover:border-black/50 transition-all duration-300"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            Reservieren
+          </button>
         </div>
       </div>
 
-      {/* ===== BOTTOM: Footer nav (arc: 5-col grid, links in cols 1-4, 90px height, sticky on tablet) ===== */}
-      <footer className="flex-shrink-0 flex items-center justify-end md:grid md:grid-cols-6 md:items-center md:justify-items-center mt-10 md:mt-0 h-[70px] md:h-[60px] lg:h-[90px] px-6 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
+      {/* ===== DESKTOP: Footer nav ===== */}
+      <footer className="hidden md:grid md:grid-cols-6 md:items-center md:justify-items-center h-[60px] lg:h-[90px] px-6 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
         <div className="hidden md:block">
           <a
             href="/karte"
