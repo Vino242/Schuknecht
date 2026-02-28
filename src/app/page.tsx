@@ -62,20 +62,9 @@ export default function Home() {
   return (
     <div className="min-h-screen w-screen bg-white text-black flex flex-col pb-[70px] md:pb-0">
       {/* ===== TOP: Logo bar ===== */}
-      <div className="flex-shrink-0 relative flex items-center md:justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        {/* Logo left (mobile) / right (desktop) */}
-        <a href="/" className="relative h-[35px] w-[35px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
-          <Image
-            src="/logo.png"
-            alt="Schu Knecht Logo"
-            fill
-            className="object-contain"
-            priority
-          />
-        </a>
-
+      <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
         {/* Mobile hamburger — centered */}
-        <div className="md:hidden flex-1 flex justify-center">
+        <div className="md:hidden absolute left-1/2 -translate-x-1/2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
@@ -92,6 +81,17 @@ export default function Home() {
             </svg>
           </button>
         </div>
+
+        {/* Logo right */}
+        <a href="/" className="relative h-[35px] w-[35px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
+          <Image
+            src="/logo.png"
+            alt="Schu Knecht Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </a>
       </div>
 
       {/* Mobile menu overlay */}
@@ -119,8 +119,8 @@ export default function Home() {
       <div
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-[8px] md:gap-[19px] px-4 md:px-10 lg:px-16"
       >
-        {/* Image slideshow (mobile: first/left 3 cols, desktop: right 2 cols) */}
-        <div className="col-span-3 md:col-span-2 md:order-2 relative aspect-[2/3] md:aspect-auto md:min-h-[120vh]">
+        {/* Image slideshow (mobile: right 3 cols, desktop: right 2 cols) */}
+        <div className="col-span-3 md:col-span-2 order-2 relative aspect-[2/3] md:aspect-auto md:min-h-[120vh]">
           {slideshowImages.map((src, index) => (
             <Image
               key={src}
@@ -136,7 +136,7 @@ export default function Home() {
         </div>
 
         {/* Title + ticker (mobile: right 2 cols, desktop: left 3 cols) */}
-        <div className="col-span-2 md:col-span-3 md:order-1 flex flex-col items-start pt-0">
+        <div className="col-span-2 md:col-span-3 order-1 flex flex-col items-start pt-4 md:pt-0">
           <h1
             className="text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif" }}
@@ -167,8 +167,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===== MOBILE: Spacer + Ticker + Spacer ===== */}
-      <div className="flex-1 md:hidden" />
+      {/* ===== MOBILE: Spacer + Ticker + Spacer (1:2 ratio = ticker higher) ===== */}
+      <div className="flex-[1] md:hidden" />
       <div className="md:hidden w-full bg-black text-white overflow-hidden py-3 flex-shrink-0">
         <div
           className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
@@ -177,7 +177,7 @@ export default function Home() {
           Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
         </div>
       </div>
-      <div className="flex-1 md:hidden" />
+      <div className="flex-[2] md:hidden" />
 
       {/* ===== MOBILE: Reservieren fixed am unteren Rand ===== */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white pb-[env(safe-area-inset-bottom)]">
