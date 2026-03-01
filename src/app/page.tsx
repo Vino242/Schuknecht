@@ -47,13 +47,13 @@ export default function Home() {
   }, [splashPhase]);
 
   return (
-    <div className="h-screen overflow-hidden md:h-auto md:min-h-screen md:overflow-visible w-screen bg-white text-black flex flex-col md:pb-0">
+    <div className="h-screen overflow-hidden md:h-auto md:min-h-screen md:overflow-visible w-screen bg-[#f2efe8] text-black flex flex-col md:pb-0">
       {/* ===== SPLASH OVERLAY ===== */}
       {splashPhase !== "done" && (
         <>
           {/* Weißer Hintergrund – fadet beim Slide aus */}
           <div
-            className={`fixed inset-0 z-50 bg-white pointer-events-none transition-opacity duration-700 ${
+            className={`fixed inset-0 z-50 bg-[#f2efe8] pointer-events-none transition-opacity duration-700 ${
               splashPhase === "slide" ? "opacity-0" : "opacity-100"
             }`}
           />
@@ -76,10 +76,9 @@ export default function Home() {
       )}
 
       {/* ===== TOP: Logo bar ===== */}
-      <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        <MobileNav />
-        {/* Logo right */}
-        <a ref={logoRef} href="/" className={`relative h-[50px] w-[50px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 ${splashPhase !== "done" ? "invisible" : ""}`}>
+      <div className="flex-shrink-0 relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
+        {/* Logo left */}
+        <a ref={logoRef} href="/" className={`relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 ${splashPhase !== "done" ? "invisible" : ""}`}>
           <Image
             src="/logo.png"
             alt="Schu Knecht Logo"
@@ -88,6 +87,7 @@ export default function Home() {
             priority
           />
         </a>
+        <MobileNav />
       </div>
 
       {/* ===== CENTER: 5-column grid, image in columns 4-5 (arc style) ===== */}
@@ -95,7 +95,7 @@ export default function Home() {
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
         {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
-        <div className="col-span-4 md:col-span-2 order-2 relative aspect-[3/4] md:aspect-auto md:min-h-[120vh]">
+        <div className="col-span-5 md:col-span-2 order-2 relative aspect-[3/4] md:aspect-auto md:min-h-[120vh]">
           {slideshowImages.map((src, index) => (
             <Image
               key={src}
@@ -111,19 +111,7 @@ export default function Home() {
         </div>
 
         {/* Title + ticker (mobile: 1 col vertical, desktop: left 3 cols) */}
-        <div className="col-span-1 md:col-span-3 order-1 flex flex-col items-start justify-end md:justify-start md:pt-0">
-          {/* Mobile: vertical SCHUKNECHT */}
-          <h1
-            className="md:hidden font-bold tracking-[0.3em] uppercase text-black"
-            style={{
-              writingMode: 'vertical-rl',
-              transform: 'rotate(180deg)',
-              fontFamily: "'Futura Bold', sans-serif",
-              fontSize: 'clamp(1.8rem, 6vw, 2.8rem)',
-            }}
-          >
-            SCHUKNECHT
-          </h1>
+        <div className="hidden md:flex col-span-3 order-1 flex-col items-start md:pt-0">
           {/* Desktop: horizontal SCHUKNECHT */}
           <h1
             className="hidden md:block text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
@@ -166,7 +154,7 @@ export default function Home() {
       <div className="flex-[2] md:hidden" />
 
       {/* ===== DESKTOP: Footer nav ===== */}
-      <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
+      <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-[#f2efe8] z-40">
         <div className="hidden md:block">
           <a
             href="/karte"
