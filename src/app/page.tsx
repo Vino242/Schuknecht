@@ -47,7 +47,7 @@ export default function Home() {
   }, [splashPhase]);
 
   return (
-    <div className="h-screen overflow-hidden md:h-auto md:min-h-screen md:overflow-visible w-screen bg-[#f2efe8] text-black flex flex-col md:pb-0">
+    <div className="h-screen overflow-hidden md:h-auto md:min-h-screen md:overflow-visible w-full bg-[#f2efe8] text-black flex flex-col md:pb-0">
       {/* ===== SPLASH OVERLAY ===== */}
       {splashPhase !== "done" && (
         <>
@@ -141,9 +141,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===== MOBILE: Spacer + Ticker + Spacer (1:2 ratio = ticker higher) ===== */}
-      <div className="flex-[1] md:hidden" />
-      <div className="md:hidden mx-4 text-white overflow-hidden py-3 flex-shrink-0" style={{ backgroundColor: "rgb(207, 46, 46)" }}>
+      {/* ===== MOBILE: Ticker ===== */}
+      <div className="md:hidden mx-4 mt-6 text-white overflow-hidden py-3 flex-shrink-0" style={{ backgroundColor: "rgb(207, 46, 46)" }}>
         <div
           className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
