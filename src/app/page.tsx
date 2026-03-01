@@ -5,10 +5,14 @@ import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
 const slideshowImages = [
-  "/Bild1.png",
-  "/SnapInsta.to_619267563_18309907135266547_7588622597534957389_n.jpg",
-  "/SnapInsta.to_621663790_18310873372266547_8744142021882896224_n.jpg",
-  "/SnapInsta.to_631810161_18312997990266547_8809735527891804484_n.jpg",
+  { src: "/Bild1.png", position: "object-center" },
+  { src: "/IMG_4615.jpg", position: "object-top" },
+  { src: "/SnapInsta.to_619267563_18309907135266547_7588622597534957389_n.jpg", position: "object-center" },
+  { src: "/IMG_4617.jpg", position: "object-center" },
+  { src: "/SnapInsta.to_621663790_18310873372266547_8744142021882896224_n.jpg", position: "object-center" },
+  { src: "/IMG_4618.jpg", position: "object-top" },
+  { src: "/Gemini_Generated_Image_ip59b0ip59b0ip59.png", position: "object-center" },
+  { src: "/SnapInsta.to_631810161_18312997990266547_8809735527891804484_n.jpg", position: "object-center" },
 ];
 
 export default function Home() {
@@ -22,7 +26,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, [nextSlide]);
 
@@ -95,14 +99,14 @@ export default function Home() {
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
         {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
-        <div className="col-span-5 md:col-span-2 order-2 relative aspect-[3/4] max-h-[55vh] md:max-h-none md:aspect-auto md:min-h-[120vh]">
-          {slideshowImages.map((src, index) => (
+        <div className="col-span-5 md:col-span-2 order-2 relative h-[55vh] md:h-auto md:min-h-[120vh] overflow-hidden">
+          {slideshowImages.map((img, index) => (
             <Image
-              key={src}
-              src={src}
+              key={img.src}
+              src={img.src}
               alt={`Schuknecht ${index + 1}`}
               fill
-              className={`object-cover object-bottom transition-opacity duration-1000 ${
+              className={`object-cover ${img.position} transition-opacity duration-1000 ${
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
               priority={index === 0}
@@ -130,7 +134,7 @@ export default function Home() {
           </h2>
 
           {/* Marquee ticker (desktop only — inside left column) */}
-          <div className="hidden md:block mt-52 w-[85%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "rgb(207, 46, 46)" }}>
+          <div className="hidden md:block mt-52 w-[85%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "black" }}>
             <div
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
@@ -142,7 +146,7 @@ export default function Home() {
       </div>
 
       {/* ===== MOBILE: Ticker ===== */}
-      <div className="md:hidden mx-4 mt-6 text-white overflow-hidden py-3 flex-shrink-0" style={{ backgroundColor: "rgb(207, 46, 46)" }}>
+      <div className="md:hidden mx-4 mt-6 text-white overflow-hidden py-3 flex-shrink-0" style={{ backgroundColor: "black" }}>
         <div
           className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
