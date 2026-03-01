@@ -17,7 +17,7 @@ export default function MobileNav() {
   return (
     <>
       {/* Burger button */}
-      <div className="md:hidden absolute left-4">
+      <div className="md:hidden absolute left-6">
         <button
           onClick={() => setOpen(!open)}
           aria-expanded={open}
