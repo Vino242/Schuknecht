@@ -76,10 +76,10 @@ export default function Home() {
       )}
 
       {/* ===== TOP: Logo bar ===== */}
-      <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
+      <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
         <MobileNav />
         {/* Logo right */}
-        <a ref={logoRef} href="/" className={`relative h-[35px] w-[35px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 ${splashPhase !== "done" ? "invisible" : ""}`}>
+        <a ref={logoRef} href="/" className={`relative h-[50px] w-[50px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 ${splashPhase !== "done" ? "invisible" : ""}`}>
           <Image
             src="/logo.png"
             alt="Schu Knecht Logo"
@@ -92,17 +92,17 @@ export default function Home() {
 
       {/* ===== CENTER: 5-column grid, image in columns 4-5 (arc style) ===== */}
       <div
-        className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16"
+        className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
         {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
-        <div className="col-span-4 md:col-span-2 order-2 relative aspect-[2/3] md:aspect-auto md:min-h-[120vh]">
+        <div className="col-span-4 md:col-span-2 order-2 relative aspect-[3/4] md:aspect-auto md:min-h-[120vh]">
           {slideshowImages.map((src, index) => (
             <Image
               key={src}
               src={src}
               alt={`Schuknecht ${index + 1}`}
               fill
-              className={`object-cover object-center transition-opacity duration-1000 ${
+              className={`object-cover object-bottom transition-opacity duration-1000 ${
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
               priority={index === 0}

@@ -24,9 +24,9 @@ export default function MobileNav() {
           aria-label="menu"
           style={{ color: "rgb(207, 46, 46)" }}
         >
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
             <path
-              d="M3 6.5h18M3 12h18M3 17.5h18"
+              d="M0 5h22M0 11h22M0 17h22"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
