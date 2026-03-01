@@ -20,6 +20,8 @@ export default function Home() {
   const [splashPhase, setSplashPhase] = useState<"center" | "slide" | "done">("center");
   const logoRef = useRef<HTMLAnchorElement>(null);
   const [logoTarget, setLogoTarget] = useState<{ top: number; left: number; width: number; height: number } | null>(null);
+  const mobileTextRef = useRef<HTMLDivElement>(null);
+  const [mobileTextVisible, setMobileTextVisible] = useState(false);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
@@ -50,14 +52,26 @@ export default function Home() {
     }
   }, [splashPhase]);
 
+  // Intersection Observer für mobile Text-Animation
+  useEffect(() => {
+    const el = mobileTextRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setMobileTextVisible(true); },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="h-screen overflow-hidden md:h-auto md:min-h-screen md:overflow-visible w-full bg-[#f2efe8] text-black flex flex-col md:pb-0">
+    <div className="w-full bg-white text-black md:pb-0">
       {/* ===== SPLASH OVERLAY ===== */}
       {splashPhase !== "done" && (
         <>
           {/* Weißer Hintergrund – fadet beim Slide aus */}
           <div
-            className={`fixed inset-0 z-50 bg-[#f2efe8] pointer-events-none transition-opacity duration-700 ${
+            className={`fixed inset-0 z-50 bg-white pointer-events-none transition-opacity duration-700 ${
               splashPhase === "slide" ? "opacity-0" : "opacity-100"
             }`}
           />
@@ -79,10 +93,13 @@ export default function Home() {
         </>
       )}
 
+      {/* ===== First viewport (mobile) ===== */}
+      <div className="h-screen flex flex-col md:h-auto md:min-h-screen">
+
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        {/* Logo left */}
-        <a ref={logoRef} href="/" className={`relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 ${splashPhase !== "done" ? "invisible" : ""}`}>
+        {/* Logo: left on mobile, right on desktop */}
+        <a ref={logoRef} href="/" className={`relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 md:order-2 ${splashPhase !== "done" ? "invisible" : ""}`}>
           <Image
             src="/logo.png"
             alt="Schu Knecht Logo"
@@ -91,6 +108,7 @@ export default function Home() {
             priority
           />
         </a>
+        <div className="hidden md:block md:flex-1" />
         <MobileNav />
       </div>
 
@@ -157,7 +175,7 @@ export default function Home() {
       <div className="flex-[2] md:hidden" />
 
       {/* ===== DESKTOP: Footer nav ===== */}
-      <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-[#f2efe8] z-40">
+      <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
         <div className="hidden md:block">
           <a
             href="/karte"
@@ -204,6 +222,25 @@ export default function Home() {
           </a>
         </div>
       </footer>
+      </div>
+
+      {/* ===== MOBILE: Text below fold ===== */}
+      <div ref={mobileTextRef} className="md:hidden px-6 py-10">
+        {["Mit viel Gespür für Qualität, saisonale Vielfalt und rein vegetarischer sowie veganer Küche ist das Schuknecht ein lebendiger Treffpunkt – vom kreativen Frühstück bis zu entspannten Sommerabenden mit besonderen Drinks."].map((text, i) => (
+          <p
+            key={i}
+            className="text-[14px] leading-[1.6em] font-light transition-all duration-500 ease-out"
+            style={{
+              fontFamily: "'Futura Medium', sans-serif",
+              transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
+              opacity: mobileTextVisible ? 1 : 0,
+              transitionDelay: mobileTextVisible ? `${i * 120}ms` : '0ms',
+            }}
+          >
+            {text}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

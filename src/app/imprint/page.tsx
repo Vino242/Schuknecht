@@ -5,10 +5,10 @@ import MobileNav from "@/components/MobileNav";
 
 export default function Imprint() {
   return (
-    <div className="min-h-screen w-screen bg-[#f2efe8] text-black flex flex-col">
+    <div className="min-h-screen w-screen bg-white text-black flex flex-col">
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        <a href="/" className="relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
+        <a href="/" className="relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 md:order-2">
           <Image
             src="/logo.png"
             alt="Schu Knecht Logo"
@@ -17,6 +17,7 @@ export default function Imprint() {
             priority
           />
         </a>
+        <div className="hidden md:block md:flex-1" />
         <MobileNav />
       </div>
 

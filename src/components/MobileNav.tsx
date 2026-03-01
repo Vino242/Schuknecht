@@ -48,7 +48,7 @@ export default function MobileNav() {
         className={`md:hidden fixed inset-0 z-50 flex flex-col transition-all duration-500 ease-in-out ${
           open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
-        style={{ backgroundColor: "#f2efe8" }}
+        style={{ backgroundColor: "white" }}
       >
         {/* Logo in nav */}
         <div className="px-4 min-h-[70px] flex items-center">
