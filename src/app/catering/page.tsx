@@ -22,11 +22,10 @@ export default function Catering() {
   }, [nextSlide]);
 
   return (
-    <div className="min-h-screen w-screen bg-white text-black flex flex-col">
+    <div className="min-h-screen w-screen bg-[#f2efe8] text-black flex flex-col">
       {/* ===== TOP: Logo bar ===== */}
-      <div className="flex-shrink-0 relative flex items-center justify-end px-4 md:px-10 lg:px-16 min-h-[50px] max-h-[50px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
-        <MobileNav />
-        <a href="/" className="relative h-[35px] w-[35px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
+      <div className="flex-shrink-0 relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
+        <a href="/" className="relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0">
           <Image
             src="/logo.png"
             alt="Schu Knecht Logo"
@@ -35,6 +34,7 @@ export default function Catering() {
             priority
           />
         </a>
+        <MobileNav />
       </div>
 
       {/* ===== CENTER: 5-column grid ===== */}

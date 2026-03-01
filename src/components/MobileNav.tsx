@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
-  { label: "home", href: "/" },
-  { label: "menü", href: "/karte" },
-  { label: "catering", href: "/catering" },
-  { label: "schuki", href: "/menu" },
-  { label: "kontakt", href: "/contact" },
-  { label: "impressum", href: "/imprint" },
+{ label: "Menü", href: "/karte" },
+  { label: "Catering", href: "/catering" },
+  { label: "Schuki", href: "/menu" },
+{ label: "Impressum", href: "/imprint" },
 ];
 
 export default function MobileNav() {
@@ -17,60 +16,91 @@ export default function MobileNav() {
   return (
     <>
       {/* Burger button */}
-      <div className="md:hidden absolute left-6">
+      <div className="md:hidden absolute right-4 z-[60]">
         <button
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label="menu"
-          style={{ color: "rgb(207, 46, 46)" }}
         >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <path
-              d="M0 5h22M0 11h22M0 17h22"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
+          <div className="relative w-[32px] h-[10px]">
+            <div
+              className="absolute w-full h-[1.5px] transition-all duration-300 ease-in-out"
+              style={{
+                backgroundColor: "black",
+                top: open ? '4px' : '0px',
+                transform: open ? 'rotate(45deg)' : 'rotate(0deg)',
+              }}
             />
-          </svg>
+            <div
+              className="absolute w-full h-[1.5px] transition-all duration-300 ease-in-out"
+              style={{
+                backgroundColor: "black",
+                bottom: open ? '4px' : '0px',
+                transform: open ? 'rotate(-45deg)' : 'rotate(0deg)',
+              }}
+            />
+          </div>
         </button>
       </div>
 
-      {/* Dark backdrop */}
+      {/* Fullscreen overlay */}
       <div
-        className={`md:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${
-          open ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`md:hidden fixed inset-0 z-50 flex flex-col transition-all duration-500 ease-in-out ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
-        onClick={() => setOpen(false)}
-      />
-
-      {/* Side drawer */}
-      <div
-        className={`md:hidden fixed top-0 left-0 z-50 w-2/3 h-full px-8 py-20 flex flex-col justify-center transition-transform duration-300 ease-in-out ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
-        style={{ backgroundColor: "rgb(207, 46, 46)" }}
+        style={{ backgroundColor: "#f2efe8" }}
       >
-        <button
-          onClick={() => setOpen(false)}
-          aria-label="Menü schließen"
-          className="absolute top-6 right-6 text-white hover:opacity-70 transition-opacity"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-          </svg>
-        </button>
-        <nav className="flex flex-col gap-5">
-          {navLinks.map((link) => (
-            <a
+        {/* Logo in nav */}
+        <div className="px-4 min-h-[70px] flex items-center">
+          <a href="/" className="relative h-[60px] w-[60px]">
+            <Image src="/logo.png" alt="Schu Knecht Logo" fill className="object-contain" />
+          </a>
+        </div>
+
+        {/* Nav links */}
+        <nav className="flex flex-col px-6 pt-10">
+          {navLinks.map((link, i) => (
+            <div
               key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="text-[15px] tracking-[0.08em] uppercase text-white hover:opacity-70 transition-opacity"
-              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+              className="transition-all duration-500 ease-out border-b border-black"
+              style={{
+                transform: open ? 'translate(0px, 0px)' : 'translate(0px, 20px)',
+                opacity: open ? 1 : 0,
+                transitionDelay: open ? `${i * 120}ms` : '0ms',
+              }}
             >
-              {link.label}
-            </a>
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block py-4 text-[clamp(2rem,8vw,3.5rem)] leading-[1.1] text-black hover:opacity-50 transition-opacity duration-300"
+                style={{ fontFamily: "'Futura Bold', sans-serif" }}
+              >
+                {link.label}
+              </a>
+            </div>
           ))}
+
+          {/* Kontakt Button */}
+          <div
+            className="mt-8 transition-all duration-500 ease-out"
+            style={{
+              transform: open ? 'translate(0px, 0px)' : 'translate(0px, 20px)',
+              opacity: open ? 1 : 0,
+              transitionDelay: open ? `${navLinks.length * 120}ms` : '0ms',
+            }}
+          >
+            <a
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="inline-block px-6 py-3 text-[clamp(1rem,4vw,1.4rem)] text-white hover:opacity-80 transition-opacity duration-300"
+              style={{
+                fontFamily: "'Futura Bold', sans-serif",
+                backgroundColor: "rgb(207, 46, 46)",
+              }}
+            >
+              Kontakt
+            </a>
+          </div>
         </nav>
       </div>
     </>
