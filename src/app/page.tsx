@@ -34,7 +34,7 @@ export default function Home() {
         setLogoTarget({ top: rect.top, left: rect.left, width: rect.width, height: rect.height });
       }
       setSplashPhase("slide");
-    }, 1500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -94,8 +94,8 @@ export default function Home() {
       <div
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-[8px] md:gap-[19px] px-4 md:px-10 lg:px-16"
       >
-        {/* Image slideshow (mobile: right 3 cols, desktop: right 2 cols) */}
-        <div className="col-span-3 md:col-span-2 order-2 relative aspect-[2/3] md:aspect-auto md:min-h-[120vh]">
+        {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
+        <div className="col-span-4 md:col-span-2 order-2 relative aspect-[2/3] md:aspect-auto md:min-h-[120vh]">
           {slideshowImages.map((src, index) => (
             <Image
               key={src}
@@ -110,19 +110,30 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Title + ticker (mobile: right 2 cols, desktop: left 3 cols) */}
-        <div className="col-span-2 md:col-span-3 order-1 flex flex-col items-start pt-4 md:pt-0">
+        {/* Title + ticker (mobile: 1 col vertical, desktop: left 3 cols) */}
+        <div className="col-span-1 md:col-span-3 order-1 flex flex-col items-start md:pt-0">
+          {/* Mobile: vertical SCHUKNECHT */}
           <h1
-            className="text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
-            style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            className="md:hidden font-bold tracking-[0.3em] uppercase text-black"
+            style={{
+              writingMode: 'vertical-rl',
+              transform: 'rotate(180deg)',
+              fontFamily: "'Futura Bold', sans-serif",
+              fontSize: 'clamp(1.4rem, 5vw, 2.2rem)',
+            }}
           >
-            SCHU
-            <br />
-            KNECHT
+            SCHUKNECHT
+          </h1>
+          {/* Desktop: horizontal SCHUKNECHT */}
+          <h1
+            className="hidden md:block text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
+            style={{ fontFamily: "'Futura Bold', sans-serif", transform: "scaleY(1.08)" }}
+          >
+            SCHUKNECH<span className="serif-foot">T</span>
           </h1>
           <h2
-            className="hidden md:block mt-6 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="hidden md:block mt-6 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[560px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Mit viel Gespür für Qualität, saisonale Vielfalt und rein
             vegetarischer sowie veganer Küche ist das Schuknecht ein lebendiger
@@ -131,7 +142,7 @@ export default function Home() {
           </h2>
 
           {/* Marquee ticker (desktop only — inside left column) */}
-          <div className="hidden md:block mt-16 w-[75%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "rgb(207, 46, 46)" }}>
+          <div className="hidden md:block mt-52 w-[85%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "rgb(207, 46, 46)" }}>
             <div
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
@@ -155,7 +166,7 @@ export default function Home() {
       <div className="flex-[2] md:hidden" />
 
       {/* ===== DESKTOP: Footer nav ===== */}
-      <footer className="hidden md:flex md:items-center md:gap-20 lg:gap-28 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
+      <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
         <div className="hidden md:block">
           <a
             href="/karte"
