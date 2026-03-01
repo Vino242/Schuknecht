@@ -111,10 +111,10 @@ export default function Home() {
 
       {/* ===== CENTER: 5-column grid, image in columns 4-5 (arc style) ===== */}
       <div
-        className="md:flex-1 min-h-0 grid grid-cols-5 gap-3 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
+        className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
         {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
-        <div className="col-span-2 order-2 relative h-[30vh] md:h-auto md:min-h-[120vh] overflow-hidden">
+        <div className="col-span-5 md:col-span-2 order-2 relative h-[55vh] md:h-auto md:min-h-[120vh] overflow-hidden">
           {slideshowImages.map((img, index) => (
             <Image
               key={img.src}
@@ -130,10 +130,10 @@ export default function Home() {
         </div>
 
         {/* Title + ticker (mobile: 1 col vertical, desktop: left 3 cols) */}
-        <div className="flex col-span-3 order-1 flex-col items-start justify-start md:pt-0">
+        <div className="hidden md:flex col-span-3 order-1 flex-col items-start md:pt-0">
           {/* Desktop: horizontal SCHUKNECHT */}
           <h1
-            className="text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
+            className="hidden md:block text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif", transform: "scaleY(1.08)" }}
           >
             SCHUKNECH<span className="serif-foot">T</span>
@@ -157,6 +157,16 @@ export default function Home() {
               Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* ===== MOBILE: Ticker ===== */}
+      <div className="md:hidden mx-4 mt-6 text-white overflow-hidden py-3 flex-shrink-0" style={{ backgroundColor: "black" }}>
+        <div
+          className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
+          style={{ fontFamily: "'Futura Medium', sans-serif" }}
+        >
+          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
         </div>
       </div>
 
@@ -210,28 +220,20 @@ export default function Home() {
       </footer>
       </div>
 
-      {/* ===== MOBILE: Below fold (ticker + text) ===== */}
-      <div ref={mobileTextRef} className="md:hidden pb-12">
-        {/* Ticker */}
-        <div
-          className="mx-4 mt-6 text-white overflow-hidden py-3 transition-all duration-500 ease-out"
+      {/* ===== MOBILE: Text below fold ===== */}
+      <div ref={mobileTextRef} className="md:hidden px-6 pt-8 pb-12">
+        <h2
+          className="text-[clamp(2rem,8vw,3.5rem)] leading-[1.1] font-bold uppercase tracking-[-0.02em] transition-all duration-500 ease-out"
           style={{
-            backgroundColor: "black",
+            fontFamily: "'Futura Bold', sans-serif",
             transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
             opacity: mobileTextVisible ? 1 : 0,
           }}
         >
-          <div
-            className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
-            style={{ fontFamily: "'Futura Medium', sans-serif" }}
-          >
-            Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
-          </div>
-        </div>
-
-        {/* Beschreibung */}
+          SCHUKNECH<span className="serif-foot">T</span>
+        </h2>
         <p
-          className="mx-6 mt-8 text-[14px] leading-[1.6em] font-light transition-all duration-500 ease-out"
+          className="mt-5 text-[14px] leading-[1.6em] font-light transition-all duration-500 ease-out"
           style={{
             fontFamily: "'Futura Medium', sans-serif",
             transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
@@ -244,7 +246,7 @@ export default function Home() {
 
         {/* Kontakt */}
         <div
-          className="mx-6 mt-10 transition-all duration-500 ease-out"
+          className="mt-10 transition-all duration-500 ease-out"
           style={{
             transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
             opacity: mobileTextVisible ? 1 : 0,
@@ -262,7 +264,7 @@ export default function Home() {
 
         {/* Adresse & Zeiten */}
         <div
-          className="mx-6 mt-8 text-[13px] leading-[1.8em] transition-all duration-500 ease-out"
+          className="mt-8 text-[13px] leading-[1.8em] transition-all duration-500 ease-out"
           style={{
             fontFamily: "'Futura Medium', sans-serif",
             transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
