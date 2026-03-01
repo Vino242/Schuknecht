@@ -169,7 +169,7 @@ export default function Home() {
           Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
         </div>
       </div>
-      <div className="flex-[2] md:hidden" />
+      <div className="flex-1 md:hidden" />
 
       {/* ===== DESKTOP: Footer nav ===== */}
       <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
@@ -222,21 +222,61 @@ export default function Home() {
       </div>
 
       {/* ===== MOBILE: Text below fold ===== */}
-      <div ref={mobileTextRef} className="md:hidden px-6 py-10">
-        {["Mit viel Gespür für Qualität, saisonale Vielfalt und rein vegetarischer sowie veganer Küche ist das Schuknecht ein lebendiger Treffpunkt – vom kreativen Frühstück bis zu entspannten Sommerabenden mit besonderen Drinks."].map((text, i) => (
-          <p
-            key={i}
-            className="text-[14px] leading-[1.6em] font-light transition-all duration-500 ease-out"
-            style={{
-              fontFamily: "'Futura Medium', sans-serif",
-              transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
-              opacity: mobileTextVisible ? 1 : 0,
-              transitionDelay: mobileTextVisible ? `${i * 120}ms` : '0ms',
-            }}
+      <div ref={mobileTextRef} className="md:hidden px-6 pt-8 pb-12">
+        <h2
+          className="text-[clamp(2rem,8vw,3.5rem)] leading-[1.1] font-bold uppercase tracking-[-0.02em] transition-all duration-500 ease-out"
+          style={{
+            fontFamily: "'Futura Bold', sans-serif",
+            transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
+            opacity: mobileTextVisible ? 1 : 0,
+          }}
+        >
+          SCHUKNECH<span className="serif-foot">T</span>
+        </h2>
+        <p
+          className="mt-5 text-[14px] leading-[1.6em] font-light transition-all duration-500 ease-out"
+          style={{
+            fontFamily: "'Futura Medium', sans-serif",
+            transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
+            opacity: mobileTextVisible ? 1 : 0,
+            transitionDelay: mobileTextVisible ? '120ms' : '0ms',
+          }}
+        >
+          Mit viel Gespür für Qualität, saisonale Vielfalt und rein vegetarischer sowie veganer Küche ist das Schuknecht ein lebendiger Treffpunkt – vom kreativen Frühstück bis zu entspannten Sommerabenden mit besonderen Drinks.
+        </p>
+
+        {/* Kontakt */}
+        <div
+          className="mt-10 transition-all duration-500 ease-out"
+          style={{
+            transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
+            opacity: mobileTextVisible ? 1 : 0,
+            transitionDelay: mobileTextVisible ? '240ms' : '0ms',
+          }}
+        >
+          <a
+            href="/contact"
+            className="inline-block px-6 py-3 text-[14px] tracking-[0.1em] uppercase text-white hover:opacity-80 transition-opacity duration-300"
+            style={{ fontFamily: "'Futura Bold', sans-serif", backgroundColor: "black" }}
           >
-            {text}
-          </p>
-        ))}
+            Kontakt
+          </a>
+        </div>
+
+        {/* Adresse & Zeiten */}
+        <div
+          className="mt-8 text-[13px] leading-[1.8em] transition-all duration-500 ease-out"
+          style={{
+            fontFamily: "'Futura Medium', sans-serif",
+            transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
+            opacity: mobileTextVisible ? 1 : 0,
+            transitionDelay: mobileTextVisible ? '360ms' : '0ms',
+          }}
+        >
+          <p>Schuknechtstr. 1, Darmstadt 64289</p>
+          <p className="mt-2 opacity-50">So — Mi &nbsp; 09:30 — 20:00</p>
+          <p className="opacity-50">Do — Sa &nbsp; 09:30 — 00:00</p>
+        </div>
       </div>
     </div>
   );
