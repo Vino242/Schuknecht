@@ -24,11 +24,11 @@ export default function MobileNav() {
           aria-label="menu"
           style={{ color: "rgb(207, 46, 46)" }}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
             <path
               d="M3 6.5h18M3 12h18M3 17.5h18"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="2"
               strokeLinecap="round"
             />
           </svg>

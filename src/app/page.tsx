@@ -92,7 +92,7 @@ export default function Home() {
 
       {/* ===== CENTER: 5-column grid, image in columns 4-5 (arc style) ===== */}
       <div
-        className="md:flex-1 min-h-0 grid grid-cols-5 gap-[8px] md:gap-[19px] px-4 md:px-10 lg:px-16"
+        className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16"
       >
         {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
         <div className="col-span-4 md:col-span-2 order-2 relative aspect-[2/3] md:aspect-auto md:min-h-[120vh]">
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
 
         {/* Title + ticker (mobile: 1 col vertical, desktop: left 3 cols) */}
-        <div className="col-span-1 md:col-span-3 order-1 flex flex-col items-start md:pt-0">
+        <div className="col-span-1 md:col-span-3 order-1 flex flex-col items-start justify-end md:justify-start md:pt-0">
           {/* Mobile: vertical SCHUKNECHT */}
           <h1
             className="md:hidden font-bold tracking-[0.3em] uppercase text-black"
@@ -119,7 +119,7 @@ export default function Home() {
               writingMode: 'vertical-rl',
               transform: 'rotate(180deg)',
               fontFamily: "'Futura Bold', sans-serif",
-              fontSize: 'clamp(1.4rem, 5vw, 2.2rem)',
+              fontSize: 'clamp(1.8rem, 6vw, 2.8rem)',
             }}
           >
             SCHUKNECHT
