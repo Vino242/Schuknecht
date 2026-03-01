@@ -5,11 +5,11 @@ import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
 const slideshowImages = [
-  { src: "/Gemini_Generated_Image_hsp5zihsp5zihsp5.png", position: "object-center" },
+  { src: "/Gemini_Generated_Image_hsp5zihsp5zihsp5.png", position: "object-top md:object-center" },
   { src: "/IMG_4618.jpg", position: "object-top" },
-  { src: "/Gemini_Generated_Image_k77bqak77bqak77b.png", position: "object-center" },
+  { src: "/Gemini_Generated_Image_k77bqak77bqak77b.png", position: "object-top md:object-center" },
   { src: "/img11.jpg", position: "object-top" },
-  { src: "/Gemini_Generated_Image_nv4tqanv4tqanv4t.png", position: "object-center" },
+  { src: "/Gemini_Generated_Image_nv4tqanv4tqanv4t.png", position: "object-top md:object-center" },
 ];
 
 export default function Home() {
@@ -94,7 +94,7 @@ export default function Home() {
       <div className="flex flex-col md:min-h-screen">
 
       {/* ===== TOP: Logo bar ===== */}
-      <div className="flex-shrink-0 relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
+      <div className="flex-shrink-0 sticky top-0 z-40 bg-white relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
         {/* Logo: left on mobile, right on desktop */}
         <a ref={logoRef} href="/" className={`relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 md:order-2 ${splashPhase !== "done" ? "invisible" : ""}`}>
           <Image
