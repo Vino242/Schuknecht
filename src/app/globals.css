@@ -22,7 +22,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 40 20% 97%;
     --foreground: 0 0% 0%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 0%;
@@ -84,4 +84,13 @@ html {
 
 .animate-marquee-mobile {
   animation: marquee-mobile 15s linear infinite;
+}
+
+@keyframes spin-once {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-once {
+  animation: spin-once 1s ease-in-out;
 }
