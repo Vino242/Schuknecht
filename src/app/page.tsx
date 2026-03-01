@@ -5,14 +5,11 @@ import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
 const slideshowImages = [
-  { src: "/Bild1.png", position: "object-center" },
-  { src: "/IMG_4615.jpg", position: "object-top" },
-  { src: "/SnapInsta.to_619267563_18309907135266547_7588622597534957389_n.jpg", position: "object-center" },
-  { src: "/IMG_4617.jpg", position: "object-center" },
-  { src: "/SnapInsta.to_621663790_18310873372266547_8744142021882896224_n.jpg", position: "object-center" },
+  { src: "/Gemini_Generated_Image_hsp5zihsp5zihsp5.png", position: "object-center" },
   { src: "/IMG_4618.jpg", position: "object-top" },
-  { src: "/Gemini_Generated_Image_ip59b0ip59b0ip59.png", position: "object-center" },
-  { src: "/SnapInsta.to_631810161_18312997990266547_8809735527891804484_n.jpg", position: "object-center" },
+  { src: "/Gemini_Generated_Image_k77bqak77bqak77b.png", position: "object-center" },
+  { src: "/img11.jpg", position: "object-top" },
+  { src: "/Gemini_Generated_Image_nv4tqanv4tqanv4t.png", position: "object-center" },
 ];
 
 export default function Home() {
