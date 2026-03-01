@@ -91,7 +91,7 @@ export default function Home() {
       )}
 
       {/* ===== First viewport (mobile) ===== */}
-      <div className="h-screen flex flex-col md:h-auto md:min-h-screen">
+      <div className="flex flex-col md:min-h-screen">
 
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
@@ -169,7 +169,6 @@ export default function Home() {
           Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
         </div>
       </div>
-      <div className="flex-1 md:hidden" />
 
       {/* ===== DESKTOP: Footer nav ===== */}
       <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
