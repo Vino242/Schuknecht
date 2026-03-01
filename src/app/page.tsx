@@ -95,7 +95,7 @@ export default function Home() {
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
         {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
-        <div className="col-span-5 md:col-span-2 order-2 relative aspect-[3/4] md:aspect-auto md:min-h-[120vh]">
+        <div className="col-span-5 md:col-span-2 order-2 relative aspect-[3/4] max-h-[55vh] md:max-h-none md:aspect-auto md:min-h-[120vh]">
           {slideshowImages.map((src, index) => (
             <Image
               key={src}
