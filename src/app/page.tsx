@@ -133,13 +133,13 @@ export default function Home() {
         <div className="hidden md:flex col-span-3 order-1 flex-col items-start md:pt-0">
           {/* Desktop: horizontal SCHUKNECHT */}
           <h1
-            className="hidden md:block text-[clamp(1.8rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
+            className="hidden md:block text-[clamp(1.8rem,5.5vw,75px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif", transform: "scaleY(1.08)" }}
           >
             SCHUKNECH<span className="serif-foot">T</span>
           </h1>
           <h2
-            className="hidden md:block mt-6 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[560px] text-justify"
+            className="hidden md:block mt-5 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Mit viel Gespür für Qualität, saisonale Vielfalt und rein
@@ -149,7 +149,7 @@ export default function Home() {
           </h2>
 
           {/* Marquee ticker (desktop only — inside left column) */}
-          <div className="hidden md:block mt-52 w-[85%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "black" }}>
+          <div className="hidden md:block mt-36 w-[70%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "black" }}>
             <div
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
