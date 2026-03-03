@@ -95,19 +95,3 @@ html {
   animation: spin-once 1s ease-in-out;
 }
 
-.serif-foot {
-  position: relative;
-  display: inline-block;
-}
-
-.serif-foot::after {
-  content: '';
-  position: absolute;
-  bottom: 0.099em;
-  left: 62%;
-  width: 0;
-  height: 0;
-  border-top: 0.09em solid transparent;
-  border-bottom: 0.09em solid transparent;
-  border-left: 0.11em solid black;
-}

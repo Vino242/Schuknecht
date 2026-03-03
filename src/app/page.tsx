@@ -140,7 +140,7 @@ export default function Home() {
           </h1>
           <h2
             className="hidden md:block mt-5 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
-            style={{ fontFamily: "'Futura Medium', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Mit viel Gespür für Qualität, saisonale Vielfalt und rein
             vegetarischer sowie veganer Küche ist das Schuknecht ein lebendiger
@@ -154,7 +154,7 @@ export default function Home() {
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
-              Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+              Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function Home() {
           className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
         >
-          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
         </div>
       </div>
 
@@ -233,9 +233,12 @@ export default function Home() {
           SCHUKNECH<span className="serif-foot">T</span>
         </h2>
         <p
-          className="mt-5 text-[14px] leading-[1.6em] font-light transition-all duration-500 ease-out"
+          className="mt-5 text-[14px] leading-[1.6em] font-light text-justify transition-all duration-500 ease-out"
           style={{
             fontFamily: "'Futura Medium', sans-serif",
+            hyphens: "auto",
+            WebkitHyphens: "auto",
+            wordSpacing: "-0.02em",
             transform: mobileTextVisible ? 'translateY(0)' : 'translateY(20px)',
             opacity: mobileTextVisible ? 1 : 0,
             transitionDelay: mobileTextVisible ? '120ms' : '0ms',
