@@ -1,9 +1,6 @@
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
-import menuData from "@/data/menu.json";
 import tageskarte from "@/data/tageskarte.json";
-
-const menu = menuData;
 
 export default function Karte() {
   return (
@@ -91,68 +88,54 @@ export default function Karte() {
           </div>
         </div>
 
-        {/* ===== REGULÄRES MENÜ ===== */}
-        <div className="mt-16 max-w-[800px] flex flex-col gap-12">
-          {menu.map((section) => (
-            <div key={section.category}>
-              {/* Category header */}
-              <div className="border-b border-black/10 pb-2 mb-6">
-                <h2
-                  className="text-[clamp(1.2rem,3vw,28px)] font-bold tracking-[-0.01em] uppercase text-black"
-                  style={{ fontFamily: "'Futura Bold', sans-serif" }}
-                >
-                  {section.category}
-                </h2>
-                {section.desc && (
-                  <p
-                    className="text-[12px] md:text-[13px] opacity-50 mt-1"
-                    style={{ fontFamily: "'DM Sans', sans-serif" }}
-                  >
-                    {section.desc}
-                  </p>
-                )}
-              </div>
+        {/* ===== KARTE ALS PDF ===== */}
+        <div className="mt-16 max-w-[800px]">
+          <div className="flex items-baseline justify-between mb-6 border-b border-black/10 pb-4">
+            <h2
+              className="text-[clamp(1.4rem,3.5vw,32px)] font-bold tracking-[-0.01em] uppercase"
+              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            >
+              Speisekarte
+            </h2>
+            <a
+              href="/KarteSchukiSommer_Feb26.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] tracking-[0.1em] uppercase opacity-40 hover:opacity-100 transition-opacity"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              PDF öffnen ↗
+            </a>
+          </div>
 
-              {/* Items */}
-              <div className="flex flex-col gap-4">
-                {section.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex justify-between items-baseline gap-4">
-                    <div className="flex-1 min-w-0">
-                      <span
-                        className="text-[15px] md:text-[17px] font-normal"
-                        style={{ fontFamily: "'DM Sans', sans-serif" }}
-                      >
-                        {item.name}
-                      </span>
-                      {item.desc && (
-                        <span
-                          className="block text-[12px] md:text-[13px] opacity-40 mt-0.5"
-                          style={{ fontFamily: "'DM Sans', sans-serif" }}
-                        >
-                          {item.desc}
-                        </span>
-                      )}
-                    </div>
-                    <span
-                      className="text-[15px] md:text-[17px] font-normal whitespace-nowrap"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    >
-                      {item.price} €
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+          {/* Desktop: embedded PDF */}
+          <div className="hidden md:block w-full" style={{ height: "85vh" }}>
+            <iframe
+              src="/KarteSchukiSommer_Feb26.pdf"
+              className="w-full h-full border-0"
+              title="Speisekarte Schuknecht"
+            />
+          </div>
+
+          {/* Mobile: open button */}
+          <div className="md:hidden">
+            <p
+              className="text-[14px] leading-[1.6em] font-light opacity-60 mb-6"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Unsere vollständige Speise- und Getränkekarte als PDF — Frühstück, Mittagessen, Kaffee, Drinks und mehr.
+            </p>
+            <a
+              href="/KarteSchukiSommer_Feb26.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
+              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            >
+              Karte öffnen
+            </a>
+          </div>
         </div>
-
-        {/* Hinweis */}
-        <p
-          className="mt-16 text-[12px] md:text-[13px] opacity-40 max-w-[600px]"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
-        >
-          Alle Speisen sind vegetarisch oder vegan. Allergene und Zusatzstoffe auf Nachfrage. Preise inkl. MwSt. Die Wochengerichte wechseln regelmäßig — folgt uns auf Instagram für Updates.
-        </p>
       </div>
     </div>
   );
