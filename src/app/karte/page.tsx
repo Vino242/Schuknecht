@@ -108,33 +108,21 @@ export default function Karte() {
             </a>
           </div>
 
-          {/* Desktop: embedded PDF */}
-          <div className="hidden md:block w-full" style={{ height: "85vh" }}>
-            <iframe
-              src="/KarteSchukiSommer_Feb26.pdf"
-              className="w-full h-full border-0"
-              title="Speisekarte Schuknecht"
-            />
-          </div>
-
-          {/* Mobile: open button */}
-          <div className="md:hidden">
-            <p
-              className="text-[14px] leading-[1.6em] font-light opacity-60 mb-6"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              Unsere vollständige Speise- und Getränkekarte als PDF — Frühstück, Mittagessen, Kaffee, Drinks und mehr.
-            </p>
-            <a
-              href="/KarteSchukiSommer_Feb26.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
-              style={{ fontFamily: "'Futura Bold', sans-serif" }}
-            >
-              Karte öffnen
-            </a>
-          </div>
+          <p
+            className="text-[14px] leading-[1.6em] font-light opacity-60 mb-6"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            Unsere vollständige Speise- und Getränkekarte — Frühstück, Mittagessen, Kaffee, Drinks und mehr.
+          </p>
+          <a
+            href="/KarteSchukiSommer_Feb26.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
+            style={{ fontFamily: "'Futura Bold', sans-serif" }}
+          >
+            Karte öffnen
+          </a>
         </div>
       </div>
     </div>
