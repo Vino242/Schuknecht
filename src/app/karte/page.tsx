@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 import menuData from "@/data/menu.json";
+import tageskarte from "@/data/tageskarte.json";
 
 const menu = menuData;
 
@@ -31,7 +32,67 @@ export default function Karte() {
           MENÜ
         </h1>
 
-        <div className="mt-10 max-w-[800px] flex flex-col gap-12">
+        {/* ===== TAGESKARTE ===== */}
+        <div className="mt-10 max-w-[800px] bg-[#f7f5f2] px-6 py-8 md:px-10 md:py-10">
+          <div className="flex items-baseline gap-4 mb-8 border-b border-black/10 pb-4">
+            <h2
+              className="text-[clamp(1.4rem,3.5vw,32px)] font-bold tracking-[-0.01em] uppercase"
+              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            >
+              Tageskarte
+            </h2>
+            <span
+              className="text-[12px] opacity-40"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              {tageskarte.zeitraum}
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {tageskarte.sections.map((section) => (
+              <div key={section.category}>
+                <div className="mb-4">
+                  <h3
+                    className="text-[clamp(1rem,2vw,18px)] font-bold uppercase tracking-[-0.01em]"
+                    style={{ fontFamily: "'Futura Bold', sans-serif" }}
+                  >
+                    {section.category}
+                  </h3>
+                  {section.desc && (
+                    <p
+                      className="text-[11px] opacity-40 mt-0.5"
+                      style={{ fontFamily: "'DM Sans', sans-serif" }}
+                    >
+                      {section.desc}
+                    </p>
+                  )}
+                </div>
+                <div className="flex flex-col gap-3">
+                  {section.items.map((item, i) => (
+                    <div key={i} className="flex justify-between items-baseline gap-4">
+                      <span
+                        className="text-[14px] md:text-[15px] font-light flex-1"
+                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                      >
+                        {item.name}
+                      </span>
+                      <span
+                        className="text-[14px] md:text-[15px] font-light whitespace-nowrap opacity-70"
+                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                      >
+                        {item.price} €
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ===== REGULÄRES MENÜ ===== */}
+        <div className="mt-16 max-w-[800px] flex flex-col gap-12">
           {menu.map((section) => (
             <div key={section.category}>
               {/* Category header */}

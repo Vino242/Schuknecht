@@ -1,0 +1,42 @@
+{
+  "zeitraum": "Mo, 02.02. – Fr, 06.03. von 12.00 bis 14.30 Uhr",
+  "sections": [
+    {
+      "category": "Snacks & Tapas",
+      "desc": "täglich ab 12.00 Uhr",
+      "items": [
+        { "name": "Hummus / Olivenöl / Zaatar / Brot (v)", "price": "8,00" },
+        { "name": "Ajvar / Paprika-Auberginen Dip / Brot (v)", "price": "7,50" },
+        { "name": "Bohnen in Tomatensauce / Feta überbacken / Brot", "price": "8,50" },
+        { "name": "Artischocken mariniert / Brot (v)", "price": "7,00" },
+        { "name": "Peperoni / Feta gefüllt / Brot", "price": "7,00" },
+        { "name": "Schafskäse mariniert / Brot", "price": "8,00" },
+        { "name": "Oliven mariniert (v)", "price": "6,50" },
+        { "name": "Kimchi hausgemacht (v)", "price": "4,50" },
+        { "name": "3erlei Variation Snacks & Tapas", "price": "9,50" },
+        { "name": "Grilled Cheese Sandwich / Rucola / saure Gurken", "price": "8,50" },
+        { "name": "Grilled Cheese Sandwich / Rucola / Kimchi", "price": "9,50" },
+        { "name": "Kochkäse / Mussig & Kümmel / Brot", "price": "8,50" },
+        { "name": "Warmer Schafskäse / Honig & Thymian / Brot", "price": "8,00" },
+        { "name": "Kartoffelcremésuppe / Croûtons / Brot (v)", "price": "8,50" },
+        { "name": "Quiche des Tages", "price": "4,80" },
+        { "name": "Brot extra", "price": "1,50" },
+        { "name": "Kuchenstück", "price": "4,80" },
+        { "name": "Erdnüsse oder Maiskörner / geröstet & gesalzen", "price": "1,50" }
+      ]
+    },
+    {
+      "category": "Mittagessen",
+      "desc": "Mo, 02.02. – Fr, 06.03. von 12.00 bis 14.30 Uhr",
+      "items": [
+        { "name": "Beilagensalat (v)", "price": "6,80" },
+        { "name": "Kartoffelcremésuppe / Croûtons / Brot (v)", "price": "8,50" },
+        { "name": "Quiche des Tages / Beilagensalat", "price": "11,50" },
+        { "name": "Burrata / Rucola / Cherrytomaten / Parmesan / Brot", "price": "12,50" },
+        { "name": "Bunter Salat / Feta / Oliven / Brot", "price": "13,90" },
+        { "name": "Bunter Salat / gegrillter Halloumi / Brot", "price": "13,90" },
+        { "name": "Gebratener Blumenkohl / Reis / Berberitzen / Gurken-Tahin-Joghurt / Granatapfelsirup (vegan möglich)", "price": "13,90" }
+      ]
+    }
+  ]
+}
