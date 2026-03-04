@@ -40,18 +40,11 @@ export default function Imprint() {
               Angaben gemäß § 5 TMG
             </h3>
             <p>
-              Schuknecht GmbH<br />
+              Nurhan Vural<br />
+              Schuknecht Café &amp; Bar<br />
               Schuknechtstr. 1<br />
               64289 Darmstadt
             </p>
-          </div>
-
-          {/* Vertreten durch */}
-          <div>
-            <h3 className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2">
-              Vertreten durch
-            </h3>
-            <p>Nuri Vural</p>
           </div>
 
           {/* Kontakt */}
@@ -65,35 +58,13 @@ export default function Imprint() {
             </p>
           </div>
 
-          {/* Handelsregister */}
-          <div>
-            <h3 className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2">
-              Handelsregister
-            </h3>
-            <p>
-              Registergericht: Amtsgericht Darmstadt<br />
-              Registernummer: HRB 12345
-            </p>
-          </div>
-
-          {/* Umsatzsteuer-ID */}
-          <div>
-            <h3 className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2">
-              Umsatzsteuer-ID
-            </h3>
-            <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-              DE 123456789
-            </p>
-          </div>
-
           {/* Verantwortlich für den Inhalt */}
           <div>
             <h3 className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2">
               Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
             </h3>
             <p>
-              Nuri Vural<br />
+              Nurhan Vural<br />
               Schuknechtstr. 1<br />
               64289 Darmstadt
             </p>

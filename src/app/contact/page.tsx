@@ -90,6 +90,29 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Reservierung */}
+          <div className="mt-10 border border-black p-6 max-w-[380px]">
+            <h3
+              className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-4"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Reservierung
+            </h3>
+            <p
+              className="text-[15px] leading-[1.6em] font-light mb-5"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Wir nehmen Reservierungen ausschließlich telefonisch entgegen. Ruf uns einfach an — wir freuen uns!
+            </p>
+            <a
+              href="tel:+4915110657966"
+              className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 text-[14px] tracking-[0.08em] uppercase hover:opacity-80 transition-opacity w-full justify-center"
+              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            >
+              Jetzt anrufen
+            </a>
+          </div>
+
           {/* Google Maps Link */}
           <a
             href="https://maps.google.com/?q=Schuknechtstr.+1,+64289+Darmstadt"

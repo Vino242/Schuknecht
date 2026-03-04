@@ -1,12 +1,38 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
+const galleryImages = [
+  "/schuki/SnapInsta.to_571416637_18298987600266547_3405723530171740079_n.jpg",
+  "/schuki/SnapInsta.to_571798906_18298987576266547_7559366974313528418_n.jpg",
+  "/schuki/SnapInsta.to_572126642_18298987573266547_141197245182427405_n.jpg",
+  "/schuki/SnapInsta.to_572158971_18298987591266547_3827719316460653812_n.jpg",
+  "/schuki/SnapInsta.to_573283502_18298987549266547_9156242153154724135_n.jpg",
+  "/schuki/SnapInsta.to_573341431_18298987564266547_6795980787638574488_n.jpg",
+  "/schuki/SnapInsta.to_573496149_18298987546266547_2808062395761828047_n.jpg",
+  "/schuki/SnapInsta.to_573657062_18298987603266547_6406355972972956997_n.jpg",
+  "/schuki/SnapInsta.to_574348949_18298987531266547_7203622640070163603_n.jpg",
+];
+
 export default function Menu() {
+  const [lightbox, setLightbox] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen w-screen bg-white text-black flex flex-col">
+      {/* ===== LIGHTBOX ===== */}
+      {lightbox !== null && (
+        <div className="fixed inset-0 z-[70] bg-black/95 flex items-center justify-center" onClick={() => setLightbox(null)}>
+          <button className="absolute top-5 right-5 text-white/70 hover:text-white text-3xl leading-none z-10" onClick={() => setLightbox(null)}>✕</button>
+          <button className="absolute left-4 text-white/70 hover:text-white text-5xl leading-none px-4 py-8 z-10" onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + galleryImages.length) % galleryImages.length); }}>‹</button>
+          <div className="relative w-full h-full max-w-4xl mx-auto px-16 py-12" onClick={(e) => e.stopPropagation()}>
+            <Image src={galleryImages[lightbox]} alt={`Schuki ${lightbox + 1}`} fill className="object-contain" />
+          </div>
+          <button className="absolute right-4 text-white/70 hover:text-white text-5xl leading-none px-4 py-8 z-10" onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % galleryImages.length); }}>›</button>
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/50 text-[13px]" style={{ fontFamily: "'DM Sans', sans-serif" }}>{lightbox + 1} / {galleryImages.length}</div>
+        </div>
+      )}
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 sticky top-0 z-40 bg-white relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
         <a href="/" className="relative h-[60px] w-[60px] md:h-[75px] lg:h-[100px] md:w-[75px] lg:w-[100px] flex-shrink-0 md:order-2">
@@ -136,24 +162,9 @@ export default function Menu() {
       {/* ===== GALLERY: Schuki Bilder ===== */}
       <div className="px-6 md:px-10 lg:px-16 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-[19px]">
-          {[
-            "/schuki/SnapInsta.to_571416637_18298987600266547_3405723530171740079_n.jpg",
-            "/schuki/SnapInsta.to_571798906_18298987576266547_7559366974313528418_n.jpg",
-            "/schuki/SnapInsta.to_572126642_18298987573266547_141197245182427405_n.jpg",
-            "/schuki/SnapInsta.to_572158971_18298987591266547_3827719316460653812_n.jpg",
-            "/schuki/SnapInsta.to_573283502_18298987549266547_9156242153154724135_n.jpg",
-            "/schuki/SnapInsta.to_573341431_18298987564266547_6795980787638574488_n.jpg",
-            "/schuki/SnapInsta.to_573496149_18298987546266547_2808062395761828047_n.jpg",
-            "/schuki/SnapInsta.to_573657062_18298987603266547_6406355972972956997_n.jpg",
-            "/schuki/SnapInsta.to_574348949_18298987531266547_7203622640070163603_n.jpg",
-          ].map((src, i) => (
-            <div key={src} className="relative aspect-[4/5]">
-              <Image
-                src={src}
-                alt={`Schuki ${i + 1}`}
-                fill
-                className="object-cover"
-              />
+          {galleryImages.map((src, i) => (
+            <div key={src} className="relative aspect-[4/5] cursor-pointer overflow-hidden group" onClick={() => setLightbox(i)}>
+              <Image src={src} alt={`Schuki ${i + 1}`} fill className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
             </div>
           ))}
         </div>

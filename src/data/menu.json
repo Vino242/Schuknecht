@@ -1,0 +1,246 @@
+[
+  {
+    "category": "Frühstück Deftig",
+    "desc": "Mo–Fr 09:30–12:00 · Sa & So 09:30–14:00",
+    "items": [
+      { "name": "Spiegeleier (aus 2 Bio-Eiern)", "desc": "Butter, Salatgarnitur & Brot", "price": "8,50" },
+      { "name": "Rührei (aus 3 Bio-Eiern)", "desc": "frische Kräuter, Salatgarnitur & Brot", "price": "8,90" },
+      { "name": "Tofu-Rührei (v)", "desc": "frische Kräuter, Salatgarnitur & Brot", "price": "12,50" },
+      { "name": "Shakshuka »Schuki Style«", "desc": "Eier, Bohnen, Tomatensauce, Feta & Brot", "price": "13,90" },
+      { "name": "Hummus Stulle (v)", "desc": "Hummus, Avocado, Cocktailtomate & Salatgarnitur", "price": "11,90" },
+      { "name": "Spiegelei Stulle", "desc": "Rucola-Dip, Tomate, Spiegelei & Salatgarnitur", "price": "11,90" },
+      { "name": "Rührei Stulle", "desc": "Frischkäse-Dip, Tomate, Rührei & Salatgarnitur", "price": "13,50" },
+      { "name": "Burrata Stulle", "desc": "Ajvar, Tomatensalsa, Burrata, Parmesan & Salatgarnitur", "price": "14,90" },
+      { "name": "Feta Stulle", "desc": "Hummus, Tomatensalsa, Rucola, marinierter Feta & Salatgarnitur", "price": "13,50" },
+      { "name": "Kimchi Stulle", "desc": "Hummus, Kimchi, marinierter Feta & Salatgarnitur", "price": "14,90" },
+      { "name": "Kimchi Stulle vegan", "desc": "Hummus, Kimchi & Salatgarnitur", "price": "13,90" },
+      { "name": "Halloumi Stulle", "desc": "Gegrillter Halloumi, Hummus, Rucola, Preiselbeeren & Mandeln", "price": "13,90" },
+      { "name": "Rührei Bowl", "desc": "Rührei aus 3 Bio-Eiern, bunte Blattsalate, Rohkost, Avocado & Brot", "price": "12,90" },
+      { "name": "Tofu-Rührei Bowl (v)", "desc": "Tofu-Rührei, bunte Blattsalate, Rohkost, Avocado & Brot", "price": "13,90" },
+      { "name": "Frühstücks-Burrito", "desc": "Rührei, Tomatensalsa, Avocado, Rucola & Salatgarnitur", "price": "12,90" },
+      { "name": "Veganer Frühstücks-Burrito", "desc": "Tofu-Rührei, Tomatensalsa, Avocado, Rucola & Salatgarnitur", "price": "13,90" },
+      { "name": "Halloumi Burrito", "desc": "Halloumi, Hummus, Preiselbeeren, Rucola & Salatgarnitur", "price": "13,90" },
+      { "name": "English Breakfast", "desc": "Baked Beans, 3 Rostbratwürstchen (v), Spiegelei, gegrillte Tomate & Toast", "price": "13,50" },
+      { "name": "English Breakfast vegan", "desc": "Baked Beans, 3 Rostbratwürstchen (v), Tofu-Rührei, gegrillte Tomate & Toast", "price": "14,50" },
+      { "name": "Breakfast Sandwich", "desc": "Brioche, vegane Mayo, veganer Speck, Rührei, Parmesan & Salatgarnitur", "price": "13,90" },
+      { "name": "Breakfast Sandwich vegan", "desc": "Brioche, vegane Mayo, veganer Speck, Tofu-Rührei & Salatgarnitur", "price": "14,90" },
+      { "name": "Gefülltes Croissant", "desc": "mit Hummus, Avocado & Salatgarnitur", "price": "11,90" },
+      { "name": "+ Spiegelei", "price": "1,90" },
+      { "name": "+ Rührei", "price": "3,80" },
+      { "name": "+ Tofurührei (v)", "price": "4,50" }
+    ]
+  },
+  {
+    "category": "Frühstück Süß",
+    "desc": "Mo–Fr 09:30–12:00 · Sa & So 09:30–14:00",
+    "items": [
+      { "name": "Croissant", "price": "2,80" },
+      { "name": "+ Marmelade", "price": "0,80" },
+      { "name": "+ Butter", "price": "0,80" },
+      { "name": "Porridge Bowl (v)", "desc": "Haferflocken, Hafermilch, Zimt, Nüsse, Fruchtsauce & Fruchttopping", "price": "8,90" },
+      { "name": "Granola Bowl", "desc": "Hausgemachtes Granola, griechischer Joghurt, Fruchtsauce & Fruchttopping (vegan möglich)", "price": "8,90" },
+      { "name": "Kokos Bowl (v)", "desc": "Haferflocken, Hafermilch, geröstete Kokoschips, Kakaonibs, Fruchtsauce & Fruchttopping", "price": "8,90" },
+      { "name": "Belgische Waffel (v)", "desc": "Fruchttopping, Sirup & Puderzucker", "price": "9,50" },
+      { "name": "Pancakes (v)", "desc": "Fruchttopping, Sirup & Puderzucker", "price": "11,50" },
+      { "name": "Sweet Croissant", "desc": "Burrata, Fruchtsauce, Hanfsamen, Chiasamen, saisonale Früchte & Honig", "price": "11,80" },
+      { "name": "French Toast", "desc": "Brioche, warme Vanillesauce & Fruchttopping", "price": "12,90" }
+    ]
+  },
+  {
+    "category": "Kaffee",
+    "items": [
+      { "name": "Espresso", "price": "2,50" },
+      { "name": "Espresso Macchiato", "price": "2,70" },
+      { "name": "Doppio", "price": "4,20" },
+      { "name": "Café Crema", "price": "3,30" },
+      { "name": "Cappuccino", "desc": "single shot", "price": "3,80" },
+      { "name": "Flat White", "desc": "double shot", "price": "4,50" },
+      { "name": "Milchkaffee", "price": "4,60" },
+      { "name": "Latte Macchiato", "price": "4,60" },
+      { "name": "Cortado", "price": "3,00" },
+      { "name": "Matcha Latte", "price": "4,90" },
+      { "name": "MatChai", "price": "4,90" },
+      { "name": "White Chocolate Matcha", "price": "4,90" },
+      { "name": "Chai Latte", "price": "4,70" },
+      { "name": "Dirty Chai", "price": "4,90" },
+      { "name": "Choc Chai", "price": "4,80" },
+      { "name": "Heiße Schokolade", "price": "4,50" },
+      { "name": "Dirty Hot Chocolate", "price": "4,90" },
+      { "name": "Hot Choc Pistachio", "price": "4,80" },
+      { "name": "Frische Minze / Ingwer / Zitrone", "price": "3,90" },
+      { "name": "Tee vom Teehaus am Riegerplatz", "price": "3,50" },
+      { "name": "Aufpreis Decaf / Hafermilch / Laktosefrei", "price": "0,30" },
+      { "name": "+ Honig", "price": "0,40" },
+      { "name": "+ Schuss Sirup", "desc": "Vanille, Caramel, Cookie, Pistazie, Haselnuss, White Chocolate", "price": "0,30" }
+    ]
+  },
+  {
+    "category": "Iced Specials",
+    "items": [
+      { "name": "Iced Strawberry Matcha", "price": "6,00" },
+      { "name": "Iced Mango Matcha", "price": "6,00" },
+      { "name": "Iced Blueberry Matcha", "price": "6,00" },
+      { "name": "Iced White Chocolate Matcha", "price": "6,00" },
+      { "name": "Iced Strawberry Latte", "price": "5,60" },
+      { "name": "Iced Mango Latte", "price": "5,60" },
+      { "name": "Iced Blueberry Latte", "price": "5,60" },
+      { "name": "Iced Cinnamon Latte", "desc": "Zimt, Caramellsirup, Sahne", "price": "5,80" },
+      { "name": "Iced Café Crema", "price": "3,50" },
+      { "name": "Iced Cappuccino", "desc": "single shot", "price": "4,00" },
+      { "name": "Iced Flat White", "desc": "double shot", "price": "4,70" },
+      { "name": "Iced Latte Macchiato", "price": "4,80" },
+      { "name": "Iced Matcha Latte", "price": "5,10" },
+      { "name": "Iced Chai Latte", "price": "5,10" },
+      { "name": "Iced Chocolate", "price": "4,90" }
+    ]
+  },
+  {
+    "category": "Softdrinks",
+    "items": [
+      { "name": "Wasser Sprudel / Still 0,3L", "price": "2,50" },
+      { "name": "Wasser Sprudel / Still 1,0L", "price": "6,50" },
+      { "name": "Coca Cola / Zero 0,33L", "price": "3,90" },
+      { "name": "Paulaner Spezi 0,33L", "price": "3,90" },
+      { "name": "Thomas Henry 0,2L", "desc": "Pink Grapefruit · Mystic Mango", "price": "3,50" },
+      { "name": "Aqua Monaco Hot Ginger Beer 0,23L", "price": "3,80" },
+      { "name": "Club Mate 0,5L", "price": "4,20" },
+      { "name": "Hausgemachte Limonade", "desc": "Lavendel-Blaubeere", "price": "4,80" },
+      { "name": "Espresso Tonic", "price": "6,00" }
+    ]
+  },
+  {
+    "category": "Säfte & Saftschorlen",
+    "items": [
+      { "name": "Klein 0,3L", "desc": "Apfel naturtrüb, Banane, Johannisbeere, Kirsche, Maracuja, Orange, Rhabarber", "price": "3,90" },
+      { "name": "Groß 0,5L", "desc": "Apfel naturtrüb, Banane, Johannisbeere, Kirsche, Maracuja, Orange, Rhabarber", "price": "5,20" },
+      { "name": "Frischer Orangensaft 0,25L", "price": "4,80" }
+    ]
+  },
+  {
+    "category": "Fassbier",
+    "items": [
+      { "name": "Augustiner Helles 0,4L", "price": "4,70" },
+      { "name": "Augustiner Helles 0,5L", "price": "4,90" },
+      { "name": "Faust Pils 0,3L", "price": "3,90" },
+      { "name": "Faust Pils 0,4L", "price": "4,50" }
+    ]
+  },
+  {
+    "category": "Flaschenbier",
+    "items": [
+      { "name": "Faust Hefe 0,5L", "price": "4,90" },
+      { "name": "Faust Hefe alkoholfrei 0,5L", "price": "4,90" },
+      { "name": "Faust Radler naturtrüb 0,33L", "price": "3,70" },
+      { "name": "Faust Helles alkoholfrei 0,33L", "price": "3,70" }
+    ]
+  },
+  {
+    "category": "Apfelwein pur / gespritzt",
+    "items": [
+      { "name": "Krämer Apfelwein 0,25L", "price": "2,90" },
+      { "name": "Krämer Apfelwein 0,5L", "price": "4,90" }
+    ]
+  },
+  {
+    "category": "Aperitif",
+    "items": [
+      { "name": "Aperol Spritz 0,3L", "price": "7,50" },
+      { "name": "Campari Spritz 0,3L", "price": "7,50" },
+      { "name": "Limoncello Spritz 0,3L", "price": "7,50" },
+      { "name": "Italicus Spritz 0,3L", "price": "7,50" },
+      { "name": "Holunder Spritz 0,3L", "price": "7,50" },
+      { "name": "Cynar Spritz 0,3L", "price": "8,50" },
+      { "name": "Sarti Spritz 0,3L", "price": "7,50" },
+      { "name": "Rosato Spritz 0,3L", "price": "7,50" },
+      { "name": "Crodino Spritz alkoholfrei 0,3L", "price": "7,00" },
+      { "name": "Aperol Spritz alkoholfrei 0,3L", "price": "7,00" },
+      { "name": "Limoncello Spritz alkoholfrei 0,3L", "price": "7,00" },
+      { "name": "Sarti Spritz alkoholfrei 0,3L", "price": "7,00" },
+      { "name": "Basilikum Spritz alkoholfrei 0,3L", "price": "7,00" }
+    ]
+  },
+  {
+    "category": "Sekt",
+    "items": [
+      { "name": "Mimosa Orange 0,1L", "price": "6,80" },
+      { "name": "Mimosa Maracuja 0,1L", "price": "6,80" },
+      { "name": "Prosecco 0,1L", "price": "6,70" },
+      { "name": "Prosecco 0,75L", "desc": "Vivarello, Prosecco Spum. Extra Dry, DOC Treviso 2023", "price": "36,00" },
+      { "name": "Schuknecht Riesling Sekt 0,1L", "price": "6,70" },
+      { "name": "Schuknecht Riesling Sekt 0,75L", "desc": "Bertsch & Gassert, Extra Trocken, 2023", "price": "36,00" }
+    ]
+  },
+  {
+    "category": "Weißwein",
+    "items": [
+      { "name": "Grauburgunder 0,2L", "price": "7,20" },
+      { "name": "Grauburgunder 0,75L", "desc": "JUWEL, Juliane Eller, Rheinhessen 2023", "price": "24,90" },
+      { "name": "Riesling 0,2L", "price": "7,00" },
+      { "name": "Riesling 1,0L", "desc": "Bassermann-Jordan, Pfalz 2023", "price": "33,90" },
+      { "name": "Weißburgunder 0,2L", "price": "7,20" },
+      { "name": "Weißburgunder 0,75L", "desc": "JUWEL, Juliane Eller, Rheinhessen 2023", "price": "24,90" },
+      { "name": "Lugana 0,2L", "price": "7,20" },
+      { "name": "Lugana 0,75L", "desc": "Antica Casa Visconti, Lugana Doc 2023", "price": "24,90" },
+      { "name": "Blanc de Noirs 0,2L", "price": "7,20" },
+      { "name": "Blanc de Noirs 0,75L", "desc": "Weingut Klerner, Rheingau 2023", "price": "24,90" },
+      { "name": "Weißweinschorle 0,2L", "price": "6,00" }
+    ]
+  },
+  {
+    "category": "Rotwein",
+    "items": [
+      { "name": "Primitivo 0,2L", "price": "7,20" },
+      { "name": "Primitivo 0,75L", "desc": "Masseria Li Veli, Orion, Italien 2022", "price": "24,90" },
+      { "name": "Primitivo 0,2L", "price": "7,20" },
+      { "name": "Primitivo 0,75L", "desc": "Cala Zagaro, Di Camilo, Apulien, Italien 2023", "price": "24,90" },
+      { "name": "Montepulciano 0,2L", "price": "7,20" },
+      { "name": "Montepulciano 0,75L", "desc": "Tatone, Terra D'Aligi, Abruzzen, Italien 2021", "price": "24,90" }
+    ]
+  },
+  {
+    "category": "Rosé",
+    "items": [
+      { "name": "Rosé 0,2L", "price": "7,20" },
+      { "name": "Rosé 0,75L", "desc": "Juwel, Juliane Eller, Rheinhessen 2023", "price": "24,90" },
+      { "name": "Roséschorle 0,2L", "price": "6,00" }
+    ]
+  },
+  {
+    "category": "Longdrink",
+    "items": [
+      { "name": "Sekt Mate", "desc": "Prosecco & Club Mate", "price": "7,00" },
+      { "name": "Wodka Mate", "desc": "Kinetic Wodka & Club Mate", "price": "8,00" },
+      { "name": "Wodka Soda", "desc": "Kinetic Wodka & Soda", "price": "7,00" },
+      { "name": "Campari Soda", "desc": "Campari & Soda", "price": "7,00" },
+      { "name": "Vermouth Tonic", "desc": "Dolin Vermouth Dry, Thomas Henry Tonic", "price": "7,50" },
+      { "name": "Port Tonic", "desc": "Roter Portwein, Thomas Henry Tonic, Orange", "price": "8,00" },
+      { "name": "Americano", "desc": "Campari, roter Vermouth, Soda", "price": "7,50" },
+      { "name": "Negroni Sbagliato", "desc": "Campari, roter Vermouth, Prosecco", "price": "8,50" },
+      { "name": "Paloma", "desc": "Corazon Blanco Tequila, Thomas Henry Pink Grapefruit, Limette", "price": "10,00" },
+      { "name": "Tanqueray London Dry", "desc": "+ Thomas Henry Tonic oder Thomas Henry Botanical", "price": "8,50" }
+    ]
+  },
+  {
+    "category": "Shots",
+    "items": [
+      { "name": "Fireball 2cl", "price": "3,50" },
+      { "name": "Tequila 2cl", "price": "4,00" },
+      { "name": "Prinz Schnaps 2cl", "desc": "Obstbrand, Himbeer, Kirsch, Haselnuß, Zwetschge", "price": "4,00" }
+    ]
+  },
+  {
+    "category": "Cocktails",
+    "desc": "Do–Sa ab 18:00",
+    "items": [
+      { "name": "Grace Collins", "desc": "Tanqueray London Dry Gin, Giffard Creme de Pamplemousse Rose, Zitrone, Gurke, Soda", "price": "10,00" },
+      { "name": "Tom Collins", "desc": "Tanqueray London Dry Gin, Zitrone, Soda", "price": "9,00" },
+      { "name": "French 75", "desc": "Tanqueray London Dry Gin, Prosecco, Zitrone", "price": "10,00" },
+      { "name": "Whiskey Sour", "desc": "Old Forester Bourbon, Zitrone, Eiweiß (optional)", "price": "10,00" },
+      { "name": "Earl Grey MarTEAni", "desc": "Earl Grey infused Tanqueray London Dry Gin, Zitrone", "price": "12,00" },
+      { "name": "Espresso Martini", "desc": "Kinetic Vodka, Giffard Kaffeelikör, Espresso", "price": "11,00" },
+      { "name": "Pornstar Martini", "desc": "Absolut Vanilla, Passoã, Maracujasaft, Zitrone, Vanillesirup, Sidecar: Prosecco", "price": "12,00" },
+      { "name": "Negroni", "desc": "Tanqueray London Dry Gin, Campari, Dolin Vermouth Rouge", "price": "10,00" },
+      { "name": "Amaretto Sour", "desc": "Amaretto, Bourbon Whiskey, Zuckersirup, Zitrone", "price": "10,00" }
+    ]
+  }
+]

@@ -19,6 +19,7 @@ export default function Home() {
   const [logoTarget, setLogoTarget] = useState<{ top: number; left: number; width: number; height: number } | null>(null);
   const mobileTextRef = useRef<HTMLDivElement>(null);
   const [mobileTextVisible, setMobileTextVisible] = useState(false);
+  const [reservationOpen, setReservationOpen] = useState(false);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
@@ -90,8 +91,47 @@ export default function Home() {
         </>
       )}
 
+      {/* ===== RESERVATION MODAL ===== */}
+      {reservationOpen && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50"
+          onClick={() => setReservationOpen(false)}
+        >
+          <div
+            className="bg-white p-8 max-w-[360px] w-[90%] relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setReservationOpen(false)}
+              className="absolute top-4 right-4 text-black/40 hover:text-black text-xl leading-none"
+            >
+              ✕
+            </button>
+            <h3
+              className="text-[11px] tracking-[0.2em] uppercase opacity-40 mb-4"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Reservierung
+            </h3>
+            <p
+              className="text-[15px] leading-[1.6em] font-light mb-6"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Wir nehmen Reservierungen ausschließlich telefonisch entgegen. Ruf uns einfach an — wir freuen uns!
+            </p>
+            <a
+              href="tel:+4915110657966"
+              className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 text-[13px] tracking-[0.1em] uppercase hover:opacity-80 transition-opacity w-full"
+              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            >
+              Jetzt anrufen
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* ===== First viewport (mobile) ===== */}
-      <div className="flex flex-col md:min-h-screen">
+      <div className="flex flex-col md:h-screen">
 
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 sticky top-0 z-40 bg-white relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
@@ -114,7 +154,7 @@ export default function Home() {
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
         {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
-        <div className="col-span-5 md:col-span-2 order-2 relative h-[55vh] md:h-auto md:min-h-[120vh] overflow-hidden">
+        <div className="col-span-5 md:col-span-2 order-2 relative h-[55vh] md:h-full overflow-hidden">
           {slideshowImages.map((img, index) => (
             <Image
               key={img.src}
@@ -138,15 +178,12 @@ export default function Home() {
           >
             SCHUKNECH<span className="serif-foot">T</span>
           </h1>
-          <h2
-            className="hidden md:block mt-5 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
-            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
-          >
-            Mit viel Gespür für Qualität, saisonale Vielfalt und rein
-            vegetarischer sowie veganer Küche ist das Schuknecht ein lebendiger
-            Treffpunkt – vom kreativen Frühstück bis zu entspannten
-            Sommerabenden mit besonderen Drinks.
-          </h2>
+          <div className="hidden md:block mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify flex flex-col gap-4" style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}>
+            <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
+            <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte - sei es Quinoa aus dem Odenwald - oder Gemüse aus dem Ried.</p>
+            <p className="mt-4">Wir bieten täglich frische Kuchen an — auch vegan und glutenfrei. Die Gerichte der Frühstücks und Mittagskarte sind immer vegetarisch und meistens auch vegan. Das (v) hinter den Gerichten steht in diesem Fall für vegan.</p>
+            <p className="mt-4">Und jetzt lass es Dir schmecken!</p>
+          </div>
 
           {/* Marquee ticker (desktop only — inside left column) */}
           <div className="hidden md:block mt-36 w-[70%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "black" }}>
@@ -171,11 +208,11 @@ export default function Home() {
       </div>
 
       {/* ===== DESKTOP: Footer nav ===== */}
-      <footer className="hidden md:flex md:items-center md:gap-28 lg:gap-40 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:sticky md:bottom-0 bg-white z-40">
+      <footer className="hidden md:flex md:items-center md:gap-36 lg:gap-52 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:fixed md:bottom-0 md:left-0 md:right-0 bg-white z-40">
         <div className="hidden md:block">
           <a
             href="/karte"
-            className="text-[21px] leading-[1.3em] font-normal lowercase text-black hover:opacity-50 transition-opacity duration-300"
+            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             menü
@@ -184,7 +221,7 @@ export default function Home() {
         <div className="hidden md:block">
           <a
             href="/catering"
-            className="text-[21px] leading-[1.3em] font-normal lowercase text-black hover:opacity-50 transition-opacity duration-300"
+            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             catering
@@ -193,7 +230,7 @@ export default function Home() {
         <div className="hidden md:block">
           <a
             href="/menu"
-            className="text-[21px] leading-[1.3em] font-normal lowercase text-black hover:opacity-50 transition-opacity duration-300"
+            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             schuki
@@ -202,7 +239,7 @@ export default function Home() {
         <div className="hidden md:block">
           <a
             href="/contact"
-            className="text-[21px] leading-[1.3em] font-normal lowercase text-black hover:opacity-50 transition-opacity duration-300"
+            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             kontakt
@@ -211,11 +248,20 @@ export default function Home() {
         <div className="hidden md:block">
           <a
             href="/imprint"
-            className="text-[21px] leading-[1.3em] font-normal lowercase text-black hover:opacity-50 transition-opacity duration-300"
+            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             impressum
           </a>
+        </div>
+        <div className="hidden md:block ml-auto">
+          <button
+            onClick={() => setReservationOpen(true)}
+            className="px-5 py-2 border border-black/30 text-[14px] tracking-[0.08em] capitalize text-black/40 hover:border-black hover:text-black transition-colors duration-200"
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
+          >
+            Tisch reservieren
+          </button>
         </div>
       </footer>
       </div>
@@ -232,7 +278,7 @@ export default function Home() {
         >
           SCHUKNECH<span className="serif-foot">T</span>
         </h2>
-        <p
+        <div
           className="mt-5 text-[14px] leading-[1.6em] font-light text-justify transition-all duration-500 ease-out"
           style={{
             fontFamily: "'Futura Medium', sans-serif",
@@ -244,8 +290,11 @@ export default function Home() {
             transitionDelay: mobileTextVisible ? '120ms' : '0ms',
           }}
         >
-          Mit viel Gespür für Qualität, saisonale Vielfalt und rein vegetarischer sowie veganer Küche ist das Schuknecht ein lebendiger Treffpunkt – vom kreativen Frühstück bis zu entspannten Sommerabenden mit besonderen Drinks.
-        </p>
+          <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
+          <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte - sei es Quinoa aus dem Odenwald - oder Gemüse aus dem Ried.</p>
+          <p className="mt-4">Wir bieten täglich frische Kuchen an — auch vegan und glutenfrei. Die Gerichte der Frühstücks und Mittagskarte sind immer vegetarisch und meistens auch vegan. Das (v) hinter den Gerichten steht in diesem Fall für vegan.</p>
+          <p className="mt-4">Und jetzt lass es Dir schmecken!</p>
+        </div>
 
         {/* Kontakt */}
         <div
@@ -263,6 +312,13 @@ export default function Home() {
           >
             Kontakt
           </a>
+          <button
+            onClick={() => setReservationOpen(true)}
+            className="ml-3 inline-block px-6 py-3 text-[14px] tracking-[0.1em] uppercase border border-black hover:bg-black hover:text-white transition-colors duration-200"
+            style={{ fontFamily: "'Futura Bold', sans-serif" }}
+          >
+            Reservieren
+          </button>
         </div>
 
         {/* Adresse & Zeiten */}
