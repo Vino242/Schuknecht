@@ -37,7 +37,7 @@ export default function Karte() {
               {/* Category header */}
               <div className="border-b border-black/10 pb-2 mb-6">
                 <h2
-                  className={`text-[clamp(1.2rem,3vw,28px)] font-bold tracking-[-0.01em] uppercase ${section.highlight ? "text-black" : "text-black"}`}
+                  className="text-[clamp(1.2rem,3vw,28px)] font-bold tracking-[-0.01em] uppercase text-black"
                   style={{ fontFamily: "'Futura Bold', sans-serif" }}
                 >
                   {section.category}
