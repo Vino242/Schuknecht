@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
@@ -18,35 +18,12 @@ const galleryImages = [
 
 export default function Menu() {
   const [lightbox, setLightbox] = useState<number | null>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.muted = true;
-
-    const tryPlay = () => {
-      if (v.paused) {
-        v.play().catch(() => {});
-      }
-    };
-
-    // Try autoplay immediately
-    tryPlay();
-
-    // Fallback: start on first user interaction (iOS may block autoplay)
-    const startOnInteraction = () => {
-      tryPlay();
-      document.removeEventListener("touchstart", startOnInteraction);
-      document.removeEventListener("scroll", startOnInteraction);
-    };
-    document.addEventListener("touchstart", startOnInteraction, { once: true });
-    document.addEventListener("scroll", startOnInteraction, { once: true });
-
-    return () => {
-      document.removeEventListener("touchstart", startOnInteraction);
-      document.removeEventListener("scroll", startOnInteraction);
-    };
+  // Callback ref to ensure muted attribute is set before play (React bug workaround for Safari)
+  const videoCallbackRef = useCallback((node: HTMLVideoElement | null) => {
+    if (!node) return;
+    node.defaultMuted = true;
+    node.muted = true;
+    node.play().catch(() => {});
   }, []);
 
   return (
@@ -132,15 +109,16 @@ export default function Menu() {
         {/* Right columns 4-5: video */}
         <div className="col-span-1 md:col-span-2 relative min-h-[60vh] md:min-h-[80vh]">
           <video
-            ref={videoRef}
-            src="/schuki/SnapInsta.to_AQMACyNywDypoIFjdf67dcRnnIqbY2uxmAi7JXceZVvtlAsx0WO1WMWPcy_i0221xjHQ70OKYngGuizswF5obsgR.mp4"
+            ref={videoCallbackRef}
             autoPlay
             loop
             muted
             playsInline
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover object-center"
-          />
+          >
+            <source src="/schuki/SnapInsta.to_AQMACyNywDypoIFjdf67dcRnnIqbY2uxmAi7JXceZVvtlAsx0WO1WMWPcy_i0221xjHQ70OKYngGuizswF5obsgR.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
 
