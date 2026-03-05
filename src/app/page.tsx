@@ -5,11 +5,11 @@ import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
 const slideshowImages = [
-  { src: "/Gemini_Generated_Image_hsp5zihsp5zihsp5.png", position: "object-top md:object-center" },
-  { src: "/IMG_4618.jpg", position: "object-top" },
-  { src: "/Gemini_Generated_Image_k77bqak77bqak77b.png", position: "object-top md:object-center" },
-  { src: "/img11.jpg", position: "object-top" },
-  { src: "/Gemini_Generated_Image_nv4tqanv4tqanv4t.png", position: "object-top md:object-center" },
+  { src: "/Bild1.jpg", position: "object-center" },
+  { src: "/IMG_4618.jpg", position: "object-center" },
+  { src: "/Bild2.jpg", position: "object-center" },
+  { src: "/img11.jpg", position: "object-center" },
+  { src: "/Bild3.jpg", position: "object-center" },
 ];
 
 export default function Home() {
@@ -173,7 +173,7 @@ export default function Home() {
               src={img.src}
               alt={`Schuknecht ${index + 1}`}
               fill
-              className={`object-cover ${img.position} transition-opacity duration-1000 scale-[1.15] origin-top md:scale-100 ${
+              className={`object-cover ${img.position} transition-opacity duration-1000 ${
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
               priority={index === 0}
