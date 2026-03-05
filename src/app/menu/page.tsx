@@ -22,10 +22,31 @@ export default function Menu() {
 
   useEffect(() => {
     const v = videoRef.current;
-    if (v) {
-      v.muted = true;
-      v.play().catch(() => {});
-    }
+    if (!v) return;
+    v.muted = true;
+
+    const tryPlay = () => {
+      if (v.paused) {
+        v.play().catch(() => {});
+      }
+    };
+
+    // Try autoplay immediately
+    tryPlay();
+
+    // Fallback: start on first user interaction (iOS may block autoplay)
+    const startOnInteraction = () => {
+      tryPlay();
+      document.removeEventListener("touchstart", startOnInteraction);
+      document.removeEventListener("scroll", startOnInteraction);
+    };
+    document.addEventListener("touchstart", startOnInteraction, { once: true });
+    document.addEventListener("scroll", startOnInteraction, { once: true });
+
+    return () => {
+      document.removeEventListener("touchstart", startOnInteraction);
+      document.removeEventListener("scroll", startOnInteraction);
+    };
   }, []);
 
   return (
