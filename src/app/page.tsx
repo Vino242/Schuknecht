@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           {/* Ticker — same width as SCHUKNECHT title, a bit above bottom */}
-          <div className="mt-auto mb-12 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
+          <div className="mt-auto mb-36 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
             <div
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
