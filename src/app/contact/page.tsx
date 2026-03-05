@@ -67,6 +67,23 @@ export default function Contact() {
             </a>
           </div>
 
+          {/* E-Mail */}
+          <div className="mt-8">
+            <h3
+              className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              E-Mail
+            </h3>
+            <a
+              href="mailto:mail@schuknecht.net"
+              className="text-[18px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              mail@schuknecht.net
+            </a>
+          </div>
+
           {/* Öffnungszeiten */}
           <div className="mt-8">
             <h3
@@ -110,23 +127,6 @@ export default function Contact() {
               style={{ fontFamily: "'Futura Bold', sans-serif" }}
             >
               Jetzt anrufen
-            </a>
-          </div>
-
-          {/* E-Mail */}
-          <div className="mt-8">
-            <h3
-              className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              E-Mail
-            </h3>
-            <a
-              href="mailto:mail@schuknecht.net"
-              className="text-[18px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              mail@schuknecht.net
             </a>
           </div>
 

@@ -142,7 +142,7 @@ export default function Home() {
       )}
 
       {/* ===== First viewport (mobile) ===== */}
-      <div className="flex flex-col">
+      <div className="flex flex-col min-h-[100dvh] md:min-h-0">
 
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 sticky top-0 z-40 bg-white relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
@@ -166,7 +166,7 @@ export default function Home() {
       >
         {/* Image slideshow (mobile: 70% right-aligned, desktop: right 2 cols) — 9:16 portrait */}
         <div className="col-span-5 md:col-span-2 order-2">
-          <div className="relative aspect-[9/16] overflow-hidden w-[70%] ml-auto md:w-full">
+          <div className="relative aspect-[3/4] md:aspect-[9/16] overflow-hidden w-[70%] ml-auto md:w-full">
           {slideshowImages.map((img, index) => (
             <Image
               key={img.src}
@@ -211,8 +211,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===== MOBILE: Ticker ===== */}
-      <div className="md:hidden mx-4 mt-6 text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
+      {/* ===== MOBILE: Ticker (below image, first screen) ===== */}
+      <div className="md:hidden mt-auto mb-auto mx-4 text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
         <div
           className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
@@ -282,6 +282,7 @@ export default function Home() {
 
       {/* ===== MOBILE: Text below fold ===== */}
       <div ref={mobileTextRef} className="md:hidden px-6 pt-8 pb-12">
+
         <h2
           className="text-[clamp(2rem,8vw,3.5rem)] leading-[1.1] font-bold uppercase tracking-[-0.02em] transition-all duration-500 ease-out"
           style={{
@@ -350,6 +351,7 @@ export default function Home() {
           <p className="opacity-50">Do — Sa &nbsp; 09:30 — 00:00</p>
         </div>
       </div>
+
     </div>
   );
 }
