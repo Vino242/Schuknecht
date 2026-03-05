@@ -6,21 +6,17 @@ async function isAuthenticated() {
   return cookieStore.get("admin_session")?.value === "1";
 }
 
-export async function GET() {
-  if (!(await isAuthenticated())) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const menuData = await import("@/data/tageskarte.json");
-  return NextResponse.json(menuData.default);
-}
-
 export async function POST(req: NextRequest) {
   if (!(await isAuthenticated())) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const menu = await req.json();
+  const formData = await req.formData();
+  const file = formData.get("pdf") as File | null;
+
+  if (!file) {
+    return NextResponse.json({ error: "Keine Datei" }, { status: 400 });
+  }
 
   const token = process.env.GITHUB_TOKEN;
   const owner = process.env.GITHUB_OWNER;
@@ -30,9 +26,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "GitHub nicht konfiguriert" }, { status: 500 });
   }
 
-  const filePath = "src/data/tageskarte.json";
+  const filePath = "public/speisekarte.pdf";
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
 
+  // Check if file already exists to get SHA
   const currentFile = await fetch(apiUrl, {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -40,12 +37,14 @@ export async function POST(req: NextRequest) {
     },
   });
 
-  if (!currentFile.ok) {
-    return NextResponse.json({ error: "Datei nicht gefunden" }, { status: 500 });
+  let sha: string | undefined;
+  if (currentFile.ok) {
+    const data = await currentFile.json();
+    sha = data.sha;
   }
 
-  const { sha } = await currentFile.json();
-  const content = Buffer.from(JSON.stringify(menu, null, 2)).toString("base64");
+  const bytes = await file.arrayBuffer();
+  const content = Buffer.from(bytes).toString("base64");
 
   const commitRes = await fetch(apiUrl, {
     method: "PUT",
@@ -55,9 +54,9 @@ export async function POST(req: NextRequest) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      message: "chore: update tageskarte via admin",
+      message: "chore: update speisekarte PDF via admin",
       content,
-      sha,
+      ...(sha ? { sha } : {}),
     }),
   });
 

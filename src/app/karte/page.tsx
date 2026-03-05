@@ -98,7 +98,7 @@ export default function Karte() {
               Speisekarte
             </h2>
             <a
-              href="/KarteSchukiSommer_Feb26.pdf"
+              href="/speisekarte.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[12px] tracking-[0.1em] uppercase opacity-40 hover:opacity-100 transition-opacity"
@@ -115,7 +115,7 @@ export default function Karte() {
             Unsere vollständige Speise- und Getränkekarte — Frühstück, Mittagessen, Kaffee, Drinks und mehr.
           </p>
           <a
-            href="/KarteSchukiSommer_Feb26.pdf"
+            href="/speisekarte.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
