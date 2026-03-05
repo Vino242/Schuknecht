@@ -208,7 +208,7 @@ export default function Home() {
       </div>
 
       {/* ===== DESKTOP: Footer nav ===== */}
-      <footer className="hidden md:flex md:items-center md:gap-36 lg:gap-52 h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:fixed md:bottom-0 md:left-0 md:right-0 bg-white z-40">
+      <footer className="hidden md:flex md:items-center md:justify-between h-[60px] lg:h-[90px] px-4 md:px-10 lg:px-16 md:fixed md:bottom-0 md:left-0 md:right-0 bg-white z-40">
         <div className="hidden md:block">
           <a
             href="/karte"
@@ -254,7 +254,7 @@ export default function Home() {
             impressum
           </a>
         </div>
-        <div className="hidden md:block ml-auto">
+        <div className="hidden md:block">
           <button
             onClick={() => setReservationOpen(true)}
             className="px-5 py-2 border border-black/30 text-[14px] tracking-[0.08em] capitalize text-black/40 hover:border-black hover:text-black transition-colors duration-200"
