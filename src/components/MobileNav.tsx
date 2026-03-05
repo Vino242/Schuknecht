@@ -95,7 +95,7 @@ export default function MobileNav() {
               className="inline-block px-6 py-3 text-[clamp(1rem,4vw,1.4rem)] text-white hover:opacity-80 transition-opacity duration-300"
               style={{
                 fontFamily: "'Futura Bold', sans-serif",
-                backgroundColor: "rgb(207, 46, 46)",
+                backgroundColor: "black",
               }}
             >
               Kontakt

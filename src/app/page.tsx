@@ -142,7 +142,7 @@ export default function Home() {
       )}
 
       {/* ===== First viewport (mobile) ===== */}
-      <div className="flex flex-col min-h-[100dvh] md:min-h-0">
+      <div className="flex flex-col min-h-[100svh] md:min-h-0">
 
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 sticky top-0 z-40 bg-white relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
@@ -212,7 +212,7 @@ export default function Home() {
       </div>
 
       {/* ===== MOBILE: Ticker + Reservieren (pinned to bottom) ===== */}
-      <div className="md:hidden mt-auto mb-6 mx-4">
+      <div className="md:hidden mt-auto mb-3 mx-4">
         <div className="text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
           <div
             className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
