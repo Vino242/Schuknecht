@@ -221,7 +221,7 @@ export default function Home() {
             Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
           </div>
         </div>
-        <div className="mt-2 flex justify-end">
+        <div className="mt-12 flex justify-end">
           <button
             onClick={() => setReservationOpen(true)}
             className="px-5 py-2 border border-black/30 text-[13px] tracking-[0.1em] uppercase text-black/60 hover:border-black hover:text-black transition-colors duration-200"
