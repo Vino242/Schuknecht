@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 
 const navLinks = [
-{ label: "Menü", href: "/karte" },
-  { label: "Catering", href: "/catering" },
+  { label: "Karte", href: "/karte" },
   { label: "Schuki", href: "/menu" },
-{ label: "Impressum", href: "/imprint" },
+  { label: "Catering", href: "/catering" },
+  { label: "Impressum", href: "/imprint" },
 ];
 
 export default function MobileNav() {

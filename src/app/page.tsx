@@ -240,16 +240,7 @@ export default function Home() {
             className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
-            menü
-          </a>
-        </div>
-        <div className="hidden md:block">
-          <a
-            href="/catering"
-            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
-            style={{ fontFamily: "'Futura Medium', sans-serif" }}
-          >
-            catering
+            karte
           </a>
         </div>
         <div className="hidden md:block">
@@ -259,6 +250,15 @@ export default function Home() {
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             schuki
+          </a>
+        </div>
+        <div className="hidden md:block">
+          <a
+            href="/catering"
+            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
+          >
+            catering
           </a>
         </div>
         <div className="hidden md:block">
