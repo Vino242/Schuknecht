@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
@@ -18,13 +18,6 @@ const galleryImages = [
 
 export default function Menu() {
   const [lightbox, setLightbox] = useState<number | null>(null);
-  // Callback ref to ensure muted attribute is set before play (React bug workaround for Safari)
-  const videoCallbackRef = useCallback((node: HTMLVideoElement | null) => {
-    if (!node) return;
-    node.defaultMuted = true;
-    node.muted = true;
-    node.play().catch(() => {});
-  }, []);
 
   return (
     <div className="min-h-screen w-screen bg-white text-black flex flex-col">
@@ -56,9 +49,9 @@ export default function Menu() {
       </div>
 
       {/* ===== MOBILE ONLY: Title above video ===== */}
-      <div className="md:hidden px-6 pt-6">
+      <div className="md:hidden px-6 pt-6 pb-4">
         <h1
-          className="text-[clamp(2rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
           SCHUKI
@@ -116,20 +109,13 @@ export default function Menu() {
           </a>
         </div>
 
-        {/* Right columns 4-5: video */}
-        <div className="col-span-1 md:col-span-2 relative min-h-[60vh] md:min-h-[80vh]">
-          <video
-            ref={videoCallbackRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          >
-            <source src="/schuki/SnapInsta.to_AQMACyNywDypoIFjdf67dcRnnIqbY2uxmAi7JXceZVvtlAsx0WO1WMWPcy_i0221xjHQ70OKYngGuizswF5obsgR.mp4" type="video/mp4" />
-          </video>
-        </div>
+        {/* Right columns 4-5: video (raw HTML to ensure muted attribute for Safari iOS autoplay) */}
+        <div
+          className="col-span-1 md:col-span-2 relative min-h-[60vh] md:min-h-[80vh]"
+          dangerouslySetInnerHTML={{
+            __html: `<video autoplay loop muted playsinline webkit-playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover object-center"><source src="/schuki/SnapInsta.to_AQMACyNywDypoIFjdf67dcRnnIqbY2uxmAi7JXceZVvtlAsx0WO1WMWPcy_i0221xjHQ70OKYngGuizswF5obsgR.mp4" type="video/mp4"></video>`
+          }}
+        />
       </div>
 
       {/* ===== MOBILE ONLY: Text between video and gallery ===== */}

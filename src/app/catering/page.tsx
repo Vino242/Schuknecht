@@ -39,9 +39,9 @@ export default function Catering() {
       </div>
 
       {/* ===== MOBILE ONLY: Title above image ===== */}
-      <div className="md:hidden px-6 pt-6">
+      <div className="md:hidden px-6 pt-6 pb-4">
         <h1
-          className="text-[clamp(2rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
           CATERING
