@@ -63,7 +63,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full bg-white text-black md:pb-0">
+    <div className="w-full bg-white text-black pb-0 md:pb-24 lg:pb-28">
       {/* ===== SPLASH OVERLAY ===== */}
       {splashPhase !== "done" && (
         <>
@@ -131,7 +131,7 @@ export default function Home() {
       )}
 
       {/* ===== First viewport (mobile) ===== */}
-      <div className="flex flex-col md:h-screen">
+      <div className="flex flex-col">
 
       {/* ===== TOP: Logo bar ===== */}
       <div className="flex-shrink-0 sticky top-0 z-40 bg-white relative flex items-center justify-between px-4 md:px-10 lg:px-16 min-h-[70px] max-h-[70px] md:min-h-[90px] md:max-h-[90px] lg:min-h-[130px] lg:max-h-[150px]">
@@ -153,8 +153,8 @@ export default function Home() {
       <div
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
-        {/* Image slideshow (mobile: 4 cols, desktop: right 2 cols) */}
-        <div className="col-span-5 md:col-span-2 order-2 relative h-[55vh] md:h-full overflow-hidden">
+        {/* Image slideshow (mobile: full width, desktop: right 2 cols) — 9:16 portrait */}
+        <div className="col-span-5 md:col-span-2 order-2 relative aspect-[9/16] overflow-hidden">
           {slideshowImages.map((img, index) => (
             <Image
               key={img.src}
@@ -185,25 +185,16 @@ export default function Home() {
             <p className="mt-4">Und jetzt lass es Dir schmecken!</p>
           </div>
 
-          {/* Marquee ticker (desktop only — inside left column) */}
-          <div className="hidden md:block mt-36 w-[70%] text-white overflow-hidden py-2.5" style={{ backgroundColor: "black" }}>
-            <div
-              className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
-              style={{ fontFamily: "'Futura Medium', sans-serif" }}
-            >
-              Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* ===== MOBILE: Ticker ===== */}
-      <div className="md:hidden mx-4 mt-6 text-white overflow-hidden py-3 flex-shrink-0" style={{ backgroundColor: "black" }}>
+      {/* ===== TICKER: full width below grid ===== */}
+      <div className="mx-4 md:mx-10 lg:mx-16 mt-6 text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
         <div
-          className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
+          className="whitespace-nowrap animate-marquee text-[13px] md:text-[14px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
         >
-          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
         </div>
       </div>
 
