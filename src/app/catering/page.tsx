@@ -38,6 +38,16 @@ export default function Catering() {
         <MobileNav />
       </div>
 
+      {/* ===== MOBILE ONLY: Title above image ===== */}
+      <div className="md:hidden px-6 pt-6">
+        <h1
+          className="text-[clamp(2rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+          style={{ fontFamily: "'Futura Bold', sans-serif" }}
+        >
+          CATERING
+        </h1>
+      </div>
+
       {/* ===== CENTER: 5-column grid ===== */}
       <div className="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-5 gap-[19px] px-6 md:px-10 lg:px-16">
         {/* Left columns 1-3: text */}
@@ -100,12 +110,6 @@ export default function Catering() {
 
       {/* ===== MOBILE: Text below image ===== */}
       <div className="md:hidden px-6 py-10">
-        <h1
-          className="text-[clamp(2rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
-          style={{ fontFamily: "'Futura Bold', sans-serif" }}
-        >
-          CATERING
-        </h1>
         <p
           className="mt-4 text-[14px] leading-[1.6em] font-light"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
