@@ -20,6 +20,17 @@ export default function Home() {
   const mobileTextRef = useRef<HTMLDivElement>(null);
   const [mobileTextVisible, setMobileTextVisible] = useState(false);
   const [reservationOpen, setReservationOpen] = useState(false);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const [tickerWidth, setTickerWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    const measure = () => {
+      if (titleRef.current) setTickerWidth(titleRef.current.offsetWidth);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
@@ -153,8 +164,9 @@ export default function Home() {
       <div
         className="md:flex-1 min-h-0 grid grid-cols-5 gap-0 md:gap-[19px] px-4 md:px-10 lg:px-16 mt-4"
       >
-        {/* Image slideshow (mobile: full width, desktop: right 2 cols) — 9:16 portrait */}
-        <div className="col-span-5 md:col-span-2 order-2 relative aspect-[9/16] overflow-hidden">
+        {/* Image slideshow (mobile: 70% right-aligned, desktop: right 2 cols) — 9:16 portrait */}
+        <div className="col-span-5 md:col-span-2 order-2">
+          <div className="relative aspect-[9/16] overflow-hidden w-[70%] ml-auto md:w-full">
           {slideshowImages.map((img, index) => (
             <Image
               key={img.src}
@@ -167,34 +179,45 @@ export default function Home() {
               priority={index === 0}
             />
           ))}
+          </div>
         </div>
 
-        {/* Title + ticker (mobile: 1 col vertical, desktop: left 3 cols) */}
+        {/* Title + ticker (desktop: left 3 cols) */}
         <div className="hidden md:flex col-span-3 order-1 flex-col items-start md:pt-0">
-          {/* Desktop: horizontal SCHUKNECHT */}
+          {/* Title + ticker wrapped together so ticker width = title width */}
           <h1
-            className="hidden md:block text-[clamp(1.8rem,5.5vw,75px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
+            ref={titleRef}
+            className="text-[clamp(1.8rem,5.5vw,75px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black whitespace-nowrap"
             style={{ fontFamily: "'Futura Bold', sans-serif", transform: "scaleY(1.08)" }}
           >
             SCHUKNECH<span className="serif-foot">T</span>
           </h1>
-          <div className="hidden md:block mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify flex flex-col gap-4" style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}>
+          <div className="mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify" style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}>
             <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
             <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte - sei es Quinoa aus dem Odenwald - oder Gemüse aus dem Ried.</p>
             <p className="mt-4">Wir bieten täglich frische Kuchen an — auch vegan und glutenfrei. Die Gerichte der Frühstücks und Mittagskarte sind immer vegetarisch und meistens auch vegan. Das (v) hinter den Gerichten steht in diesem Fall für vegan.</p>
             <p className="mt-4">Und jetzt lass es Dir schmecken!</p>
           </div>
 
+          {/* Ticker — same width as SCHUKNECHT title, a bit above bottom */}
+          <div className="mt-auto mb-12 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
+            <div
+              className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
+            >
+              Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* ===== TICKER: full width below grid ===== */}
-      <div className="mx-4 md:mx-10 lg:mx-16 mt-6 text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
+      {/* ===== MOBILE: Ticker ===== */}
+      <div className="md:hidden mx-4 mt-6 text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
         <div
-          className="whitespace-nowrap animate-marquee text-[13px] md:text-[14px] leading-[1.4em] font-normal"
+          className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
           style={{ fontFamily: "'Futura Medium', sans-serif" }}
         >
-          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+          Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
         </div>
       </div>
 
