@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
@@ -18,6 +18,15 @@ const galleryImages = [
 
 export default function Menu() {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.muted = true;
+      v.play().catch(() => {});
+    }
+  }, []);
 
   return (
     <div className="min-h-screen w-screen bg-white text-black flex flex-col">
@@ -100,25 +109,18 @@ export default function Menu() {
         </div>
 
         {/* Right columns 4-5: video */}
-        <div
-          className="col-span-1 md:col-span-2 relative min-h-[60vh] md:min-h-[80vh]"
-          ref={(el) => {
-            if (el && !el.querySelector("video")) {
-              const video = document.createElement("video");
-              video.src = "/schuki/SnapInsta.to_AQMACyNywDypoIFjdf67dcRnnIqbY2uxmAi7JXceZVvtlAsx0WO1WMWPcy_i0221xjHQ70OKYngGuizswF5obsgR.mp4";
-              video.autoplay = true;
-              video.loop = true;
-              video.muted = true;
-              video.playsInline = true;
-              video.setAttribute("playsinline", "");
-              video.setAttribute("webkit-playsinline", "");
-              video.setAttribute("preload", "auto");
-              video.className = "absolute inset-0 w-full h-full object-cover object-center";
-              el.appendChild(video);
-              video.play().catch(() => {});
-            }
-          }}
-        />
+        <div className="col-span-1 md:col-span-2 relative min-h-[60vh] md:min-h-[80vh]">
+          <video
+            ref={videoRef}
+            src="/schuki/SnapInsta.to_AQMACyNywDypoIFjdf67dcRnnIqbY2uxmAi7JXceZVvtlAsx0WO1WMWPcy_i0221xjHQ70OKYngGuizswF5obsgR.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </div>
       </div>
 
       {/* ===== MOBILE ONLY: Text between video and gallery ===== */}
