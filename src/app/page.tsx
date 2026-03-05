@@ -211,8 +211,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===== MOBILE: Ticker + Reservieren (centered between image & bottom) ===== */}
-      <div className="md:hidden mt-auto mb-auto mx-4">
+      {/* ===== MOBILE: Ticker + Reservieren (pinned to bottom) ===== */}
+      <div className="md:hidden mt-auto mb-6 mx-4">
         <div className="text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
           <div
             className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
