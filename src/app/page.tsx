@@ -131,7 +131,7 @@ export default function Home() {
               Wir nehmen Reservierungen ausschließlich telefonisch entgegen. Ruf uns einfach an — wir freuen uns!
             </p>
             <a
-              href="tel:+4915110657966"
+              href="tel:+4961514920255"
               className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 text-[13px] tracking-[0.1em] uppercase hover:opacity-80 transition-opacity w-full"
               style={{ fontFamily: "'Futura Bold', sans-serif" }}
             >

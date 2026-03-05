@@ -33,7 +33,7 @@ export default function Contact() {
           </h1>
 
           {/* Adresse */}
-          <div className="mt-10">
+          <div className="mt-8">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -51,7 +51,7 @@ export default function Contact() {
           </div>
 
           {/* Telefon */}
-          <div className="mt-8">
+          <div className="mt-4">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -59,16 +59,16 @@ export default function Contact() {
               Telefon
             </h3>
             <a
-              href="tel:+4915110657966"
+              href="tel:+4961514920255"
               className="text-[18px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              +49 151 10657966
+              06151 4920255
             </a>
           </div>
 
           {/* E-Mail */}
-          <div className="mt-8">
+          <div className="mt-4">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -85,7 +85,7 @@ export default function Contact() {
           </div>
 
           {/* Öffnungszeiten */}
-          <div className="mt-8">
+          <div className="mt-4">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -108,7 +108,7 @@ export default function Contact() {
           </div>
 
           {/* Reservierung */}
-          <div className="mt-10 border border-black p-6 max-w-[380px]">
+          <div className="mt-8 border border-black p-6 max-w-[380px]">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-4"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -122,7 +122,7 @@ export default function Contact() {
               Wir nehmen Reservierungen ausschließlich telefonisch entgegen. Ruf uns einfach an — wir freuen uns!
             </p>
             <a
-              href="tel:+4915110657966"
+              href="tel:+4961514920255"
               className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 text-[14px] tracking-[0.08em] uppercase hover:opacity-80 transition-opacity w-full justify-center"
               style={{ fontFamily: "'Futura Bold', sans-serif" }}
             >
@@ -135,7 +135,7 @@ export default function Contact() {
             href="https://maps.google.com/?q=Schuknechtstr.+1,+64289+Darmstadt"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 mb-10 inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
+            className="mt-8 mb-10 inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
             Route planen

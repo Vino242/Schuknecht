@@ -22,7 +22,7 @@ export default function Imprint() {
       </div>
 
       {/* ===== Content ===== */}
-      <div className="flex-1 px-6 md:px-10 lg:px-16 pb-16">
+      <div className="flex-1 px-6 md:px-10 lg:px-16 pt-14 pb-16">
         <h1
           className="text-[clamp(2.5rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
@@ -53,7 +53,7 @@ export default function Imprint() {
               Kontakt
             </h3>
             <p>
-              Telefon: +49 151 10657966<br />
+              Telefon: 06151 4920255<br />
               E-Mail: mail@schuknecht.net
             </p>
           </div>
