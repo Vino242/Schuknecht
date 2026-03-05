@@ -1,7 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
+import settings from "@/data/settings.json";
 
 export default function Contact() {
   return (
@@ -96,14 +95,12 @@ export default function Contact() {
               className="text-[18px] leading-[1.8em] font-light"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              <div className="flex gap-6">
-                <span className="w-[80px]">So — Mi</span>
-                <span>09:30 — 20:00</span>
-              </div>
-              <div className="flex gap-6">
-                <span className="w-[80px]">Do — Sa</span>
-                <span>09:30 — 00:00</span>
-              </div>
+              {settings.oeffnungszeiten.map((z, i) => (
+                <div key={i} className="flex gap-6">
+                  <span className="w-[80px]">{z.tage}</span>
+                  <span>{z.zeit}</span>
+                </div>
+              ))}
             </div>
           </div>
 

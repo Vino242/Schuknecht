@@ -16,22 +16,29 @@ type MenuCategory = {
   items: MenuItem[];
 };
 
+type OeffnungszeitRow = { tage: string; zeit: string };
+type Settings = { oeffnungszeiten: OeffnungszeitRow[]; ticker: string };
+
 export default function AdminDashboard() {
   const [menu, setMenu] = useState<MenuCategory[]>([]);
+  const [settings, setSettings] = useState<Settings>({ oeffnungszeiten: [], ticker: "" });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [status, setStatus] = useState<"idle" | "saved" | "error">("idle");
   const router = useRouter();
 
   useEffect(() => {
-    fetch("/api/admin/menu")
-      .then((r) => {
+    Promise.all([
+      fetch("/api/admin/menu").then((r) => {
         if (r.status === 401) { router.push("/admin"); return null; }
         return r.json();
-      })
-      .then((data) => {
-        if (data) { setMenu(data); setLoading(false); }
-      });
+      }),
+      fetch("/api/admin/settings").then((r) => r.ok ? r.json() : null),
+    ]).then(([menuData, settingsData]) => {
+      if (menuData) setMenu(menuData);
+      if (settingsData) setSettings(settingsData);
+      setLoading(false);
+    });
   }, [router]);
 
   function updateItem(ci: number, ii: number, field: keyof MenuItem, value: string) {
@@ -76,13 +83,20 @@ export default function AdminDashboard() {
   async function save() {
     setSaving(true);
     setStatus("idle");
-    const res = await fetch("/api/admin/menu", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(menu),
-    });
+    const [menuRes, settingsRes] = await Promise.all([
+      fetch("/api/admin/menu", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(menu),
+      }),
+      fetch("/api/admin/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(settings),
+      }),
+    ]);
     setSaving(false);
-    if (res.ok) {
+    if (menuRes.ok && settingsRes.ok) {
       setStatus("saved");
     } else {
       setStatus("error");
@@ -110,7 +124,7 @@ export default function AdminDashboard() {
           className="text-[18px] uppercase tracking-[0.05em]"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
-          Karte bearbeiten
+          Admin
         </h1>
         <div className="flex items-center gap-4">
           {status === "saved" && (
@@ -141,8 +155,106 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      {/* Menu Editor */}
+      {/* Settings Editor */}
       <div className="px-6 md:px-10 py-10 max-w-[800px] flex flex-col gap-12">
+        {/* Öffnungszeiten */}
+        <div>
+          <div className="border-b border-black pb-3 mb-6">
+            <h2
+              className="text-[20px] font-bold uppercase"
+              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            >
+              Öffnungszeiten
+            </h2>
+          </div>
+          <div className="flex flex-col gap-3">
+            {settings.oeffnungszeiten.map((row, i) => (
+              <div key={i} className="flex gap-3 items-center">
+                <input
+                  type="text"
+                  value={row.tage}
+                  onChange={(e) => {
+                    const updated = [...settings.oeffnungszeiten];
+                    updated[i] = { ...updated[i], tage: e.target.value };
+                    setSettings({ ...settings, oeffnungszeiten: updated });
+                    setStatus("idle");
+                  }}
+                  placeholder="z.B. So — Mi"
+                  className="border-b border-black/20 focus:border-black px-0 py-1.5 text-[14px] outline-none bg-transparent transition-colors w-[150px]"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                />
+                <input
+                  type="text"
+                  value={row.zeit}
+                  onChange={(e) => {
+                    const updated = [...settings.oeffnungszeiten];
+                    updated[i] = { ...updated[i], zeit: e.target.value };
+                    setSettings({ ...settings, oeffnungszeiten: updated });
+                    setStatus("idle");
+                  }}
+                  placeholder="z.B. 09:30 — 20:00"
+                  className="border-b border-black/20 focus:border-black px-0 py-1.5 text-[14px] outline-none bg-transparent transition-colors w-[200px]"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                />
+                <button
+                  onClick={() => {
+                    setSettings({
+                      ...settings,
+                      oeffnungszeiten: settings.oeffnungszeiten.filter((_, idx) => idx !== i),
+                    });
+                    setStatus("idle");
+                  }}
+                  className="text-[18px] opacity-30 hover:opacity-80 transition-opacity leading-none"
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+          <button
+            onClick={() => setSettings({
+              ...settings,
+              oeffnungszeiten: [...settings.oeffnungszeiten, { tage: "", zeit: "" }],
+            })}
+            className="mt-4 text-[12px] opacity-40 hover:opacity-80 transition-opacity uppercase tracking-[0.08em]"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            + Zeile hinzufügen
+          </button>
+        </div>
+
+        {/* Ticker */}
+        <div>
+          <div className="border-b border-black pb-3 mb-6">
+            <h2
+              className="text-[20px] font-bold uppercase"
+              style={{ fontFamily: "'Futura Bold', sans-serif" }}
+            >
+              Ticker
+            </h2>
+          </div>
+          <textarea
+            value={settings.ticker}
+            onChange={(e) => {
+              setSettings({ ...settings, ticker: e.target.value });
+              setStatus("idle");
+            }}
+            placeholder="Ticker-Text (wird auf der Startseite als Laufband angezeigt)"
+            rows={3}
+            className="w-full border border-black/20 focus:border-black px-3 py-2 text-[14px] outline-none bg-transparent transition-colors resize-none"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          />
+        </div>
+
+        {/* Menu Editor */}
+        <div className="border-b border-black pb-3 mb-0">
+          <h2
+            className="text-[20px] font-bold uppercase"
+            style={{ fontFamily: "'Futura Bold', sans-serif" }}
+          >
+            Karte
+          </h2>
+        </div>
         {menu.map((cat, ci) => (
           <div key={ci}>
             {/* Category title */}

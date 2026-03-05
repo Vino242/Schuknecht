@@ -3,6 +3,7 @@
 import { useEffect, useCallback, useState, useRef } from "react";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
+import settings from "@/data/settings.json";
 
 const slideshowImages = [
   { src: "/Bild1.jpg", position: "object-center" },
@@ -205,7 +206,7 @@ export default function Home() {
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
-              Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289 &nbsp;&nbsp;|&nbsp;&nbsp; Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+              {settings.ticker} &nbsp;&nbsp;|&nbsp;&nbsp; {settings.ticker}
             </div>
           </div>
         </div>
@@ -218,7 +219,7 @@ export default function Home() {
             className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
-            Willkommen im Schuknecht &nbsp;&nbsp;|&nbsp;&nbsp; So — Mi 09:30 — 20:00 &nbsp;&nbsp;|&nbsp;&nbsp; Do — Sa 09:30 — 00:00 &nbsp;&nbsp;|&nbsp;&nbsp; NEU: Schuki — unser Raum zum Mieten &nbsp;&nbsp;|&nbsp;&nbsp; Schuknechtstr. 1, Darmstadt, Hessen 64289
+            {settings.ticker}
           </div>
         </div>
         <div className="mt-12 flex justify-end">
@@ -358,8 +359,9 @@ export default function Home() {
           }}
         >
           <p>Schuknechtstr. 1, Darmstadt 64289</p>
-          <p className="mt-2 opacity-50">So — Mi &nbsp; 09:30 — 20:00</p>
-          <p className="opacity-50">Do — Sa &nbsp; 09:30 — 00:00</p>
+          {settings.oeffnungszeiten.map((z, i) => (
+            <p key={i} className={`opacity-50${i === 0 ? " mt-2" : ""}`}>{z.tage} &nbsp; {z.zeit}</p>
+          ))}
         </div>
       </div>
 
