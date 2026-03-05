@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
@@ -18,6 +18,25 @@ const galleryImages = [
 
 export default function Menu() {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.setAttribute("playsinline", "true");
+    v.setAttribute("webkit-playsinline", "true");
+    v.play().catch(() => {});
+
+    // Retry on visibility change (iOS sometimes blocks until tab is active)
+    const handleVisibility = () => {
+      if (!document.hidden && v.paused) {
+        v.play().catch(() => {});
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, []);
 
   return (
     <div className="min-h-screen w-screen bg-white text-black flex flex-col">
@@ -102,6 +121,7 @@ export default function Menu() {
         {/* Right columns 4-5: video */}
         <div className="col-span-1 md:col-span-2 relative min-h-[60vh] md:min-h-[80vh]">
           <video
+            ref={videoRef}
             src="/schuki/SnapInsta.to_AQMACyNywDypoIFjdf67dcRnnIqbY2uxmAi7JXceZVvtlAsx0WO1WMWPcy_i0221xjHQ70OKYngGuizswF5obsgR.mp4"
             autoPlay
             loop
