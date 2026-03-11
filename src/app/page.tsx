@@ -121,13 +121,13 @@ export default function Home() {
             </button>
             <h3
               className="text-[11px] tracking-[0.2em] uppercase opacity-40 mb-4"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               Reservierung
             </h3>
             <p
               className="text-[15px] leading-[1.6em] font-light mb-6"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               Wir nehmen Reservierungen ausschließlich telefonisch entgegen. Ruf uns einfach an — wir freuen uns!
             </p>

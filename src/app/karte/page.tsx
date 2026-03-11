@@ -40,7 +40,7 @@ export default function Karte() {
             </h2>
             <span
               className="text-[12px] opacity-40"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               {tageskarte.zeitraum}
             </span>
@@ -59,7 +59,7 @@ export default function Karte() {
                   {section.desc && (
                     <p
                       className="text-[11px] opacity-40 mt-0.5"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
+                      style={{ fontFamily: "'Futura Medium', sans-serif" }}
                     >
                       {section.desc}
                     </p>
@@ -70,13 +70,13 @@ export default function Karte() {
                     <div key={i} className="flex justify-between items-baseline gap-4">
                       <span
                         className="text-[14px] md:text-[15px] font-light flex-1"
-                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                        style={{ fontFamily: "'Futura Medium', sans-serif" }}
                       >
                         {item.name}
                       </span>
                       <span
                         className="text-[14px] md:text-[15px] font-light whitespace-nowrap opacity-70"
-                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                        style={{ fontFamily: "'Futura Medium', sans-serif" }}
                       >
                         {item.price} €
                       </span>
@@ -102,7 +102,7 @@ export default function Karte() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-[12px] tracking-[0.1em] uppercase opacity-40 hover:opacity-100 transition-opacity"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               PDF öffnen ↗
             </a>
@@ -110,7 +110,7 @@ export default function Karte() {
 
           <p
             className="text-[14px] leading-[1.6em] font-light opacity-60 mb-6"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Unsere vollständige Speise- und Getränkekarte — Frühstück, Mittagessen, Kaffee, Drinks und mehr.
           </p>

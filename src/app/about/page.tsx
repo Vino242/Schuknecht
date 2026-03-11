@@ -36,39 +36,39 @@ export default function About() {
             UNS
           </h1>
           <p
-            className="mt-6 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-6 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Ein frischer Wind weht durchs Schuknecht am Schlossgartenplatz. Nuri Vural, eine Bekanntheit in der Darmstädter Gastronomieszene, übernimmt die Führung des Cafés im Herzen des Martinsviertels.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Nuri hat Lust auf Vielfalt — und ein Auge für Qualität: Ihre Küchenerfahrung bringt sie in einer wechselnden Karte ein, mit einer erlesenen Auswahl an saisonal abgestimmten Speisen mit frischen Zutaten — darunter Quinoa aus dem Odenwald und Brot aus dem Martinsviertel.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Eine Sache steht fest: Alles ist vegan oder vegetarisch. Von veganem Tofu-Rührei mit frischen Kräutern über Frühstücksburritos bis hin zu Rührei &bdquo;Menemen&ldquo; à la turka — die Frühstückslandschaft des Viertels bekommt frischen Wind.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Am Donnerstag, Freitag und Samstag ab 18 Uhr bieten wir wechselnde Getränkespecials — ausgefallene Spirituosen zu originellen Cocktails, in vier Wirkungsgraden von &bdquo;ohne Alkohol&ldquo; bis &bdquo;stark&ldquo;.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Was bleibt: Unsere hauseigene Konditorin Liza und mit ihr das unschlagbare Schuknecht-Kuchensortiment — auch vegan und glutenfrei — sowie unser fresches Team und das vertraute Gesicht des Cafés.
           </p>
           <a
             href="/contact"
             className="mt-8 inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Kontakt
           </a>

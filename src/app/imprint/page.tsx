@@ -22,7 +22,7 @@ export default function Imprint() {
       </div>
 
       {/* ===== Content ===== */}
-      <div className="flex-1 px-6 md:px-10 lg:px-16 pt-14 pb-16">
+      <div className="flex-1 px-6 md:px-10 lg:px-16 pt-6 pb-16">
         <h1
           className="text-[clamp(2.5rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
@@ -31,8 +31,8 @@ export default function Imprint() {
         </h1>
 
         <div
-          className="mt-10 max-w-[600px] text-[16px] md:text-[18px] leading-[1.8em] font-light flex flex-col gap-8"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-10 max-w-[600px] text-[15px] md:text-[16px] leading-[1.8em] font-light flex flex-col gap-8 text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           {/* Angaben gemäß § 5 TMG */}
           <div>

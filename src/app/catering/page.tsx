@@ -59,33 +59,33 @@ export default function Catering() {
             CATERING
           </h1>
           <p
-            className="mt-6 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-6 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Ihr plant ein Event, eine Feier oder ein besonderes Dinner? Wir bringen das Schuknecht zu euch — mit frischen, saisonalen Gerichten, die komplett vegetarisch oder vegan sind.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Ob Fingerfood für den Empfang, ein mehrgängiges Menü für den Geburtstag oder ein entspanntes Brunch-Buffet am Sonntagmorgen — wir stellen euch ein individuelles Angebot zusammen, das zu eurem Anlass passt.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Unser Catering lebt von dem, was wir am besten können: kreative, pflanzliche Küche mit hochwertigen Zutaten aus der Region. Von Quinoa aus dem Odenwald bis zu Brot aus dem Martinsviertel — alles frisch zubereitet, mit Liebe angerichtet.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Schreibt uns einfach eine Nachricht mit euren Wünschen — wir melden uns schnellstmöglich mit einem unverbindlichen Angebot.
           </p>
           <a
             href="mailto:mail@schuknecht.net?subject=Catering-Anfrage"
             className="mt-8 inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Catering anfragen
           </a>
@@ -111,33 +111,33 @@ export default function Catering() {
       {/* ===== MOBILE: Text below image ===== */}
       <div className="md:hidden px-6 py-10">
         <p
-          className="mt-4 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-4 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Ihr plant ein Event, eine Feier oder ein besonderes Dinner? Wir bringen das Schuknecht zu euch — mit frischen, saisonalen Gerichten, die komplett vegetarisch oder vegan sind.
         </p>
         <p
-          className="mt-3 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Ob Fingerfood für den Empfang, ein mehrgängiges Menü für den Geburtstag oder ein entspanntes Brunch-Buffet am Sonntagmorgen — wir stellen euch ein individuelles Angebot zusammen, das zu eurem Anlass passt.
         </p>
         <p
-          className="mt-3 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Unser Catering lebt von dem, was wir am besten können: kreative, pflanzliche Küche mit hochwertigen Zutaten aus der Region.
         </p>
         <p
-          className="mt-3 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Schreibt uns einfach eine Nachricht mit euren Wünschen — wir melden uns schnellstmöglich mit einem unverbindlichen Angebot.
         </p>
         <a
           href="mailto:mail@schuknecht.net?subject=Catering-Anfrage"
           className="mt-6 inline-block bg-black text-white px-5 py-2.5 text-[12px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          style={{ fontFamily: "'Futura Medium', sans-serif" }}
         >
           Catering anfragen
         </a>

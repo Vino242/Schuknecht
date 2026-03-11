@@ -39,7 +39,7 @@ export default function AdminLogin() {
         </h1>
         <p
           className="text-[13px] opacity-50"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          style={{ fontFamily: "'Futura Medium', sans-serif" }}
         >
           Schuknecht Kartenverwaltung
         </p>
@@ -50,10 +50,10 @@ export default function AdminLogin() {
           placeholder="Passwort"
           autoFocus
           className="border border-black px-4 py-3 text-[15px] outline-none mt-2"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          style={{ fontFamily: "'Futura Medium', sans-serif" }}
         />
         {error && (
-          <p className="text-red-600 text-[13px]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <p className="text-red-600 text-[13px]" style={{ fontFamily: "'Futura Medium', sans-serif" }}>
             {error}
           </p>
         )}

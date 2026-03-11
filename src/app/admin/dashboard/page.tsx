@@ -136,7 +136,7 @@ export default function AdminDashboard() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
-        <p style={{ fontFamily: "'DM Sans', sans-serif" }} className="text-[14px] opacity-40">Laden...</p>
+        <p style={{ fontFamily: "'Futura Medium', sans-serif" }} className="text-[14px] opacity-40">Laden...</p>
       </div>
     );
   }
@@ -153,12 +153,12 @@ export default function AdminDashboard() {
         </h1>
         <div className="flex items-center gap-4">
           {status === "saved" && (
-            <p className="text-[13px] text-green-600" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <p className="text-[13px] text-green-600" style={{ fontFamily: "'Futura Medium', sans-serif" }}>
               Gespeichert ✓
             </p>
           )}
           {status === "error" && (
-            <p className="text-[13px] text-red-600" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <p className="text-[13px] text-red-600" style={{ fontFamily: "'Futura Medium', sans-serif" }}>
               Fehler beim Speichern
             </p>
           )}
@@ -173,7 +173,7 @@ export default function AdminDashboard() {
           <button
             onClick={logout}
             className="text-[12px] opacity-40 hover:opacity-80 transition-opacity uppercase tracking-[0.05em]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Logout
           </button>
@@ -202,7 +202,7 @@ export default function AdminDashboard() {
                   }}
                   placeholder="z.B. So — Mi"
                   className="border-b border-black/20 focus:border-black px-0 py-1.5 text-[14px] outline-none bg-transparent transition-colors w-[150px]"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  style={{ fontFamily: "'Futura Medium', sans-serif" }}
                 />
                 <input
                   type="text"
@@ -215,7 +215,7 @@ export default function AdminDashboard() {
                   }}
                   placeholder="z.B. 09:30 — 20:00"
                   className="border-b border-black/20 focus:border-black px-0 py-1.5 text-[14px] outline-none bg-transparent transition-colors w-[200px]"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  style={{ fontFamily: "'Futura Medium', sans-serif" }}
                 />
                 <button
                   onClick={() => {
@@ -238,7 +238,7 @@ export default function AdminDashboard() {
               oeffnungszeiten: [...settings.oeffnungszeiten, { tage: "", zeit: "" }],
             })}
             className="mt-4 text-[12px] opacity-40 hover:opacity-80 transition-opacity uppercase tracking-[0.08em]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             + Zeile hinzufügen
           </button>
@@ -260,7 +260,7 @@ export default function AdminDashboard() {
             placeholder="Ticker-Text (wird auf der Startseite als Laufband angezeigt)"
             rows={3}
             className="w-full border border-black/20 focus:border-black px-3 py-2 text-[14px] outline-none bg-transparent transition-colors resize-none"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           />
         </div>
 
@@ -271,7 +271,7 @@ export default function AdminDashboard() {
               Speisekarte (PDF)
             </h2>
           </div>
-          <p className="text-[13px] opacity-50 mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <p className="text-[13px] opacity-50 mb-4" style={{ fontFamily: "'Futura Medium', sans-serif" }}>
             Lade hier die aktuelle Speisekarte als PDF hoch. Sie wird auf der Karte-Seite zum Download angeboten.
           </p>
           <div className="flex items-center gap-4">
@@ -280,7 +280,7 @@ export default function AdminDashboard() {
               type="file"
               accept=".pdf"
               className="text-[13px]"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             />
             <button
               onClick={uploadPdf}
@@ -292,12 +292,12 @@ export default function AdminDashboard() {
             </button>
           </div>
           {pdfStatus === "done" && (
-            <p className="mt-3 text-[13px] text-green-600" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <p className="mt-3 text-[13px] text-green-600" style={{ fontFamily: "'Futura Medium', sans-serif" }}>
               PDF hochgeladen ✓
             </p>
           )}
           {pdfStatus === "error" && (
-            <p className="mt-3 text-[13px] text-red-600" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <p className="mt-3 text-[13px] text-red-600" style={{ fontFamily: "'Futura Medium', sans-serif" }}>
               Fehler beim Hochladen
             </p>
           )}
@@ -311,7 +311,7 @@ export default function AdminDashboard() {
             </h2>
           </div>
           <div className="mb-8">
-            <label className="text-[12px] opacity-50 uppercase tracking-[0.08em] block mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <label className="text-[12px] opacity-50 uppercase tracking-[0.08em] block mb-2" style={{ fontFamily: "'Futura Medium', sans-serif" }}>
               Zeitraum
             </label>
             <input
@@ -323,7 +323,7 @@ export default function AdminDashboard() {
               }}
               placeholder="z.B. Mo, 02.02. – Fr, 06.03. von 12.00 bis 14.30 Uhr"
               className="w-full border-b border-black/20 focus:border-black px-0 py-1.5 text-[14px] outline-none bg-transparent transition-colors"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             />
           </div>
 
@@ -339,7 +339,7 @@ export default function AdminDashboard() {
                   onChange={(e) => updateCategoryDesc(ci, e.target.value)}
                   placeholder="Kategorie-Beschreibung (optional)"
                   className="mt-1 w-full text-[12px] opacity-50 outline-none border-none bg-transparent"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  style={{ fontFamily: "'Futura Medium', sans-serif" }}
                 />
               </div>
 
@@ -353,7 +353,7 @@ export default function AdminDashboard() {
                         onChange={(e) => updateItem(ci, ii, "name", e.target.value)}
                         placeholder="Name"
                         className="border-b border-black/20 focus:border-black px-0 py-1.5 text-[14px] outline-none bg-transparent transition-colors"
-                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                        style={{ fontFamily: "'Futura Medium', sans-serif" }}
                       />
                       <input
                         type="text"
@@ -361,7 +361,7 @@ export default function AdminDashboard() {
                         onChange={(e) => updateItem(ci, ii, "price", e.target.value)}
                         placeholder="0,00"
                         className="border-b border-black/20 focus:border-black px-0 py-1.5 text-[14px] outline-none bg-transparent text-right transition-colors"
-                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                        style={{ fontFamily: "'Futura Medium', sans-serif" }}
                       />
                     </div>
                     <button
@@ -378,7 +378,7 @@ export default function AdminDashboard() {
               <button
                 onClick={() => addItem(ci)}
                 className="mt-4 text-[12px] opacity-40 hover:opacity-80 transition-opacity uppercase tracking-[0.08em]"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                style={{ fontFamily: "'Futura Medium', sans-serif" }}
               >
                 + Gericht hinzufügen
               </button>

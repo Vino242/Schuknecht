@@ -35,13 +35,13 @@ export default function Contact() {
           <div className="mt-8">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               Adresse
             </h3>
             <p
-              className="text-[18px] leading-[1.6em] font-light"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              className="text-[15px] md:text-[16px] leading-[1.6em] font-light text-justify"
+              style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
             >
               Schuknechtstr. 1<br />
               64289 Darmstadt<br />
@@ -53,14 +53,14 @@ export default function Contact() {
           <div className="mt-4">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               Telefon
             </h3>
             <a
               href="tel:+4961514920255"
-              className="text-[18px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              className="text-[15px] md:text-[16px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               06151 4920255
             </a>
@@ -70,14 +70,14 @@ export default function Contact() {
           <div className="mt-4">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               E-Mail
             </h3>
             <a
               href="mailto:mail@schuknecht.net"
-              className="text-[18px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              className="text-[15px] md:text-[16px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               mail@schuknecht.net
             </a>
@@ -87,13 +87,13 @@ export default function Contact() {
           <div className="mt-4">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               Öffnungszeiten
             </h3>
             <div
-              className="text-[18px] leading-[1.8em] font-light"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              className="text-[15px] md:text-[16px] leading-[1.8em] font-light"
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               {settings.oeffnungszeiten.map((z, i) => (
                 <div key={i} className="flex gap-6">
@@ -108,13 +108,13 @@ export default function Contact() {
           <div className="mt-8 border border-black p-6 max-w-[380px]">
             <h3
               className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-4"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
               Reservierung
             </h3>
             <p
-              className="text-[15px] leading-[1.6em] font-light mb-5"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              className="text-[15px] md:text-[16px] leading-[1.6em] font-light mb-5 text-justify"
+              style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
             >
               Wir nehmen Reservierungen ausschließlich telefonisch entgegen. Ruf uns einfach an — wir freuen uns!
             </p>
@@ -133,7 +133,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 mb-10 inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Route planen
           </a>

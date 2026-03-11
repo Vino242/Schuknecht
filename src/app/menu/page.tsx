@@ -30,7 +30,7 @@ export default function Menu() {
             <Image src={galleryImages[lightbox]} alt={`Schuki ${lightbox + 1}`} fill className="object-contain" />
           </div>
           <button className="absolute right-4 text-white/70 hover:text-white text-5xl leading-none px-4 py-8 z-10" onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % galleryImages.length); }}>›</button>
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/50 text-[13px]" style={{ fontFamily: "'DM Sans', sans-serif" }}>{lightbox + 1} / {galleryImages.length}</div>
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/50 text-[13px]" style={{ fontFamily: "'Futura Medium', sans-serif" }}>{lightbox + 1} / {galleryImages.length}</div>
         </div>
       )}
       {/* ===== TOP: Logo bar ===== */}
@@ -71,39 +71,39 @@ export default function Menu() {
             SCHUKI
           </h1>
           <p
-            className="mt-6 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-6 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Wir freuen uns riesig, dass unser kleiner Ableger vom Schuknecht endlich seine Pforten öffnet.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Schuki ist da, um geteilt zu werden: Ein Ort für kreative Köpfe, Foodies, Gastgeber:innen, Nachbar:innen — für alle, die Lust haben, etwas auf die Beine zu stellen.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Ob Pop-Up, Dinnerabend, Workshop oder kleine, private Feier — Schuki lebt von euch und euren Ideen. Ein Ort für alle, die Lust haben, sich kulinarisch auszuprobieren, Neues zu wagen oder einfach gemeinsam schöne Momente zu gestalten.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Bei uns kannst du das Schuki mieten — tageweise, wochenweise oder für besondere Anlässe. Und wer etwas Größeres plant, kann zusätzlich auch das Studio von @a.paevi nebenan dazu buchen, um mehr Platz zu haben.
           </p>
           <p
-            className="mt-4 text-[16px] md:text-[18px] leading-[1.6em] font-light max-w-[440px]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
+            style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
             Schuki lebt von euch — von euren Ideen, eurer Kreativität, eurer Leidenschaft für gutes Essen und schöne Begegnungen.
           </p>
           <a
             href="mailto:mail@schuknecht.net"
             className="mt-8 inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Schuki anfragen
           </a>
@@ -121,39 +121,39 @@ export default function Menu() {
       {/* ===== MOBILE ONLY: Text between video and gallery ===== */}
       <div className="md:hidden px-6 py-10">
         <p
-          className="mt-4 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-4 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Wir freuen uns riesig, dass unser kleiner Ableger vom Schuknecht endlich seine Pforten öffnet.
         </p>
         <p
-          className="mt-3 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Schuki ist da, um geteilt zu werden: Ein Ort für kreative Köpfe, Foodies, Gastgeber:innen, Nachbar:innen — für alle, die Lust haben, etwas auf die Beine zu stellen.
         </p>
         <p
-          className="mt-3 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Ob Pop-Up, Dinnerabend, Workshop oder kleine, private Feier — Schuki lebt von euch und euren Ideen. Ein Ort für alle, die Lust haben, sich kulinarisch auszuprobieren, Neues zu wagen oder einfach gemeinsam schöne Momente zu gestalten.
         </p>
         <p
-          className="mt-3 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Bei uns kannst du das Schuki mieten — tageweise, wochenweise oder für besondere Anlässe. Und wer etwas Größeres plant, kann zusätzlich auch das Studio von @a.paevi nebenan dazu buchen, um mehr Platz zu haben.
         </p>
         <p
-          className="mt-3 text-[14px] leading-[1.6em] font-light"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
+          style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
           Schuki lebt von euch — von euren Ideen, eurer Kreativität, eurer Leidenschaft für gutes Essen und schöne Begegnungen.
         </p>
         <a
           href="mailto:mail@schuknecht.net"
           className="mt-6 inline-block bg-black text-white px-5 py-2.5 text-[12px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          style={{ fontFamily: "'Futura Medium', sans-serif" }}
         >
           Schuki anfragen
         </a>
