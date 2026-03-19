@@ -6,11 +6,16 @@ import MobileNav from "@/components/MobileNav";
 import settings from "@/data/settings.json";
 
 const slideshowImages = [
-  { src: "/Bild1.jpg", position: "object-center" },
-  { src: "/IMG_4618.jpg", position: "object-center" },
-  { src: "/Bild2.jpg", position: "object-center" },
-  { src: "/img11.jpg", position: "object-center" },
-  { src: "/Bild3.jpg", position: "object-center" },
+  { src: "/slideshow/00a.jpg", position: "object-center" },
+  { src: "/slideshow/01ajpg.jpg", position: "object-center" },
+  { src: "/slideshow/05a.jpg", position: "object-center" },
+  { src: "/slideshow/03a.jpg", position: "object-center" },
+  { src: "/slideshow/06a.jpg", position: "object-center" },
+  { src: "/slideshow/09.jpg", position: "object-center" },
+  { src: "/slideshow/07a.jpg", position: "object-center" },
+  { src: "/slideshow/02a.jpg", position: "object-center" },
+  { src: "/slideshow/04a.jpg", position: "object-center" },
+  { src: "/slideshow/08a.jpg", position: "object-center" },
 ];
 
 export default function Home() {
