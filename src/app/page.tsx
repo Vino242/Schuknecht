@@ -172,7 +172,7 @@ export default function Home() {
       >
         {/* Image slideshow (mobile: 70% right-aligned, desktop: right 2 cols) — 9:16 portrait */}
         <div className="col-span-5 md:col-span-2 order-2">
-          <div className="relative aspect-[3/4] md:aspect-[9/16] overflow-hidden w-[70%] ml-auto md:w-full">
+          <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden w-[70%] ml-auto md:w-full">
           {slideshowImages.map((img, index) => (
             <Image
               key={img.src}
@@ -201,12 +201,10 @@ export default function Home() {
           <div className="mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify" style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}>
             <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
             <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte - sei es Quinoa aus dem Odenwald - oder Gemüse aus dem Ried.</p>
-            <p className="mt-4">Wir bieten täglich frische Kuchen an — auch vegan und glutenfrei. Die Gerichte der Frühstücks und Mittagskarte sind immer vegetarisch und meistens auch vegan. Das (v) hinter den Gerichten steht in diesem Fall für vegan.</p>
-            <p className="mt-4">Und jetzt lass es Dir schmecken!</p>
           </div>
 
-          {/* Ticker — same width as SCHUKNECHT title, a bit above bottom */}
-          <div className="mt-auto mb-36 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
+          {/* Ticker — same width as SCHUKNECHT title */}
+          <div className="mt-24 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
             <div
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
@@ -324,8 +322,6 @@ export default function Home() {
         >
           <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
           <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte - sei es Quinoa aus dem Odenwald - oder Gemüse aus dem Ried.</p>
-          <p className="mt-4">Wir bieten täglich frische Kuchen an — auch vegan und glutenfrei. Die Gerichte der Frühstücks und Mittagskarte sind immer vegetarisch und meistens auch vegan. Das (v) hinter den Gerichten steht in diesem Fall für vegan.</p>
-          <p className="mt-4">Und jetzt lass es Dir schmecken!</p>
         </div>
 
         {/* Kontakt */}
