@@ -5,8 +5,8 @@ import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 
 const slideshowImages = [
-  "/catering/IMG_4603.jpg",
-  "/catering/IMG_4604.jpg",
+  "/catering/00a.jpg",
+  "/catering/00b.jpg",
 ];
 
 export default function Catering() {
@@ -41,7 +41,7 @@ export default function Catering() {
       {/* ===== MOBILE ONLY: Title above image ===== */}
       <div className="md:hidden px-6 pt-6 pb-4">
         <h1
-          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
           CATERING
@@ -53,7 +53,7 @@ export default function Catering() {
         {/* Left columns 1-3: text */}
         <div className="hidden md:flex md:col-span-3 flex-col items-start pt-0">
           <h1
-            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif" }}
           >
             CATERING
@@ -62,7 +62,7 @@ export default function Catering() {
             className="mt-6 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
             style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
-            Ihr plant ein Event, eine Feier oder ein besonderes Dinner? Wir bringen das Schuknecht zu euch — mit frischen, saisonalen Gerichten, die komplett vegetarisch oder vegan sind.
+            Ihr plant ein Event, eine Feier oder ein besonderes Dinner? Ihr könnt das Schuknecht mieten für eine geschlossene Gesellschaft oder wir bringen das Schuknecht zu euch — mit frischen, saisonalen Gerichten, die komplett vegetarisch oder vegan sind.
           </p>
           <p
             className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
@@ -114,7 +114,7 @@ export default function Catering() {
           className="mt-4 text-[14px] leading-[1.6em] font-light text-justify"
           style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
-          Ihr plant ein Event, eine Feier oder ein besonderes Dinner? Wir bringen das Schuknecht zu euch — mit frischen, saisonalen Gerichten, die komplett vegetarisch oder vegan sind.
+          Ihr plant ein Event, eine Feier oder ein besonderes Dinner? Ihr könnt das Schuknecht mieten für eine geschlossene Gesellschaft oder wir bringen das Schuknecht zu euch — mit frischen, saisonalen Gerichten, die komplett vegetarisch oder vegan sind.
         </p>
         <p
           className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"

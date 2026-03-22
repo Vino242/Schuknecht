@@ -25,7 +25,7 @@ export default function Contact() {
         {/* Left columns 1-3: Contact info */}
         <div className="md:col-span-3 flex flex-col items-start pt-0">
           <h1
-            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif" }}
           >
             KONTAKT

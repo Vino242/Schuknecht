@@ -24,7 +24,7 @@ export default function Imprint() {
       {/* ===== Content ===== */}
       <div className="flex-1 px-6 md:px-10 lg:px-16 pt-6 pb-16">
         <h1
-          className="text-[clamp(2.5rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+          className="text-[clamp(2.5rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
           Impressum

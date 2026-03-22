@@ -6,16 +6,26 @@ import MobileNav from "@/components/MobileNav";
 import settings from "@/data/settings.json";
 
 const slideshowImages = [
+  { src: "/slideshow/00b.jpg", position: "object-center" },
+  { src: "/slideshow/02b.jpg", position: "object-center" },
   { src: "/slideshow/00a.jpg", position: "object-center" },
   { src: "/slideshow/01ajpg.jpg", position: "object-center" },
-  { src: "/slideshow/05a.jpg", position: "object-center" },
-  { src: "/slideshow/03a.jpg", position: "object-center" },
-  { src: "/slideshow/06a.jpg", position: "object-center" },
-  { src: "/slideshow/09.jpg", position: "object-center" },
-  { src: "/slideshow/07a.jpg", position: "object-center" },
+  { src: "/slideshow/01b.jpg", position: "object-center" },
   { src: "/slideshow/02a.jpg", position: "object-center" },
+  { src: "/slideshow/03a.jpg", position: "object-center" },
+  { src: "/slideshow/03b.jpg", position: "object-center" },
   { src: "/slideshow/04a.jpg", position: "object-center" },
+  { src: "/slideshow/04b.jpg", position: "object-center" },
+  { src: "/slideshow/05a.jpg", position: "object-center" },
+  { src: "/slideshow/05b.jpg", position: "object-center" },
+  { src: "/slideshow/06a.jpg", position: "object-center" },
+  { src: "/slideshow/06b.jpg", position: "object-center" },
+  { src: "/slideshow/06c.jpg", position: "object-center" },
+  { src: "/slideshow/07a.jpg", position: "object-center" },
+  { src: "/slideshow/07b.jpg", position: "object-center" },
   { src: "/slideshow/08a.jpg", position: "object-center" },
+  { src: "/slideshow/08b.jpg", position: "object-center" },
+  { src: "/slideshow/09.jpg", position: "object-center" },
 ];
 
 export default function Home() {
@@ -175,7 +185,7 @@ export default function Home() {
           <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden w-[70%] ml-auto md:w-full">
           {slideshowImages.map((img, index) => (
             <Image
-              key={img.src}
+              key={index}
               src={img.src}
               alt={`Schuknecht ${index + 1}`}
               fill
@@ -193,18 +203,18 @@ export default function Home() {
           {/* Title + ticker wrapped together so ticker width = title width */}
           <h1
             ref={titleRef}
-            className="text-[clamp(1.8rem,5.5vw,75px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black whitespace-nowrap"
+            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black whitespace-nowrap"
             style={{ fontFamily: "'Futura Bold', sans-serif", transform: "scaleY(1.08)" }}
           >
             SCHUKNECH<span className="serif-foot">T</span>
           </h1>
-          <div className="mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify" style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}>
+          <div className="mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light text-left" style={{ fontFamily: "'Futura Medium', sans-serif", textWrap: "pretty", width: tickerWidth ? `${tickerWidth * 0.79}px` : undefined }}>
             <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
-            <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte - sei es Quinoa aus dem Odenwald - oder Gemüse aus dem Ried.</p>
+            <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte — sei es Quinoa aus dem Odenwald — oder Gemüse aus dem Ried.</p>
           </div>
 
           {/* Ticker — same width as SCHUKNECHT title */}
-          <div className="mt-24 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
+          <div className="mt-40 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
             <div
               className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
@@ -286,7 +296,7 @@ export default function Home() {
         <div className="hidden md:block">
           <button
             onClick={() => setReservationOpen(true)}
-            className="px-5 py-2 border border-black/30 text-[14px] tracking-[0.08em] capitalize text-black/40 hover:border-black hover:text-black transition-colors duration-200"
+            className="px-5 py-2 border border-black rounded-full text-[14px] tracking-[0.08em] capitalize text-black hover:opacity-60 transition-opacity duration-200"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Tisch reservieren

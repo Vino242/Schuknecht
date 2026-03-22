@@ -51,7 +51,7 @@ export default function Menu() {
       {/* ===== MOBILE ONLY: Title above video ===== */}
       <div className="md:hidden px-6 pt-6 pb-4">
         <h1
-          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
           SCHUKI
@@ -65,7 +65,7 @@ export default function Menu() {
         {/* Left columns 1-3: SCHUKI title + menu content */}
         <div className="hidden md:flex md:col-span-3 flex-col items-start pt-0">
           <h1
-            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[-0.02em] uppercase text-black"
+            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif" }}
           >
             SCHUKI
@@ -74,7 +74,7 @@ export default function Menu() {
             className="mt-6 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
             style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
-            Wir freuen uns riesig, dass unser kleiner Ableger vom Schuknecht endlich seine Pforten öffnet.
+            Wir freuen uns riesig, dass unser kleiner Ableger vom Schuknecht seit November 2025 seine Pforten geöffnet hat.
           </p>
           <p
             className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
@@ -92,13 +92,13 @@ export default function Menu() {
             className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
             style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
-            Bei uns kannst du das Schuki mieten — tageweise, wochenweise oder für besondere Anlässe. Und wer etwas Größeres plant, kann zusätzlich auch das Studio von @a.paevi nebenan dazu buchen, um mehr Platz zu haben.
+            Bei uns kannst du das Schuki mieten — tageweise, wochenweise oder für besondere Anlässe. Und wer etwas Größeres plant, bucht für mehr Platz einfach den direkt angrenzenden Støre von å pävi gleich dazu.
           </p>
           <p
             className="mt-4 text-[15px] md:text-[16px] leading-[1.6em] font-light max-w-[480px] text-justify"
             style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
           >
-            Schuki lebt von euch — von euren Ideen, eurer Kreativität, eurer Leidenschaft für gutes Essen und schöne Begegnungen.
+            Schuki lebt von euch — von euren Ideen, eurer Kreativität, eurer Leidenschaft für gutes Essen und schönen Begegnungen.
           </p>
           <a
             href="mailto:mail@schuknecht.net"
@@ -124,7 +124,7 @@ export default function Menu() {
           className="mt-4 text-[14px] leading-[1.6em] font-light text-justify"
           style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
-          Wir freuen uns riesig, dass unser kleiner Ableger vom Schuknecht endlich seine Pforten öffnet.
+          Wir freuen uns riesig, dass unser kleiner Ableger vom Schuknecht seit November 2025 seine Pforten geöffnet hat.
         </p>
         <p
           className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
@@ -142,13 +142,13 @@ export default function Menu() {
           className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
           style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
-          Bei uns kannst du das Schuki mieten — tageweise, wochenweise oder für besondere Anlässe. Und wer etwas Größeres plant, kann zusätzlich auch das Studio von @a.paevi nebenan dazu buchen, um mehr Platz zu haben.
+          Bei uns kannst du das Schuki mieten — tageweise, wochenweise oder für besondere Anlässe. Und wer etwas Größeres plant, bucht für mehr Platz einfach den direkt angrenzenden Støre von å pävi gleich dazu.
         </p>
         <p
           className="mt-3 text-[14px] leading-[1.6em] font-light text-justify"
           style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
-          Schuki lebt von euch — von euren Ideen, eurer Kreativität, eurer Leidenschaft für gutes Essen und schöne Begegnungen.
+          Schuki lebt von euch — von euren Ideen, eurer Kreativität, eurer Leidenschaft für gutes Essen und schönen Begegnungen.
         </p>
         <a
           href="mailto:mail@schuknecht.net"

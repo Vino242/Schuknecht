@@ -23,7 +23,7 @@ export default function Karte() {
       {/* ===== Content ===== */}
       <div className="flex-1 px-6 md:px-10 lg:px-16 pt-6 pb-16">
         <h1
-          className="text-[clamp(2.5rem,7vw,90px)] leading-[1.15em] font-bold tracking-[-0.02em] uppercase text-black"
+          className="text-[clamp(2.5rem,7vw,90px)] leading-[1.15em] font-bold tracking-[0.1em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
           KARTE
@@ -78,7 +78,7 @@ export default function Karte() {
                         className="text-[14px] md:text-[15px] font-light whitespace-nowrap opacity-70"
                         style={{ fontFamily: "'Futura Medium', sans-serif" }}
                       >
-                        {item.price} €
+                        {item.price} EUR
                       </span>
                     </div>
                   ))}
@@ -112,7 +112,7 @@ export default function Karte() {
             className="text-[14px] leading-[1.6em] font-light opacity-60 mb-6"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
-            Unsere vollständige Speise- und Getränkekarte — Frühstück, Mittagessen, Kaffee, Drinks und mehr.
+            Unsere vollständige Frühstückskarte
           </p>
           <a
             href="/speisekarte.pdf"
