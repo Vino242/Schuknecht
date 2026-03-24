@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createSession, SESSION_COOKIE, SESSION_MAX_AGE } from "@/lib/session";
+
+const SESSION_COOKIE = "admin_session";
+const SESSION_MAX_AGE = 60 * 60 * 24; // 24 hours
 
 export async function POST(req: NextRequest) {
   const { password } = await req.json();
@@ -8,10 +10,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const token = createSession();
-
   const response = NextResponse.json({ ok: true });
-  response.cookies.set(SESSION_COOKIE, token, {
+  response.cookies.set(SESSION_COOKIE, "1", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "strict",

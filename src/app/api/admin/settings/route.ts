@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { isAuthenticated } from "@/lib/session";
+import { cookies } from "next/headers";
+
+async function isAuthenticated() {
+  const cookieStore = await cookies();
+  return cookieStore.get("admin_session")?.value === "1";
+}
 
 export async function GET() {
   if (!(await isAuthenticated())) {

@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { isAuthenticated } from "@/lib/session";
+import { cookies } from "next/headers";
+
+async function isAuthenticated() {
+  const cookieStore = await cookies();
+  return cookieStore.get("admin_session")?.value === "1";
+}
 
 export async function POST(req: NextRequest) {
   if (!(await isAuthenticated())) {
@@ -24,7 +29,6 @@ export async function POST(req: NextRequest) {
   const filePath = "public/speisekarte.pdf";
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
 
-  // Check if file already exists to get SHA
   const currentFile = await fetch(apiUrl, {
     headers: {
       Authorization: `Bearer ${token}`,
