@@ -21,7 +21,7 @@ export default function AdminLogin() {
     });
 
     if (res.ok) {
-      router.push("/admin/dashboard");
+      window.location.href = "/admin/dashboard";
     } else {
       setError("Falsches Passwort");
       setLoading(false);
