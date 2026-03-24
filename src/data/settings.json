@@ -3,11 +3,7 @@
     {
       "tage": "So — Mi",
       "zeit": "09:30 — 20:00"
-    },
-    {
-      "tage": "Do — Sa",
-      "zeit": "09:30 — 00:00"
     }
   ],
-  "ticker": "Willkommen im Schuknecht   |   So — Mi 09:30 — 20:00   |   Do — Sa 09:30 — 00:00   |   NEU: Schuki — unser Raum zum Mieten   |   Schuknechtstr. 1, Darmstadt, Hessen 64289"
+  "ticker": "test"
 }
