@@ -51,7 +51,7 @@ export default function Menu() {
       {/* ===== MOBILE ONLY: Title above video ===== */}
       <div className="md:hidden px-6 pt-6 pb-4">
         <h1
-          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
+          className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
           style={{ fontFamily: "'Futura Bold', sans-serif" }}
         >
           SCHUKI
@@ -65,7 +65,7 @@ export default function Menu() {
         {/* Left columns 1-3: SCHUKI title + menu content */}
         <div className="hidden md:flex md:col-span-3 flex-col items-start pt-0">
           <h1
-            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black"
+            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black"
             style={{ fontFamily: "'Futura Bold', sans-serif" }}
           >
             SCHUKI

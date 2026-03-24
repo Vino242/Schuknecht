@@ -203,7 +203,7 @@ export default function Home() {
           {/* Title + ticker wrapped together so ticker width = title width */}
           <h1
             ref={titleRef}
-            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.1em] uppercase text-black whitespace-nowrap"
+            className="text-[clamp(3rem,7vw,90px)] leading-[1em] font-bold tracking-[0.05em] uppercase text-black whitespace-nowrap"
             style={{ fontFamily: "'Futura Bold', sans-serif", transform: "scaleY(1.08)" }}
           >
             SCHUKNECH<span className="serif-foot">T</span>
@@ -296,7 +296,7 @@ export default function Home() {
         <div className="hidden md:block">
           <button
             onClick={() => setReservationOpen(true)}
-            className="px-5 py-2 border border-black rounded-full text-[14px] tracking-[0.08em] capitalize text-black hover:opacity-60 transition-opacity duration-200"
+            className="px-5 py-2 border border-black text-[14px] tracking-[0.08em] capitalize text-black hover:opacity-60 transition-opacity duration-200"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             Tisch reservieren
