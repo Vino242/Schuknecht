@@ -208,8 +208,8 @@ export default function Home() {
           >
             SCHUKNECH<span className="serif-foot">T</span>
           </h1>
-          <div className="mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light text-left" style={{ fontFamily: "'Futura Medium', sans-serif", textWrap: "pretty", width: tickerWidth ? `${tickerWidth * 0.79}px` : undefined }}>
-            <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
+          <div className="mt-10 text-[15px] md:text-[16px] leading-[1.6em] font-light text-left" style={{ fontFamily: "'Futura Medium', sans-serif", textWrap: "pretty", width: tickerWidth ? `${tickerWidth * 0.95}px` : undefined }}>
+            <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im<br />Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
             <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte — sei es Quinoa aus dem Odenwald — oder Gemüse aus dem Ried.</p>
           </div>
 
@@ -330,7 +330,7 @@ export default function Home() {
             transitionDelay: mobileTextVisible ? '120ms' : '0ms',
           }}
         >
-          <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere gutes Frühstück.</p>
+          <p>Gutes Essen macht glücklich — nach diesem Motto begrüßen wir Dich im Schuknecht — denn wir lieben gutes Essen und insbesondere <span style={{ whiteSpace: "nowrap" }}>gutes Frühstück.</span></p>
           <p className="mt-4">Auf unsere wechselnde Karte kommt nur, worauf wir selbst Lust haben und was uns schmeckt. Wir legen besonderen Wert auf die Qualität und Zubereitung unserer Produkte - sei es Quinoa aus dem Odenwald - oder Gemüse aus dem Ried.</p>
         </div>
 
