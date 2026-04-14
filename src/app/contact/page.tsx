@@ -58,11 +58,11 @@ export default function Contact() {
               Telefon
             </h3>
             <a
-              href="tel:+4961514920255"
+              href="tel:+4961513924562"
               className="text-[15px] md:text-[16px] leading-[1.6em] font-light hover:opacity-50 transition-opacity"
               style={{ fontFamily: "'Futura Medium', sans-serif" }}
             >
-              06151 4920255
+              06151 3924562
             </a>
           </div>
 
@@ -119,7 +119,7 @@ export default function Contact() {
               Wir nehmen Reservierungen ausschließlich telefonisch entgegen. Ruf uns einfach an — wir freuen uns!
             </p>
             <a
-              href="tel:+4961514920255"
+              href="tel:+4961513924562"
               className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 text-[14px] tracking-[0.08em] uppercase hover:opacity-80 transition-opacity w-full justify-center"
               style={{ fontFamily: "'Futura Bold', sans-serif" }}
             >

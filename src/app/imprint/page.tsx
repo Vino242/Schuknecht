@@ -53,7 +53,7 @@ export default function Imprint() {
               Kontakt
             </h3>
             <p>
-              Telefon: 06151 4920255<br />
+              Telefon: 06151 3924562<br />
               E-Mail: mail@schuknecht.net
             </p>
           </div>
