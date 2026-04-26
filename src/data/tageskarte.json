@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 20.04. – Fr, 24.04. von 12.00 bis 14.30 Uhr",
+  "zeitraum": "Mo, 27.04. – Fr, 30.04. von 12.00 bis 14.30 Uhr / Feiertag kein Mittagessen - nur Frühstück 10 bis 14 Uhr",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 20.04. – Fr, 24.04. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 27.04. – Fr, 30.04. von 12.00 bis 14.30 Uhr / Feiertag kein Mittagessen - nur Frühstück 10 bis 14 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -100,7 +100,7 @@
           "price": "13,90"
         },
         {
-          "name": "Yaki Onigiri / japanische, gegrillte Reisbällchen / gefüllt mit Aubergine, Edamame, Avocado (v)",
+          "name": "Rote Spitzpaprika / gefüllt mit Feta / Reis",
           "price": "13,90"
         }
       ]
