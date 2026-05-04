@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 27.04. – Fr, 30.04. von 12.00 bis 14.30 Uhr / Feiertag kein Mittagessen - nur Frühstück 10 bis 14 Uhr",
+  "zeitraum": "Mo, 04.05. – Fr, 08.05. von 12.00 bis 14.30 Uhr ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -7,11 +7,11 @@
       "items": [
         {
           "name": "Hummus / Olivenöl / Zaatar / Brot (v)",
-          "price": "8,00"
+          "price": "8,50"
         },
         {
           "name": "Ajvar / Paprika-Auberginen Dip / Brot (v)",
-          "price": "7,50"
+          "price": "8,00"
         },
         {
           "name": "Bohnen in Tomatensauce / Feta überbacken / Brot",
@@ -19,15 +19,15 @@
         },
         {
           "name": "Artischocken mariniert / Brot (v)",
-          "price": "7,00"
+          "price": "7,50"
         },
         {
           "name": "Peperoni / Feta gefüllt / Brot",
-          "price": "7,00"
+          "price": "7,50"
         },
         {
           "name": "Schafskäse mariniert / Brot",
-          "price": "8,00"
+          "price": "8,50"
         },
         {
           "name": "Oliven mariniert (v)",
@@ -55,7 +55,7 @@
         },
         {
           "name": "Warmer Schafskäse / Honig & Thymian / Brot",
-          "price": "8,00"
+          "price": "8,50"
         },
         {
           "name": "Quiche des Tages",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 27.04. – Fr, 30.04. von 12.00 bis 14.30 Uhr / Feiertag kein Mittagessen - nur Frühstück 10 bis 14 Uhr",
+      "desc": "Mo, 04.05. – Fr, 08.05. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -100,7 +100,7 @@
           "price": "13,90"
         },
         {
-          "name": "Rote Spitzpaprika / gefüllt mit Feta / Reis",
+          "name": "Würzige, chinesische Dan Dan Nudeln / Pak Choi / Erdnüsse / (v)",
           "price": "13,90"
         }
       ]
