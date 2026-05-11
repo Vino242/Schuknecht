@@ -3,7 +3,7 @@
   "sections": [
     {
       "category": "Snacks & Tapas",
-      "desc": "Mo - Fr ab 12.00 Uhr / Sa, So & Feiertage ab 14 Uhr",
+      "desc": "Mo - Fr ab 12.00 Uhr / Sa, So & Feiertage ab 14.00 Uhr",
       "items": [
         {
           "name": "Hummus / Olivenöl / Zaatar / Brot (v)",
@@ -100,11 +100,11 @@
           "price": "13,90"
         },
         {
-          "name": "Lauwarmer Halloumi / rote Linsen / Babyspinat / Kichererbsen / getrocknete Aprikosen /",
+          "name": "Lauwarmer Halloumi / rote Linsen / Babyspinat / Kichererbsen / ",
           "price": "13,90"
         },
         {
-          "name": "Pistazien / Granatapfelkerne (vegan möglich)",
+          "name": "getrocknete Aprikosen / Pistazien / Granatapfelkerne (vegan möglich)",
           "price": ""
         }
       ]
