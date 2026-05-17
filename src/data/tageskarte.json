@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 11.05. – Fr, 15.05. von 12.00 bis 14.30 Uhr ",
+  "zeitraum": "Mo, 18.05. – Fr, 22.05. von 12.00 bis 14.30 Uhr ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 11.05. – Fr, 15.05. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 18.05. – Fr, 22.05. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -100,11 +100,11 @@
           "price": "13,90"
         },
         {
-          "name": "Lauwarmer Halloumi / rote Linsen / Babyspinat / Kichererbsen / ",
+          "name": "Grüner Spargel gebraten / Zitronen-Hollandaise / Kartoffeln /",
           "price": "13,90"
         },
         {
-          "name": "getrocknete Aprikosen / Pistazien / Granatapfelkerne (vegan möglich)",
+          "name": "in Panko geröstete Walnüsse & Mandelblättchen (vegan)",
           "price": ""
         }
       ]
