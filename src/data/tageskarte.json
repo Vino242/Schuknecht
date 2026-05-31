@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Di, 26.05. – Fr, 30.05. von 12.00 bis 14.30 Uhr ",
+  "zeitraum": "Mi, 01.06. – Fr, 03.06. von 12.00 bis 14.30 Uhr ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Di, 26.05. – Fr, 30.05. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 01.06. – Mi, 03.06. von 12.00 bis 14.30 Uhr / Feiertag bis Sonntag nur Frühstück bis 14 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -100,11 +100,11 @@
           "price": "13,90"
         },
         {
-          "name": "Grüner Spargel / konfierte Tomaten / Mango-Carpaccio / Burrata / Rucola / ",
+          "name": "Thailändisches Pad Kra Pao / Tofu-Hack / Thai-Basilikum / Basmatireis (v)",
           "price": "13,90"
         },
         {
-          "name": "geröstete Pistazien / Chili Öl ",
+          "name": "",
           "price": ""
         }
       ]
