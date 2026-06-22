@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mi, 15.06. – Fr, 19.06. von 12.00 bis 14.30 Uhr  ",
+  "zeitraum": "Mi, 22.06. – Fr, 26.06. von 12.00 bis 14.30 Uhr  ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 15.06. – Fr, 19.06. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 22.06. – Fr, 26.06. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -100,7 +100,7 @@
           "price": "13,90"
         },
         {
-          "name": "Koreanische Gemüsepancakes Pajeon / Kimchi Hot Sauce / Mayo (v)",
+          "name": "Japanische Hiyashi Somen / kalte Nudelsuppe / Tomaten-Dashi-Brühe (v)",
           "price": "13,90"
         },
         {
