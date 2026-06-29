@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mi, 22.06. – Fr, 26.06. von 12.00 bis 14.30 Uhr   ",
+  "zeitraum": "Mi, 29.06. – Fr, 03.07. von 12.00 bis 14.30 Uhr   ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -72,12 +72,20 @@
         {
           "name": "Erdnüsse oder Maiskörner / geröstet & gesalzen",
           "price": "1,50"
+        },
+        {
+          "name": "Bohnensalat / rote Zwiebeln / Cherrytomaten / Brot (v)",
+          "price": "8,00"
+        },
+        {
+          "name": "Handkäse / Mussig & Kümmel / Butter / Brot",
+          "price": "8,50"
         }
       ]
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 22.06. – Fr, 26.06. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 29.06. – Fr, 03.07. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -100,11 +108,11 @@
           "price": "13,90"
         },
         {
-          "name": "Japanische Hiyashi Somen / kalte Nudelsuppe / Tomaten-Dashi-Brühe (v) ",
+          "name": "3 Tacos / Süßkartoffeln / Hack vegan / Avocado / Koriander /",
           "price": "13,90"
         },
         {
-          "name": "",
+          "name": "Tomaten / geriebener Käse  (vegan möglich)",
           "price": " "
         }
       ]
