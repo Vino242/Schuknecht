@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mi, 29.06. – Fr, 03.07. von 12.00 bis 14.30 Uhr   ",
+  "zeitraum": "Mi, 06.07. – Fr, 10.07. von 12.00 bis 14.30 Uhr    ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -62,37 +62,37 @@
           "price": "4,80"
         },
         {
-          "name": "Brot extra",
-          "price": "1,50"
-        },
-        {
-          "name": "Kuchenstück",
-          "price": "4,80"
-        },
-        {
-          "name": "Erdnüsse oder Maiskörner / geröstet & gesalzen",
-          "price": "1,50"
+          "name": "Cacik / türkische Gurkenkaltschale / Joghurt / Brot (kalt serviert)",
+          "price": "7,50"
         },
         {
           "name": "Bohnensalat / rote Zwiebeln / Cherrytomaten / Brot (v)",
           "price": "8,00"
         },
         {
-          "name": "Handkäse / Mussig & Kümmel / Butter / Brot",
-          "price": "8,50"
+          "name": "Erdnüsse oder Maiskörner / geröstet & gesalzen",
+          "price": "1,50"
+        },
+        {
+          "name": "Brot extra",
+          "price": "1,50"
         }
       ]
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 29.06. – Fr, 03.07. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 06.07. – Fr, 10.07. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
           "price": "6,80"
         },
         {
-          "name": "Quiche des Tages / Beilagensalat",
+          "name": "Cacik / türkische Gurkenkaltschale / Joghurt / Brot (kalte Suppe)",
+          "price": "7,50"
+        },
+        {
+          "name": "Quiche des Tages / Beilagensalat ",
           "price": "11,50"
         },
         {
@@ -100,20 +100,16 @@
           "price": "12,50"
         },
         {
-          "name": "Bunter Salat / Feta / Oliven / Brot",
+          "name": "Bunter Salat / Feta / Oliven / Brot ",
           "price": "13,90"
         },
         {
-          "name": "Bunter Salat / gegrillter Halloumi / Brot",
+          "name": "Bunter Salat / gegrillter Halloumi / Brot ",
           "price": "13,90"
         },
         {
-          "name": "3 Tacos / Süßkartoffeln / Hack vegan / Avocado / Koriander /",
+          "name": "Sommerrollen (3 Stück) / Avocado / Tofu / Karotten / Gurken / Thai Basilikum / Reisnudeln (v)",
           "price": "13,90"
-        },
-        {
-          "name": "Tomaten / geriebener Käse  (vegan möglich)",
-          "price": " "
         }
       ]
     }
