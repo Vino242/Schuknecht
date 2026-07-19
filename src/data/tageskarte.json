@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mi, 13.07. – Fr, 17.07. von 12.00 bis 14.30 Uhr    ",
+  "zeitraum": "Mo, 20.07. – Fr, 24.07. von 12.00 bis 14.30 Uhr    ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -81,7 +81,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 13.07. – Fr, 17.07. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 20.07. – Fr, 24.07. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -108,7 +108,7 @@
           "price": "13,90"
         },
         {
-          "name": "Manti / türkische Mini-Teigtaschen / Joghurt / würzige Tomatensauce / Minze / (vegan möglich)",
+          "name": "Sushi Bowl / Sushi Reis / Avocado / Mango / Gurken / Tofu / (v)",
           "price": "13,90"
         }
       ]
