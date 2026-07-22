@@ -38,6 +38,14 @@ export default function Home() {
   const [reservationOpen, setReservationOpen] = useState(false);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [tickerWidth, setTickerWidth] = useState<number | null>(null);
+  const tickerText = settings.ticker.trim();
+  const [isLoop, setIsLoop] = useState(false);
+  const [spinKey, setSpinKey] = useState(0);
+
+  // ?loop im Browser lesen — useSearchParams() würde das Prerendering der Seite blockieren
+  useEffect(() => {
+    setIsLoop(new URLSearchParams(window.location.search).has("loop"));
+  }, []);
 
   useEffect(() => {
     const measure = () => {
@@ -59,23 +67,29 @@ export default function Home() {
 
   // Splash: 1s zentriert, dann zum Header gleiten
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (logoRef.current) {
-        const rect = logoRef.current.getBoundingClientRect();
-        setLogoTarget({ top: rect.top, left: rect.left, width: rect.width, height: rect.height });
-      }
-      setSplashPhase("slide");
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Splash entfernen nach Slide-Animation
-  useEffect(() => {
+    if (splashPhase === "center") {
+      const timer = setTimeout(() => {
+        if (logoRef.current) {
+          const rect = logoRef.current.getBoundingClientRect();
+          setLogoTarget({ top: rect.top, left: rect.left, width: rect.width, height: rect.height });
+        }
+        setSplashPhase("slide");
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
     if (splashPhase === "slide") {
       const timer = setTimeout(() => setSplashPhase("done"), 800);
       return () => clearTimeout(timer);
     }
-  }, [splashPhase]);
+    if (splashPhase === "done" && isLoop) {
+      const timer = setTimeout(() => {
+        setCurrentSlide(0);
+        setSpinKey((k) => k + 1);
+        setSplashPhase("center");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [splashPhase, isLoop]);
 
   // Intersection Observer für mobile Text-Animation
   useEffect(() => {
@@ -111,7 +125,7 @@ export default function Home() {
                 : { top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: 200, height: 200 }
             }
           >
-            <div className={`w-full h-full relative ${splashPhase === "center" ? "animate-spin-once" : ""}`}>
+            <div key={spinKey} className={`w-full h-full relative ${splashPhase === "center" ? "animate-spin-once" : ""}`}>
               <Image src="/logo.png" alt="Schu Knecht Logo" fill className="object-contain" priority />
             </div>
           </div>
@@ -214,27 +228,31 @@ export default function Home() {
           </div>
 
           {/* Ticker — same width as SCHUKNECHT title */}
-          <div className="mt-40 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
-            <div
-              className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
-              style={{ fontFamily: "'Futura Medium', sans-serif" }}
-            >
-              {settings.ticker} &nbsp;&nbsp;|&nbsp;&nbsp; {settings.ticker}
+          {tickerText && (
+            <div className="mt-40 text-white overflow-hidden py-2.5" style={{ backgroundColor: "black", width: tickerWidth ? `${tickerWidth}px` : "70%" }}>
+              <div
+                className="whitespace-nowrap animate-marquee text-[14px] leading-[1.4em] font-normal"
+                style={{ fontFamily: "'Futura Medium', sans-serif" }}
+              >
+                {tickerText} &nbsp;&nbsp;|&nbsp;&nbsp; {tickerText}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
       {/* ===== MOBILE: Ticker + Reservieren (pinned to bottom) ===== */}
       <div className="md:hidden mt-auto mb-3 mx-4">
-        <div className="text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
-          <div
-            className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
-            style={{ fontFamily: "'Futura Medium', sans-serif" }}
-          >
-            {settings.ticker}
+        {tickerText && (
+          <div className="text-white overflow-hidden py-3" style={{ backgroundColor: "black" }}>
+            <div
+              className="whitespace-nowrap animate-marquee-mobile text-[13px] leading-[1.4em] font-normal"
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
+            >
+              {tickerText}
+            </div>
           </div>
-        </div>
+        )}
         <div className="mt-12 flex justify-end">
           <button
             onClick={() => setReservationOpen(true)}
