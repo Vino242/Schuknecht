@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 03.08. – Fr, 07.08. von 12.00 bis 14.30 Uhr    ",
+  "zeitraum": "Mo, 10.08. – Fr, 14.08. von 12.00 bis 14.30 Uhr    ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -81,7 +81,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 03.08. – Fr, 07.08. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 10.08. – Fr, 14.08. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -108,12 +108,8 @@
           "price": "13,90"
         },
         {
-          "name": "Green Goddess Bowl / Avocado / Edamame / Babyspinat / Nachos (v)",
+          "name": "Sweet Chili Tofu Bowl / Basmatireis / Pak Choi / Möhren (v)",
           "price": "13,90"
-        },
-        {
-          "name": "zusätzlich Feta",
-          "price": "2,00"
         }
       ]
     }
