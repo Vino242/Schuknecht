@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 10.08. – Fr, 14.08. von 12.00 bis 14.30 Uhr    ",
+  "zeitraum": "Mo, 17.08. – Fr, 21.08. von 12.00 bis 14.30 Uhr    ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -81,7 +81,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 10.08. – Fr, 14.08. von 12.00 bis 14.30 Uhr",
+      "desc": "Mo, 16.08. – Fr, 21.08. von 12.00 bis 14.30 Uhr",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -108,7 +108,7 @@
           "price": "13,90"
         },
         {
-          "name": "Sweet Chili Tofu Bowl / Basmatireis / Pak Choi / Möhren (v)",
+          "name": "Orecchiette / Cherrytomaten Sugo / Burrata / Kräuteröl",
           "price": "13,90"
         }
       ]
