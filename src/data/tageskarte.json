@@ -100,8 +100,12 @@
           "price": "13,90"
         },
         {
-          "name": "Thai Curry / Zuckerschoten / Paprika / Süßkartoffel / Babyspinat Tofu / Koriander / Basmatireis (v)",
+          "name": "Thai Curry / Zuckerschoten / Paprika / Süßkartoffel / Babyspinat ",
           "price": "13,90"
+        },
+        {
+          "name": "Tofu / Koriander / Basmatireis (v)",
+          "price": ""
         }
       ]
     }
