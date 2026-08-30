@@ -1,12 +1,12 @@
 {
-  "zeitraum": "Mo, 31.08. – Fr, 06.09. von 12.00 bis 14.30 Uhr     ",
+  "zeitraum": "Mo, 31.08. – Fr, 06.09. von 12.00 bis 14.30 Uhr      ",
   "sections": [
     {
       "category": "Snacks & Tapas",
       "desc": "Mo - Fr ab 12.00 Uhr / Sa & So ab 14.00 Uhr  ",
       "items": [
         {
-          "name": "Hummus / Olivenöl / Zaatar / Brot (v) ",
+          "name": "Hummus / Olivenöl / Zaatar / Brot (v)  ",
           "price": "8,50"
         },
         {
@@ -92,15 +92,15 @@
           "price": "12,50"
         },
         {
-          "name": "Bunter Salat / Feta / Oliven / Brot (wahlweise mit veganem Feta erhältlich) ",
+          "name": "Bunter Salat / Feta / Oliven / Brot (wahlweise mit veganem Feta erhältlich)  ",
           "price": "13,90"
         },
         {
-          "name": "Bunter Salat / gegrillter Halloumi / Brot ",
+          "name": "Bunter Salat / gegrillter Halloumi / Brot  ",
           "price": "13,90"
         },
         {
-          "name": "Udon Nudeln  / gebratene Champignons / Pak Choi / Chili Crisp Öl / Sesam (v)",
+          "name": "Udon Nudeln  / gebratene Champignons / Pak Choi / Chili Crisp Öl / Sesam (v) ",
           "price": "13,90"
         }
       ]
