@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 24.08. – Fr, 28.08. von 12.00 bis 14.30 Uhr     ",
+  "zeitraum": "Mo, 31.08. – Fr, 06.09. von 12.00 bis 14.30 Uhr     ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -10,11 +10,11 @@
           "price": "8,50"
         },
         {
-          "name": "Ajvar / Paprika-Auberginen Dip / Brot (v)",
+          "name": "Ajvar (Paprika-Auberginen Dip) Brot (v)",
           "price": "8,00"
         },
         {
-          "name": "Bohnen in Tomatensauce / Feta überbacken / Brot",
+          "name": "Bohnen in Tomatensauce / Feta überbacken / Brot (wahlweise veganer Feta erhältlich)",
           "price": "8,50"
         },
         {
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 24.08. – Fr, 28.08. von 12.00 bis 14.30 Uhr ",
+      "desc": "Mo, 31.08. – Fr, 06.09. von 12.00 bis 14.30 Uhr ",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -92,7 +92,7 @@
           "price": "12,50"
         },
         {
-          "name": "Bunter Salat / Feta / Oliven / Brot ",
+          "name": "Bunter Salat / Feta / Oliven / Brot (wahlweise veganer Feta erhältlich)",
           "price": "13,90"
         },
         {
@@ -100,11 +100,11 @@
           "price": "13,90"
         },
         {
-          "name": "Thai Curry / Zuckerschoten / Paprika / Süßkartoffel / Babyspinat ",
+          "name": "Udon Nudeln  / gebratene Champignons / Pak Choi / Chili Crisp Öl / Sesam (v)",
           "price": "13,90"
         },
         {
-          "name": "Tofu / Koriander / Basmatireis (v)",
+          "name": "",
           "price": ""
         }
       ]
