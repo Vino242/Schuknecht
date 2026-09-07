@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 31.08. – Fr, 06.09. von 12.00 bis 14.30 Uhr      ",
+  "zeitraum": "Mo, 07.09. – Fr, 11.09. von 12.00 bis 14.30 Uhr      ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 31.08. – Fr, 06.09. von 12.00 bis 14.30 Uhr ",
+      "desc": "Mo, 07.09. – Fr, 11.09. von 12.00 bis 14.30 Uhr ",
       "items": [
         {
           "name": "Beilagensalat (v)",
@@ -100,7 +100,7 @@
           "price": "13,90"
         },
         {
-          "name": "Udon Nudeln  / gebratene Champignons / Pak Choi / Chili Crisp Öl / Sesam (v)   ",
+          "name": "Herbstliches Ofengemüse / Avocado-Frischkäse-Limette Dip  (v möglich)  ",
           "price": "13,90"
         }
       ]
