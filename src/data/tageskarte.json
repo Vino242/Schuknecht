@@ -62,8 +62,8 @@
           "price": "4,80"
         },
         {
-          "name": "Bohnensalat / rote Zwiebeln / Cherrytomaten / Brot (v)",
-          "price": "8,00"
+          "name": "Erbsensuppe (v)",
+          "price": "8,50"
         },
         {
           "name": "Erdnüsse oder Maiskörner / geröstet & gesalzen ",
@@ -110,6 +110,10 @@
         {
           "name": "zusätzlich hausgemachtes Kimchi",
           "price": "3,00"
+        },
+        {
+          "name": "Erbsensuppe (v)",
+          "price": "8,50"
         }
       ]
     }
