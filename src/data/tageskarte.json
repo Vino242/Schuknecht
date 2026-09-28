@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 21.09. – Fr, 25.09. von 12.00 bis 14.30 Uhr         ",
+  "zeitraum": "Mo, 28.09. – Fr, 04.10. von 12.00 bis 14.30 Uhr         ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -62,7 +62,7 @@
           "price": "4,80"
         },
         {
-          "name": "Erbsensuppe / karamellisierte Sonnenblumenkerne / Brot (v) ",
+          "name": "Kürbissuppe / Kürbiskernöl / Kürbiskerne / Brot (v)",
           "price": "8,90"
         },
         {
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 21.09. – Fr, 25.09. von 12.00 bis 14.30 Uhr    ",
+      "desc": "Mo, 28.09. – Fr, 04.10. von 12.00 bis 14.30 Uhr    ",
       "items": [
         {
           "name": "Beilagensalat (v) ",
@@ -100,11 +100,11 @@
           "price": "13,90"
         },
         {
-          "name": "Tteokbokki / koreanische Reiskuchen / Enoki Pilze / Lauch / Tofu / Gochujang / Sesam (v) ",
-          "price": "11,90"
+          "name": "Polenta / Ofenkürbis / Kichererbsen / Gremolata (v & gf)",
+          "price": "13,90"
         },
         {
-          "name": "Erbsensuppe / karamellisierte Sonnenblumenkerne/ Brot (v)  ",
+          "name": "Kürbissuppe / Kürbiskernöl / Kürbiskerne / Brot (v)",
           "price": "8,90"
         }
       ]
