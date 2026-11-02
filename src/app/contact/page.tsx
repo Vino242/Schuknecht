@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 import MapEmbed from "@/components/MapEmbed";
 import settings from "@/data/settings.json";
+
+export const metadata: Metadata = { title: "Kontakt" };
 
 export default function Contact() {
   return (
@@ -13,6 +16,7 @@ export default function Contact() {
             src="/logo.png"
             alt="Schu Knecht Logo"
             fill
+            sizes="100px"
             className="object-contain"
             priority
           />

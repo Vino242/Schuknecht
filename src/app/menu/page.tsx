@@ -40,6 +40,7 @@ export default function Menu() {
             src="/logo.png"
             alt="Schu Knecht Logo"
             fill
+            sizes="100px"
             className="object-contain"
             priority
           />
@@ -164,7 +165,7 @@ export default function Menu() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-[19px]">
           {galleryImages.map((src, i) => (
             <div key={src} className="relative aspect-[4/5] cursor-pointer overflow-hidden group" onClick={() => setLightbox(i)}>
-              <Image src={src} alt={`Schuki ${i + 1}`} fill className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+              <Image src={src} alt={`Schuki ${i + 1}`} fill sizes="(min-width: 768px) 33vw, 50vw" className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
             </div>
           ))}
         </div>

@@ -30,6 +30,7 @@ export default function Catering() {
             src="/logo.png"
             alt="Schu Knecht Logo"
             fill
+            sizes="100px"
             className="object-contain"
             priority
           />
@@ -99,6 +100,7 @@ export default function Catering() {
               src={src}
               alt={`Catering ${index + 1}`}
               fill
+              sizes="(min-width: 768px) 40vw, 100vw"
               className={`object-cover object-center transition-opacity duration-1000 ${
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}

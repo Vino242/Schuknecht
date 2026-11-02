@@ -126,7 +126,7 @@ export default function Home() {
             }
           >
             <div key={spinKey} className={`w-full h-full relative ${splashPhase === "center" ? "animate-spin-once" : ""}`}>
-              <Image src="/logo.png" alt="Schu Knecht Logo" fill className="object-contain" priority />
+              <Image src="/logo.png" alt="Schu Knecht Logo" fill sizes="200px" className="object-contain" priority />
             </div>
           </div>
         </>
@@ -182,6 +182,7 @@ export default function Home() {
             src="/logo.png"
             alt="Schu Knecht Logo"
             fill
+            sizes="100px"
             className="object-contain"
             priority
           />
@@ -197,18 +198,25 @@ export default function Home() {
         {/* Image slideshow (mobile: 70% right-aligned, desktop: right 2 cols) — 9:16 portrait */}
         <div className="col-span-5 md:col-span-2 order-2">
           <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden w-[70%] ml-auto md:w-full">
-          {slideshowImages.map((img, index) => (
-            <Image
-              key={index}
-              src={img.src}
-              alt={`Schuknecht ${index + 1}`}
-              fill
-              className={`object-cover ${img.position} transition-opacity duration-1000 ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-              priority={index === 0}
-            />
-          ))}
+          {slideshowImages.map((img, index) => {
+            // Nur aktuelles, vorheriges (Überblendung) und nächstes Bild (Vorladen) rendern, statt alle auf einmal zu laden
+            const total = slideshowImages.length;
+            const near = index === currentSlide || index === (currentSlide + 1) % total || index === (currentSlide - 1 + total) % total;
+            if (!near) return null;
+            return (
+              <Image
+                key={index}
+                src={img.src}
+                alt={`Schuknecht ${index + 1}`}
+                fill
+                sizes="(min-width: 768px) 40vw, 70vw"
+                className={`object-cover ${img.position} transition-opacity duration-1000 ${
+                  index === currentSlide ? "opacity-100" : "opacity-0"
+                }`}
+                priority={index === 0}
+              />
+            );
+          })}
           </div>
         </div>
 

@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Futura Medium';
-  src: url('../fonts/Futura-Medium.ttf') format('truetype');
+  src: url('../fonts/Futura-Medium.woff2') format('woff2'), url('../fonts/Futura-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'Futura Bold';
-  src: url('../fonts/Futura-Bold.ttf') format('truetype');
+  src: url('../fonts/Futura-Bold.woff2') format('woff2'), url('../fonts/Futura-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;

@@ -1,7 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
+
+export const metadata: Metadata = { title: "Impressum" };
 
 export default function Imprint() {
   return (
@@ -13,6 +14,7 @@ export default function Imprint() {
             src="/logo.png"
             alt="Schu Knecht Logo"
             fill
+            sizes="100px"
             className="object-contain"
             priority
           />
@@ -30,14 +32,22 @@ export default function Imprint() {
           Impressum
         </h1>
 
+        <a
+          href="/datenschutz"
+          className="mt-8 inline-block bg-black text-white px-6 py-3 text-[13px] tracking-[0.15em] uppercase hover:opacity-80 transition-opacity"
+          style={{ fontFamily: "'Futura Medium', sans-serif" }}
+        >
+          Datenschutzerklärung
+        </a>
+
         <div
           className="mt-10 max-w-[600px] text-[15px] md:text-[16px] leading-[1.8em] font-light flex flex-col gap-8 text-justify"
           style={{ fontFamily: "'Futura Medium', sans-serif", hyphens: "auto", WebkitHyphens: "auto", wordSpacing: "-0.02em" }}
         >
-          {/* Angaben gemäß § 5 TMG */}
+          {/* Angaben gemäß § 5 DDG */}
           <div>
             <h3 className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2">
-              Angaben gemäß § 5 TMG
+              Angaben gemäß § 5 DDG
             </h3>
             <p>
               Nurhan Vural<br />
@@ -61,7 +71,7 @@ export default function Imprint() {
           {/* Verantwortlich für den Inhalt */}
           <div>
             <h3 className="text-[13px] tracking-[0.15em] uppercase opacity-40 mb-2">
-              Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+              Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
             </h3>
             <p>
               Nurhan Vural<br />
@@ -88,15 +98,6 @@ export default function Imprint() {
             <p>
               Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
             </p>
-          </div>
-
-          <div className="pt-2">
-            <a
-              href="/datenschutz"
-              className="text-[13px] tracking-[0.15em] uppercase opacity-40 hover:opacity-100 transition-opacity"
-            >
-              Datenschutzerklärung
-            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 import tageskarte from "@/data/tageskarte.json";
+
+export const metadata: Metadata = { title: "Karte" };
 
 export default function Karte() {
   return (
@@ -12,6 +15,7 @@ export default function Karte() {
             src="/logo.png"
             alt="Schu Knecht Logo"
             fill
+            sizes="100px"
             className="object-contain"
             priority
           />

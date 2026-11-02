@@ -1,7 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
+
+export const metadata: Metadata = { title: "Über uns" };
 
 export default function About() {
   return (
@@ -13,6 +14,7 @@ export default function About() {
             src="/logo.png"
             alt="Schu Knecht Logo"
             fill
+            sizes="100px"
             className="object-contain"
             priority
           />
@@ -80,6 +82,7 @@ export default function About() {
             src="/ueber/SnapInsta.to_580485830_1607661643931805_1787513410864216100_n.jpg"
             alt="Schuknecht Über Uns"
             fill
+            sizes="(min-width: 768px) 40vw, 100vw"
             className="object-cover object-center"
             priority
           />
