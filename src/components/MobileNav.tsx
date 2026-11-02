@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Karte", href: "/karte" },
   { label: "Schuki", href: "/menu" },
   { label: "Catering", href: "/catering" },
-  { label: "Impressum", href: "/imprint" },
 ];
 
 export default function MobileNav() {
@@ -99,6 +98,33 @@ export default function MobileNav() {
               }}
             >
               Kontakt
+            </a>
+          </div>
+
+          {/* Rechtliches */}
+          <div
+            className="mt-10 flex gap-6 transition-all duration-500 ease-out"
+            style={{
+              transform: open ? 'translate(0px, 0px)' : 'translate(0px, 20px)',
+              opacity: open ? 1 : 0,
+              transitionDelay: open ? `${(navLinks.length + 1) * 120}ms` : '0ms',
+            }}
+          >
+            <a
+              href="/imprint"
+              onClick={() => setOpen(false)}
+              className="text-[13px] tracking-[0.15em] uppercase opacity-40 hover:opacity-100 transition-opacity"
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
+            >
+              Impressum
+            </a>
+            <a
+              href="/datenschutz"
+              onClick={() => setOpen(false)}
+              className="text-[13px] tracking-[0.15em] uppercase opacity-40 hover:opacity-100 transition-opacity"
+              style={{ fontFamily: "'Futura Medium', sans-serif" }}
+            >
+              Datenschutz
             </a>
           </div>
         </nav>

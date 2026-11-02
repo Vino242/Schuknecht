@@ -89,6 +89,15 @@ export default function Imprint() {
               Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
             </p>
           </div>
+
+          <div className="pt-2">
+            <a
+              href="/datenschutz"
+              className="text-[13px] tracking-[0.15em] uppercase opacity-40 hover:opacity-100 transition-opacity"
+            >
+              Datenschutzerklärung
+            </a>
+          </div>
         </div>
       </div>
     </div>

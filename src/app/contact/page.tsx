@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
+import MapEmbed from "@/components/MapEmbed";
 import settings from "@/data/settings.json";
 
 export default function Contact() {
@@ -141,13 +142,7 @@ export default function Contact() {
 
         {/* Right columns 4-5: Google Maps Embed */}
         <div className="col-span-1 md:col-span-2 relative min-h-[50vh] md:min-h-[80vh]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.5!2d8.6513!3d49.8728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd7063b2a742f3%3A0x0!2sSchuknechtstr.%201%2C%2064289%20Darmstadt!5e0!3m2!1sde!2sde!4v1700000000000"
-            className="absolute inset-0 w-full h-full border-0"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          <MapEmbed />
         </div>
       </div>
     </div>

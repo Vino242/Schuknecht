@@ -302,13 +302,20 @@ export default function Home() {
             kontakt
           </a>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:flex md:flex-col md:gap-1">
           <a
             href="/imprint"
-            className="text-[26px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
+            className="text-[16px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
             style={{ fontFamily: "'Futura Medium', sans-serif" }}
           >
             impressum
+          </a>
+          <a
+            href="/datenschutz"
+            className="text-[16px] leading-[1.3em] font-normal capitalize text-black hover:opacity-50 transition-opacity duration-300"
+            style={{ fontFamily: "'Futura Medium', sans-serif" }}
+          >
+            datenschutz
           </a>
         </div>
         <div className="hidden md:block">
