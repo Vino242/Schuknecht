@@ -1,12 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import { SESSION_COOKIE, verifySessionToken } from "@/lib/admin-token";
 
-export function middleware(req: NextRequest) {
-  const session = req.cookies.get("admin_session")?.value;
-
-  if (!session || session !== "1") {
+export async function middleware(req: NextRequest) {
+  const ok = await verifySessionToken(req.cookies.get(SESSION_COOKIE)?.value);
+  if (!ok) {
     return NextResponse.redirect(new URL("/admin", req.url));
   }
-
   return NextResponse.next();
 }
 

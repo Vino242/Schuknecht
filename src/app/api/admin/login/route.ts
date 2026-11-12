@@ -1,17 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
-
-const SESSION_COOKIE = "admin_session";
-const SESSION_MAX_AGE = 60 * 60 * 24; // 24 hours
+import {
+  SESSION_COOKIE,
+  SESSION_MAX_AGE,
+  checkPassword,
+  createSessionToken,
+} from "@/lib/admin-token";
 
 export async function POST(req: NextRequest) {
-  const { password } = await req.json();
+  const body = await req.json().catch(() => null);
 
-  if (!password || password !== process.env.ADMIN_PASSWORD) {
+  if (!(await checkPassword(body?.password))) {
+    // Bremst Rateversuche, ohne beim Vertippen zu stören
+    await new Promise((r) => setTimeout(r, 800));
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const response = NextResponse.json({ ok: true });
-  response.cookies.set(SESSION_COOKIE, "1", {
+  response.cookies.set(SESSION_COOKIE, await createSessionToken(), {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",

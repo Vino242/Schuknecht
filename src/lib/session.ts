@@ -1,48 +1,10 @@
 import { cookies } from "next/headers";
-import crypto from "crypto";
+import { SESSION_COOKIE, verifySessionToken } from "./admin-token";
 
-// In-memory session store (resets on server restart — fine for single-admin use)
-const sessions = new Map<string, { createdAt: number }>();
+export { SESSION_COOKIE, SESSION_MAX_AGE } from "./admin-token";
 
-const SESSION_COOKIE = "admin_session";
-const SESSION_MAX_AGE = 60 * 60 * 24; // 24 hours in seconds
-
-export function createSession(): string {
-  const token = crypto.randomUUID();
-  sessions.set(token, { createdAt: Date.now() });
-  // Clean up expired sessions
-  for (const [key, val] of sessions) {
-    if (Date.now() - val.createdAt > SESSION_MAX_AGE * 1000) {
-      sessions.delete(key);
-    }
-  }
-  return token;
-}
-
-export function destroySession(token: string) {
-  sessions.delete(token);
-}
-
+/** Für API-Routen: ist die Anfrage von einem angemeldeten Admin? */
 export async function isAuthenticated(): Promise<boolean> {
   const cookieStore = await cookies();
-  const token = cookieStore.get(SESSION_COOKIE)?.value;
-  if (!token) return false;
-
-  const session = sessions.get(token);
-  if (!session) return false;
-
-  // Check expiry
-  if (Date.now() - session.createdAt > SESSION_MAX_AGE * 1000) {
-    sessions.delete(token);
-    return false;
-  }
-
-  return true;
+  return verifySessionToken(cookieStore.get(SESSION_COOKIE)?.value);
 }
-
-export async function getSessionToken(): Promise<string | undefined> {
-  const cookieStore = await cookies();
-  return cookieStore.get(SESSION_COOKIE)?.value;
-}
-
-export { SESSION_COOKIE, SESSION_MAX_AGE };
