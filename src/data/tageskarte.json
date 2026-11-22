@@ -1,5 +1,5 @@
 {
-  "zeitraum": "Mo, 16.11. – Fr, 20.11. von 12.00 bis 14.30 Uhr                ",
+  "zeitraum": "Mo, 23.11. – Fr, 27.11. von 12.00 bis 14.30 Uhr                ",
   "sections": [
     {
       "category": "Snacks & Tapas",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Mittagessen",
-      "desc": "Mo, 16.11. – Fr, 20.11. von 12.00 bis 14.30 Uhr      ",
+      "desc": "Mo, 23.11. – Fr, 27.11. von 12.00 bis 14.30 Uhr      ",
       "items": [
         {
           "name": "Beilagensalat (v)    ",
@@ -104,7 +104,7 @@
           "price": "8,90"
         },
         {
-          "name": "Thailändische Glasnudeln / Tofu / Sojasprossen / Möhren / Koriander / Erdnusssauce (v) ",
+          "name": "Bandnudeln / \"Hähnchengeschnetzeltes\" / Champignonrahmsauce /  (v) ",
           "price": "13,90"
         }
       ]
